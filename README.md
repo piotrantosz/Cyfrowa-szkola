@@ -20,6 +20,7 @@ pip:
 * requests
 * requests-oauthlib
 * webencodings==0.5
+* pytz
 
 ## Configuration
 

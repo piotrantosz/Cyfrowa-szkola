@@ -93,3 +93,6 @@ ENV/
 
 # Database
 db.sqlite3
+
+# Media
+media_cdn/*
