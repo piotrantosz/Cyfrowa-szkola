@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+{% if instance.title %}{{ instance.title }}{% else %}Create{% endif %} | {{ block.super }}
+{% endblock head_title %}
+
+{% block head_extra %}
+{% load wysiwyg %}
+{% wysiwyg_setup %}
+{% endblock %}
+
+{% block content %}
+<form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Send"/>
+</form>
+{% wysiwyg_editor "id_content" %}
+{% endblock content %}
