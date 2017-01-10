@@ -51,7 +51,7 @@ Static files root is static_cdn to generate them:
 
 ## Project URL's
 
-/ - list of projects
+projects/ - list of projects
 
  * /id - project detail
  * /create - create project
