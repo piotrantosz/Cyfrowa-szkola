@@ -19,8 +19,8 @@ from django.contrib import admin
 from django.conf.urls.static import static
 
 urlpatterns = [
-    url(r'^', include('projects.urls', namespace='projects')),
     url(r'^admin/', admin.site.urls),
+    url(r'^projects/', include('projects.urls', namespace='projects')),
     url(r'^accounts/', include('allauth.urls')),
 ]
 
