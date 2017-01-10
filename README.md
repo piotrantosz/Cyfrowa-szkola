@@ -19,7 +19,7 @@ pip:
 * pytidylib
 * requests
 * requests-oauthlib
-* webencodings==0.5
+* webencodings
 * pytz
 
 ## Configuration
