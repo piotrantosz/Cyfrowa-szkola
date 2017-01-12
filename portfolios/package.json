@@ -1,0 +1,26 @@
+{
+  "name": "portfolios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Boquete/Vedius-portfolios.git"
+  },
+  "author": "Piotr Antosz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Boquete/Vedius-portfolios/issues"
+  },
+  "homepage": "https://github.com/Boquete/Vedius-portfolios#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1"
+  },
+  "dependencies": {
+    "foundation-sites": "^6.3.0"
+  }
+}
