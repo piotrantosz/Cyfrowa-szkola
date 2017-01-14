@@ -44,7 +44,7 @@ def project_list(request):
 
     context = {
         "object_list": queryset_list,
-        "title": "List",
+        "title": "Projects",
         "page_request_var": page_request_var
     }
     return render(request, "project_list.html", context)
@@ -71,7 +71,7 @@ def project_create(request):
     return render(request, "project_form.html", context)
 
 
-def project_detail(request, slug=None):  # retrieve
+def project_detail(request, slug=None):
     instance = get_object_or_404(Project, slug=slug)
     context = {
         "title": instance.title,

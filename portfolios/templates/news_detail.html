@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load urlify %}
+
+{% block head_title %}{{ instance.title }} | {{ block.super }}{% endblock head_title %}
+
+{% block content %}
+    <h1>{{ instance.title }}</h1>
+
+    <p><img src="{{ instance.header_image.url }}"></p>
+    <p>{{ instance.id }} </p>
+    <p>{{ instance.content|safe }}</p>
+    <p>{{ instance.updated }}</p>
+    <p>
+        {% if instance.author.get_full_name %}
+            {{ instance.author.get_full_name }}
+        {% else %}
+            {{ instance.author }}
+        {% endif %}
+    </p>
+
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}">
+        Share on Facebook
+    </a>
+
+    <a href="https://twitter.com/home?status=
+            {{ instance.content|truncatechars:20|urlify }}%20{{ request.build_absolute_uri }}">
+        Share on Twitter
+    </a>
+
+
+    <a href='https://plus.google.com/share?url={{ request.build_absolute_uri }}'>
+        Share on Google+
+    </a>
+
+{% endblock content %}
+
+

@@ -22,6 +22,7 @@ from django.views.generic import TemplateView
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^projects/', include('projects.urls', namespace='projects')),
+    url(r'^news/', include('news.urls', namespace='news')),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^accounts/profile/', TemplateView.as_view(template_name='profile.html')),
 
