@@ -7,6 +7,6 @@ from .views import (
 
 
 urlpatterns = [
-    url(r'^', news_list, name="list"),
+    url(r'^$', news_list, name="list"),
     url(r'^(?P<id>\d+)/$', news_detail, name='detail'),
 ]
