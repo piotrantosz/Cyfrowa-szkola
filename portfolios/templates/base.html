@@ -2,15 +2,32 @@
 <!--DOCTYPE html -->
 <html>
 <head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width">
     <title>{% block head_title %}Projects{% endblock head_title %}</title>
     <link rel="stylesheet" href="{% static '/css/app.css' %}">
     {% block head_extra %}{% endblock head_extra %}
 </head>
 <body>
+
 {% include "messages_display.html" %}
-<div class="container">
+
+<div class="menu">
+    <div class="menu__logo">
+        {% block menu_logo %}
+        <img src="{% static '/img/vedius-logo.png' %}">
+        {% endblock menu_logo %}
+    </div>
+    <ul class="menu__nav">
+    {% block menu_nav %}
+    {% endblock menu_nav %}
+    </ul>
+</div>
+
+<div class="content">
     {% block content %}
     {% endblock content %}
 </div>
+
 </body>
 </html>

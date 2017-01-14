@@ -1,0 +1,34 @@
+var gulp = require('gulp'); var sass = require('gulp-sass'); var autoprefixer = require('gulp-autoprefixer'); 
+var webpack = require("webpack-stream"); var sassPaths = [
+  'node_modules/foundation-sites/scss',
+  'node_modules/searchkit/them; gulp.task('sass', function () {
+  return gulp.src('static_src/scss/app.scss')
+    .pipe(sass({
+      includePaths: sassPaths
+    })
+    .on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(gulp.dest('static/default_dholec/css'));
+});
+gulp.task("copy_fonts", function () {
+  return gulp.src([
+    "static_src/fonts/woodstock/*"
+  ]).pipe(gulp.dest("static/default_dholec/fonts/"));
+});
+gulp.task('sass:watch', function () {
+  gulp.watch('static_src/scss/**/*.scss', ['sass']);
+});
+gulp.task("js", function () {
+  return webpack(require("./webpack.config.js"))
+    .pipe(gulp.dest("static/default_dholec/js/"));
+});
+gulp.task("js:watch", ["js"], function () {
+  gulp.watch([
+    "static_src/js/**/*.js",
+    "static_src/js/**/*.jsx"
+  ], ["js"]);
+});
+gulp.task("build", ["sass", "js", "copy_fonts"]); gulp.task("default", ["sass", "js"]);

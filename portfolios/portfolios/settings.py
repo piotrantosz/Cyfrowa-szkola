@@ -24,7 +24,7 @@ SECRET_KEY = 'janyk-ll8*c5!&j_7n^be4=ey2t^(ve^)ao-3rj$*g=7t1e4q3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.55.105', '127.0.0.1']
 
 # Application definition
 

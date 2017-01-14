@@ -1,3 +1,177 @@
-.canvas-menu {
-  padding-top: 20px;
+.menu {
+  color: white;
+  left: 0px;
+  background: #01AFEE url(http://i.imgur.com/fiZ8pZg.png);
+  width: 170px;
+  height: 100%;;
+  overflow: hidden;
+  position: fixed;
+
+  &__logo {
+    margin: 45px;
+    opacity: 0.9;
+
+    .avatar {
+      border-radius: 50%;
+    }
+
+    img {
+      width: 80px;
+    }
+  }
+
+  &__nav {
+    width: 100%;
+    margin: 0;
+
+    a {
+      color: inherit; /* blue colors for links too */
+      text-decoration: inherit; /* no underline */
+    }
+
+    .title {
+      position: relative;
+      margin-top: -10px;
+      margin-bottom: 10px;
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .icon {
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0 auto 10px;
+      height: 70px;
+      width: 70px;
+      position: relative;
+
+      &--home {
+        background-image: url(http://i.imgur.com/6deI8lb.png);
+      }
+
+      &--portfolio {
+        background-image: url(http://i.imgur.com/au1q8nr.png);
+      }
+
+      &--about {
+        background-image: url(http://i.imgur.com/xpFZkct.png);
+      }
+
+      &--contact {
+        background-image: url(http://i.imgur.com/1xHhDS1.png);
+      }
+
+      &--account {
+        background-image: url(http://i.imgur.com/BRAcUNh.png);
+      }
+    }
+
+    .active {
+      background-color: #00a2d8;
+
+      .icon--home {
+        transition: all 300ms ease;
+        background-image: url(http://i.imgur.com/bXily9r.png);
+      }
+
+      .icon--portfolio {
+        transition: all 300ms ease;
+        background-image: url(http://i.imgur.com/zqK5yje.png)
+      }
+
+      .icon--about {
+        transition: all 300ms ease;
+        background-image: url(http://i.imgur.com/YV3QqLc.png)
+      }
+
+      .icon--contact {
+        transition: all 300ms ease;
+        background-image: url(http://i.imgur.com/dzNBN5n.png)
+      }
+
+      .icon--account {
+        transition: all 300ms ease;
+        background-image: url(http://i.imgur.com/uwpbwN0.png)
+      }
+    }
+
+    li {
+      padding: 15px 0;
+      position: relative;
+      text-align: center;
+
+      &:hover {
+        background-color: #00a2d8;
+
+        .icon--home {
+          transition: all 300ms ease;
+          background-image: url(http://i.imgur.com/bXily9r.png);
+        }
+
+        .icon--portfolio {
+          transition: all 300ms ease;
+          background-image: url(http://i.imgur.com/zqK5yje.png)
+        }
+
+        .icon--about {
+          transition: all 300ms ease;
+          background-image: url(http://i.imgur.com/YV3QqLc.png)
+        }
+
+        .icon--contact {
+          transition: all 300ms ease;
+          background-image: url(http://i.imgur.com/dzNBN5n.png)
+        }
+
+        .icon--account {
+          transition: all 300ms ease;
+          background-image: url(http://i.imgur.com/uwpbwN0.png)
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints, 'medium')) {
+  .menu {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 52px;
+
+    &__logo {
+      display: none;
+    }
+
+    &__nav {
+
+      .title {
+        display: none;
+      }
+
+      .icon {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: 100%;
+        width: auto;
+        margin: auto;
+        background-size: 25px;
+      }
+
+      li {
+        display: inline-block;
+        width: 20%;
+        padding: 0;
+        float: left;
+      }
+    }
+
+
+  }
+
+  .content {
+    padding-left: 0;
+    padding-top: 55px;
+  }
 }
