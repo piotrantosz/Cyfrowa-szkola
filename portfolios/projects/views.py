@@ -107,6 +107,8 @@ def project_update(request, slug=None):
 
 def project_delete(request, slug=None):
     instance = get_object_or_404(Project, slug=slug)
+    if not request.user.is_authenticated() or request.user != instance.author:
+        raise Http404
     instance.delete()
     messages.success(request, "Successfully Deleted")
     return redirect("projects:list")
