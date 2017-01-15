@@ -2,13 +2,34 @@
 {% load i18n %}
 
 {% block content %}
-    <h1>{{ title }}</h1>
+    <div class="content news-list small-12 columns">
+        <div class="header small-12 medium-3 large-3 columns">
+            <div class="header__text small-12 columns small-centered">
+                <h1>{% blocktrans %}News{% endblocktrans %}</h1>
+            </div>
+        </div>
+        <div class="small-12 medium-9 large-9 columns" style="float: right;">
+        {% for obj in object_list %}
+            <div class="card small-12 columns">
+                <div class="card__content" style="background: url({{ obj.header_image.url }}) center / cover no-repeat;">
+                    <div class="card__date">
+                        <span class="day">{{ obj.updated.day }}</span>
+                        <span class="month">{{ obj.updated|date:"b" }}</span>
+                        <span class="year">{{ obj.updated.year }}</span>
+                    </div>
+                    <div class="card__data">
+                        <div class="content">
+                            <span class="author">{{ obj.author }}</span>
+                            <h1 class="title"><a href="{{ obj.get_absolute_url }}">{{ obj.title }}</a></h1>
+                            <p class="text">{{ obj.content|striptags|truncatechars:300 }} <b><a href="{{ obj.get_absolute_url }}">{% blocktrans %}read more{% endblocktrans %}</a></b></p>
+                            <a href="{{ obj.get_absolute_url }}"><label class="menu-button"><span></span></label></a>
+                        </div>
 
-    {% for obj in object_list %}
-        <h4><a href='{{ obj.get_absolute_url }}'>{{ obj.title }}</a></h4>
-        <p>{{ obj.id }} </p>
-        <p>{{ obj.content|striptags }}</p>
-        <p>{{ obj.updated }}</p>
-        <p>{{ obj.author }}</p>
-    {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+        {% endfor %}
+        </div>
+    </div>
 {% endblock content %}

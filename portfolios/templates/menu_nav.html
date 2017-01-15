@@ -1,15 +1,13 @@
 {% load i18n %}
 
 <a href="{% url 'news:list' %}">
-    <li class="
-        {% if 'news' in request.path %}active{% else %}{% endif %}">
+    <li {% if 'news' in request.path %}class="active"{% else %}{% endif %}>
         <div class="icon icon--home"></div>
         <div class="title">{% blocktrans %}News{% endblocktrans %}</div>
     </li>
 </a>
 <a href="{% url 'projects:list' %}">
-    <li class="
-        {% if 'projects' in request.path %}active{% else %} {% endif %}">
+    <li {% if 'projects' in request.path %}class="active"{% else %}{% endif %}>
         <div class="icon icon--portfolio"></div>
         <div class="title">{% blocktrans %}Portfolios{% endblocktrans %}</div>
     </li>

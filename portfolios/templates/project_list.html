@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>{{ title }}</h1>
+
 
 {% for obj in object_list %}
-<h4><a href='{{ obj.get_absolute_url }}'>{{ obj.title }}</a></h4>
-<p>{{ obj.id }} </p>
-<p>{{ obj.content|striptags }}</p>
-<p>{{ obj.updated }}</p>
-<p>{{ obj.author }}</p>
+
+    <h4><a href='{{ obj.get_absolute_url }}'>{{ obj.title }}</a></h4>
+    <p>{{ obj.id }} </p>
+    <p>{{ obj.content|striptags }}</p>
+    <p>{{ obj.updated }}</p>
+    <p>{{ obj.author }}</p>
+
+
 {% endfor %}
+
 {% endblock content %}

@@ -3,12 +3,12 @@
   left: 0px;
   background: #01AFEE url(http://i.imgur.com/fiZ8pZg.png);
   width: 170px;
-  height: 100%;;
+  height: 100vh;
   overflow: hidden;
   position: fixed;
 
   &__logo {
-    margin: 45px;
+    padding: 45px;
     opacity: 0.9;
 
     .avatar {
@@ -139,6 +139,7 @@
     overflow: hidden;
     width: 100%;
     height: 52px;
+    z-index: 9999;
 
     &__logo {
       display: none;
@@ -168,10 +169,5 @@
     }
 
 
-  }
-
-  .content {
-    padding-left: 0;
-    padding-top: 55px;
   }
 }

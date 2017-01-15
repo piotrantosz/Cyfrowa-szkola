@@ -1,8 +1,27 @@
 body {
   font-family: 'Lato', sans-serif;
+  margin-left: 170px;
+  height: 100%;
 }
 
 .content {
-  padding-left: 300px;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  height: 100%;
 }
 
+@media screen and (max-width: map-get($breakpoints, 'medium')) {
+  body {
+    margin-left: 0px;
+  }
+
+  .content {
+    margin-top: 60px;
+  }
+}
+
+@media print, screen and (min-width: 40em) {
+  h1 {
+    font-size: 2rem;
+  }
+}

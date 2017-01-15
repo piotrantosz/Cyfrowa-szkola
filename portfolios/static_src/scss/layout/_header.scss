@@ -1,0 +1,37 @@
+.news-list {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.header {
+  width: 22.5% !important;
+  padding: 0 !important;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background: url("http://i.imgur.com/W9EwXHf.jpg") no-repeat;
+  background-size: cover;
+  text-align: center;
+
+  &__text {
+    width: 22.5% !important;
+    text-shadow: -4px 1px 0px rgba(150, 150, 150, 0.46);
+    color: #ffffff;
+    text-align: center;
+    top: 45% ;
+    position: fixed;
+
+
+    h1 {
+      margin: auto;
+      font-size: 4rem;
+    }
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints, 'medium')) {
+  .header {
+    display: none;
+  }
+}

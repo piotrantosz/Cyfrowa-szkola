@@ -43,7 +43,6 @@ def create_slug(instance, new_slug=None):
     return slug
 
 
-
 def pre_save_project_receiver(sender, instance, *args, **kwargs):
     if not instance.slug:
         instance.slug = create_slug(instance)

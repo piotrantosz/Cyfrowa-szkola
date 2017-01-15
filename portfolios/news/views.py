@@ -26,8 +26,8 @@ def news_list(request):
     return render(request, "news_list.html", context)
 
 
-def news_detail(request, slug=None):  # retrieve
-    instance = get_object_or_404(News, slug=slug)
+def news_detail(request, id=None):
+    instance = get_object_or_404(News, id=id)
     context = {
         "title": instance.title,
         "instance": instance,
