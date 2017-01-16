@@ -3,6 +3,8 @@ from django.http import Http404
 from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import News
+from .forms import NewsForm
+from django.utils.translation import ugettext as _
 
 def news_list(request):
     queryset_list = News.objects.all()
@@ -35,3 +37,56 @@ def news_detail(request, id=None):
 
     return render(request, "news_detail.html", context)
 
+
+def news_create(request):
+    if not request.user.is_authenticated() or not request.user.is_staff:
+        raise Http404
+    form = NewsForm(request.POST or None, request.FILES or None)
+    if form.is_valid():
+        instance = form.save(commit=False)
+        instance.author = request.user
+        instance.save()
+        messages.success(request, _("Successfully Created"))
+        return HttpResponseRedirect(instance.get_absolute_url())
+    elif form.errors:
+        messages.error(request, _("Not Successfully Edited"))
+    else:
+        pass
+
+    context = {
+        "form": form,
+    }
+    return render(request, "news_form.html", context)
+
+
+def news_update(request, id=None):
+    instance = get_object_or_404(News, id=id)
+    if not request.user.is_authenticated() or request.user != instance.author:
+        raise Http404
+    form = NewsForm(request.POST or None, request.FILES or None, instance=instance)
+    if form.is_valid():
+        instance = form.save(commit=False)
+        instance.author = request.user
+        instance.save()
+        messages.success(request, _("Successfully Edited"))
+        return HttpResponseRedirect(instance.get_absolute_url())
+    elif form.errors:
+        messages.error(request, _("Not Successfully Edited"))
+    else:
+        pass
+
+    context = {
+        "title": instance.title,
+        "instance": instance,
+        "form": form,
+    }
+    return render(request, "news_form.html", context)
+
+
+def news_delete(request, id=None):
+    instance = get_object_or_404(News, id=id)
+    if not request.user.is_authenticated() or request.user != instance.author:
+        raise Http404
+    instance.delete()
+    messages.success(request, _("Successfully Deleted"))
+    return redirect("news:list")

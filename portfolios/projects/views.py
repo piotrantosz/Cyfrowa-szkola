@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .forms import ProjectForm
 from .models import Project
+from django.utils.translation import ugettext as _
 
 
 def user_detail(request, user_id):
@@ -58,10 +59,10 @@ def project_create(request):
         instance = form.save(commit=False)
         instance.author = request.user
         instance.save()
-        messages.success(request, "Successfully Created")
+        messages.success(request, _("Successfully Created"))
         return HttpResponseRedirect(instance.get_absolute_url())
     elif form.errors:
-        messages.error(request, "Not Successfully Edited")
+        messages.error(request, _("Not Successfully Edited"))
     else:
         pass
 
@@ -90,10 +91,10 @@ def project_update(request, slug=None):
         instance = form.save(commit=False)
         instance.author = request.user
         instance.save()
-        messages.success(request, "Successfully Edited")
+        messages.success(request, _("Successfully Edited"))
         return HttpResponseRedirect(instance.get_absolute_url())
     elif form.errors:
-        messages.error(request, "Not Successfully Edited")
+        messages.error(request, _("Not Successfully Edited"))
     else:
         pass
 
@@ -110,5 +111,5 @@ def project_delete(request, slug=None):
     if not request.user.is_authenticated() or request.user != instance.author:
         raise Http404
     instance.delete()
-    messages.success(request, "Successfully Deleted")
+    messages.success(request, _("Successfully Deleted"))
     return redirect("projects:list")
