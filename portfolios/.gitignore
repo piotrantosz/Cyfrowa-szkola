@@ -1,6 +1,7 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+*.pyc
 *$py.class
 
 # C extensions
@@ -96,3 +97,5 @@ db.sqlite3
 
 # Media
 media_cdn/*
+static/css/*
+
