@@ -3,11 +3,13 @@
 
   &__header {
     background: #eeb324 center / cover no-repeat;
-    height: 400px;
     color: white;
     text-align: center;
     line-height: 400px;
     vertical-align: middle;
+    word-wrap: break-word;
+    padding-right: 20px;
+    padding-left: 20px;
 
     h1 {
       padding-top: 150px;
@@ -24,6 +26,7 @@
       text-transform: uppercase;
       font-size: 12px;
       font-weight: 300;
+      padding-bottom: 150px;
 
       .divider {
         margin-left: 3px;
@@ -105,6 +108,11 @@
 
     p{
       font-size: 19px;
+      margin-bottom: 0;
+    }
+
+    img {
+      height: auto !important;
     }
   }
 }

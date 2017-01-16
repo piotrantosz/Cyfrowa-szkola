@@ -41,7 +41,7 @@ def news_detail(request, id=None):
 def news_create(request):
     if not request.user.is_authenticated() or not request.user.is_staff:
         raise Http404
-    form = NewsForm(request.POST or None, request.FILES or None)
+    form = NewsForm(request.POST or None, request.FILES or None, label_suffix = "")
     if form.is_valid():
         instance = form.save(commit=False)
         instance.author = request.user
@@ -49,7 +49,7 @@ def news_create(request):
         messages.success(request, _("Successfully Created"))
         return HttpResponseRedirect(instance.get_absolute_url())
     elif form.errors:
-        messages.error(request, _("Not Successfully Edited"))
+        messages.error(request, _("Not Successfully Created"))
     else:
         pass
 
@@ -63,7 +63,7 @@ def news_update(request, id=None):
     instance = get_object_or_404(News, id=id)
     if not request.user.is_authenticated() or request.user != instance.author:
         raise Http404
-    form = NewsForm(request.POST or None, request.FILES or None, instance=instance)
+    form = NewsForm(request.POST or None, request.FILES or None, instance=instance, label_suffix="")
     if form.is_valid():
         instance = form.save(commit=False)
         instance.author = request.user

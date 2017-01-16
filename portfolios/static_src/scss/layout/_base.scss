@@ -10,6 +10,28 @@ body {
   height: 100%;
 }
 
+.callout {
+  z-index: 999;
+  margin-bottom: 0;
+  text-align: center;
+  border: none;
+
+  p {
+    font-weight: 300;
+    margin-bottom: 0;
+  }
+}
+
+.success {
+  background-color: #2DCC70 !important;
+  color: #ffffff !important;
+}
+
+.error {
+  background-color: #D91E18 !important;
+  color: #ffffff !important;
+}
+
 @media screen and (max-width: map-get($breakpoints, 'medium')) {
   body {
     margin-left: 0px;
@@ -17,6 +39,10 @@ body {
 
   .content {
     margin-top: 60px;
+  }
+
+  .callout {
+    margin-top: 52px;
   }
 }
 

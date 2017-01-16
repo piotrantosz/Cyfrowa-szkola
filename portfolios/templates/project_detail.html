@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% load urlify %}
 
 {% block head_title %}{{ instance.title }} | {{ block.super }}{% endblock head_title %}
 
@@ -22,7 +21,7 @@
     Share on Facebook
 </a>
 
-<a href="https://twitter.com/home?status={{ instance.content|truncatechars:20|urlify }}%20{{ request.build_absolute_uri }}">
+<a href="https://twitter.com/home?status=%20{{ request.build_absolute_uri }}">
     Share on Twitter
 </a>
 

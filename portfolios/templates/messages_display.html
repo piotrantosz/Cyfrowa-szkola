@@ -1,11 +1,9 @@
+{% load i18n %}
+
 {% if messages %}
-<div class="messages">
-    <ul>
-        {% for message in messages %}
-        <li
-                {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
-        </li>
-        {% endfor %}
-    </ul>
-</div>
+    {% for message in messages %}
+        <div class="{% if message.tags %}{{ message.tags }}{% endif %} callout small-12 columns" data-closable="slide-out-right">
+            <p>{{ message }}</p>
+        </div>
+    {% endfor %}
 {% endif %}

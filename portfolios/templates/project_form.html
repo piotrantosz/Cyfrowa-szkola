@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block head_title %}
-{% if instance.title %}{{ instance.title }}{% else %}Create{% endif %} | {{ block.super }}
+{% if instance.title %}{{ instance.title }}{% else %}{% blocktrans %}Create{% endblocktrans %}{% endif %} | {{ block.super }}
 {% endblock head_title %}
 
 {% block head_extra %}

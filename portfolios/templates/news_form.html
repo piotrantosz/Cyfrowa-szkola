@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block head_title %}
+    {% if instance.title %}{{ instance.title }}{% else %}{% blocktrans %}Create{% endblocktrans %}{% endif %} |
+    {{ block.super }}
+{% endblock head_title %}
+
+{% block head_extra %}
+    {% load wysiwyg %}
+    {% wysiwyg_setup %}
+{% endblock %}
+
+{% block content %}
+    <div class="form news-detail small-12 small-centered columns ">
+        <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+            <div class="news-detail__header">
+                <h1><input id="id_title" maxlength="120" name="title" type="text" required=""
+                           placeholder="{% blocktrans %}Title{% endblocktrans %}"></h1>
+                <p>
+                <span class="author">
+                    {% if request.user.get_full_name %}
+                        {{ request.user.get_full_name }}
+                    {% else %}
+                        {{ request.user }}
+                    {% endif %}
+                </span>
+                    <span class="divider">|</span>
+                <span class="date">
+                    {% now "F j Y, H:i" %}
+                </span>
+                </p>
+
+            </div>
+            <div class="news-detail__social">
+                <span class="fa fa-facebook"></span>
+                <span class="fa fa-twitter"></span>
+                <span class="fa fa-google"></span>
+            </div>
+            <div class="news-detail__content row column">
+                <label for="id_header_image">{% blocktrans %}Card image{% endblocktrans %}</label>
+                <input id="id_header_image" name="header_image" type="file" required="">
+                <hr>
+                <label for="id_content">{% blocktrans %}Content{% endblocktrans %}</label>
+                <textarea cols="40" id="id_content" name="content" rows="10"
+                          style="visibility: hidden; display: none;"></textarea>
+                {% wysiwyg_editor "id_content" %}
+                <input class="button" type="submit" value="Send"/>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
