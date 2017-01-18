@@ -1,17 +1,17 @@
 from __future__ import unicode_literals
 
+from django.conf import settings
+from django.contrib.auth.base_user import AbstractBaseUser
+from django.contrib.auth.models import PermissionsMixin
+from django.contrib.auth.models import UserManager
+from django.contrib.auth.validators import ASCIIUsernameValidator, UnicodeUsernameValidator
+from django.core.mail import send_mail
 from django.core.urlresolvers import reverse
 from django.db import models
 from django.db.models.signals import pre_save
-from django.utils.text import slugify
-from django.contrib.auth.models import PermissionsMixin
-from django.contrib.auth.base_user import AbstractBaseUser
-from django.utils.translation import ugettext_lazy as _
 from django.utils import six, timezone
-from django.core.mail import send_mail
-from django.conf import settings
-from django.contrib.auth.validators import ASCIIUsernameValidator, UnicodeUsernameValidator
-from django.contrib.auth.models import UserManager
+from django.utils.text import slugify
+from django.utils.translation import ugettext_lazy as _
 
 
 class User(AbstractBaseUser, PermissionsMixin):
@@ -32,9 +32,9 @@ class User(AbstractBaseUser, PermissionsMixin):
             'unique': _("A user with that username already exists."),
         },
     )
-    first_name = models.CharField(_('first name'), max_length=30, blank=False)
-    last_name = models.CharField(_('last name'), max_length=30, blank=False)
-    email = models.EmailField(_('email address'), blank=False)
+    first_name = models.CharField(_('first name'), max_length=30)
+    last_name = models.CharField(_('last name'), max_length=30)
+    email = models.EmailField(_('email address'))
     avatar = models.ImageField(null=True, blank=True)
     is_staff = models.BooleanField(
         _('staff status'),
@@ -87,10 +87,10 @@ class Project(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True)
     slug = models.SlugField(unique=True)
     title = models.CharField(max_length=120)
-    category = models.CharField(max_length=30, blank=False, default="")
+    category = models.CharField(max_length=30, default="")
     link = models.URLField(max_length=200, blank=True)
     content = models.TextField()
-    header_image = models.ImageField(null=True, blank=False)
+    header_image = models.ImageField(null=True)
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
 

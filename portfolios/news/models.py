@@ -9,7 +9,7 @@ class News(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True)
     title = models.CharField(max_length=120)
     content = models.TextField()
-    header_image = models.ImageField(null=True, blank=False)
+    header_image = models.ImageField(null=True)
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
 

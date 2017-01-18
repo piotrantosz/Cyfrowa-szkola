@@ -1,10 +1,12 @@
-from django.shortcuts import get_object_or_404, redirect, render, HttpResponse, HttpResponseRedirect
-from django.http import Http404
 from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from .models import News
-from .forms import NewsForm
+from django.http import Http404
+from django.shortcuts import get_object_or_404, redirect, render, HttpResponseRedirect
 from django.utils.translation import ugettext as _
+
+from .forms import NewsForm
+from .models import News
+
 
 def news_list(request):
     queryset_list = News.objects.all()
