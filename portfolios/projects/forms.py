@@ -35,8 +35,11 @@ class SignupForm(forms.Form):
                                                _('Last name')
                                            })
                                 )
+    birth_date = forms.DateField(required=True,
+                                 widget=forms.SelectDateWidget(years=range(1920, 2050)))  # Let's change it someday
 
     def signup(self, request, user):
         user.first_name = self.cleaned_data['first_name']
         user.last_name = self.cleaned_data['last_name']
+        user.birth_date = self.cleaned_data['birth_date']
         user.save()

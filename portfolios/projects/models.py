@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 
+from django import forms
 from django.conf import settings
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
@@ -9,6 +10,7 @@ from django.core.mail import send_mail
 from django.core.urlresolvers import reverse
 from django.db import models
 from django.db.models.signals import pre_save
+from django.forms.extras import widgets
 from django.utils import six, timezone
 from django.utils.text import slugify
 from django.utils.translation import ugettext_lazy as _
@@ -34,8 +36,12 @@ class User(AbstractBaseUser, PermissionsMixin):
     )
     first_name = models.CharField(_('first name'), max_length=30)
     last_name = models.CharField(_('last name'), max_length=30)
+    birth_date = forms.DateField(_('birth date'),widget=widgets.SelectDateWidget())
     email = models.EmailField(_('email address'))
     avatar = models.ImageField(null=True, blank=True)
+    header_image = models.ImageField(null=True, blank=True)
+    short_description = models.TextField(max_length=200, null=True, blank=True)
+    long_description = models.TextField(max_length=200, null=True, blank=True)
     is_staff = models.BooleanField(
         _('staff status'),
         default=False,
