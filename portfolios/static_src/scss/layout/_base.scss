@@ -32,6 +32,11 @@ body {
   color: #ffffff !important;
 }
 
+.info {
+  background-color: #eeb324 !important;
+  color: #ffffff !important;
+}
+
 @media screen and (max-width: map-get($breakpoints, 'medium')) {
   body {
     margin-left: 0px;

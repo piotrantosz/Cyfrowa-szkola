@@ -4,32 +4,11 @@
 {% block head_title %}{% blocktrans %}News{% endblocktrans %}{% endblock head_title %}
 
 {% block content %}
-{% for obj in object_list %}
-    <h4><a href='{{ obj.get_absolute_url }}'>{{ obj.title }}</a></h4>
-    <p>{{ obj.id }} </p>
-    <p>{{ obj.content|striptags }}</p>
-    <p>{{ obj.updated }}</p>
-    <p>{{ obj.author }}</p>
-{% endfor %}
-
-
-        <ul class="pagination">
-            {% if users.has_previous %}
-                <li><a href="?page={{ users.previous_page_number }}">&laquo;</a></li>
-            {% else %}
-                <li class="disabled"><span>&laquo;</span></li>
-            {% endif %}
-            {% for i in users.paginator.page_range %}
-                {% if users.number == i %}
-                    <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
-                {% else %}
-                    <li><a href="?page={{ i }}">{{ i }}</a></li>
-                {% endif %}
-            {% endfor %}
-            {% if users.has_next %}
-                <li><a href="?page={{ users.next_page_number }}">&raquo;</a></li>
-            {% else %}
-                <li class="disabled"><span>&raquo;</span></li>
-            {% endif %}
-        </ul>
+    {% for obj in object_list %}
+        <h4><a href='{{ obj.get_absolute_url }}'>{{ obj.title }}</a></h4>
+        <p>{{ obj.id }} </p>
+        <p>{{ obj.content|striptags }}</p>
+        <p>{{ obj.updated }}</p>
+        <p>{{ obj.author }}</p>
+    {% endfor %}
 {% endblock content %}

@@ -1,6 +1,8 @@
 from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin
+from django.contrib.auth.models import User
 
-from .models import Project
+from .models import Project, User
 
 
 class ProjectAdmin(admin.ModelAdmin):
@@ -14,4 +16,11 @@ class ProjectAdmin(admin.ModelAdmin):
         model = Project
 
 
+class CustomUserAdmin(UserAdmin):
+    class Meta:
+        model = User
+
+
+
+admin.site.register(User, CustomUserAdmin)
 admin.site.register(Project, ProjectAdmin)

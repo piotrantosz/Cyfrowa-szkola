@@ -1,6 +1,6 @@
 $regal-blue: #034378;
 $san-juan: #2d4e68;
-$bermuda: #eeb324;
+$yellow: #eeb324;
 $white: #fff;
 $black: #000;
 $lato: 'Lato', sans-serif;
@@ -48,7 +48,7 @@ $lato: 'Lato', sans-serif;
   }
 
   &__date {
-    background-color: $bermuda;
+    background-color: $yellow;
     color: $white;
     left: 0;
     padding: 0.8em;
@@ -141,7 +141,7 @@ $lato: 'Lato', sans-serif;
     }
 
     li {
-      background-color: $bermuda;
+      background-color: $yellow;
       float: left;
       height: 60px;
       position: relative;

@@ -1,12 +1,12 @@
 from __future__ import unicode_literals
 
-from django.contrib.auth.models import User
+from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.db import models
 
 
 class News(models.Model):
-    author = models.ForeignKey(User, null=True, blank=True)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True)
     title = models.CharField(max_length=120)
     content = models.TextField()
     header_image = models.ImageField(null=True, blank=False)
