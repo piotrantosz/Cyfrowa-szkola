@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block head_title %}{{ author.first_name }}{% endblock head_title %}
+
+{% block content %}
+    <div class="user small-12 small-centered columns ">
+        <div class="user__header" style="background: url('{% if author.header_image %}{{ author.header_image.url }}{% else %}http://i.imgur.com/CUGHDT4.jpg{% endif %}') center / cover no-repeat;">
+            <div class="avatar">
+                <img src="
+                {% if author.avatar %}
+                    {{ author.avatar.url }}
+                {% else %}
+                    {% static '/img/avatar.png' %}
+                {% endif %}
+                ">
+            </div>
+        </div>
+        <div class="row column">
+            <div class="user__detail small-12 columns">
+                <div class="greeting">
+                    <h1>{% blocktrans %}Hello{% endblocktrans %}{% if user.is_authenticated %} {{ user.first_name }}{% endif %}!
+                        {% blocktrans %}I'm{% endblocktrans %} {{ author.get_full_name }}
+                    </h1>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.url }}">
+                        <button class="button button--facebook">{% blocktrans %}Share on
+                            Facebook{% endblocktrans %}</button>
+                    </a>
+                    <a href="mailto:{{ author.email }}">
+                        <button class="button button--contact">{% blocktrans %}Contact me{% endblocktrans %}</button>
+                    </a>
+                </div>
+                {# We are assigning variables to avoid multiple database requests #}
+                {% with sd=author.short_description ld=author.long_description %}
+                {% if sd or ld %}
+                <div class="description">
+                    {% if sd %}
+                        <h2>{% blocktrans %}Short information{% endblocktrans %}:</h2>
+                        <p>{{ author.short_description }}</p>
+                    {% endif %}
+                    {% if ld %}
+                        <h2>{% blocktrans %}Long information{% endblocktrans %}:</h2>
+                        <p>{{ author.long_description }}</p>
+                    {% endif %}
+                </div>
+                {% endif %}
+                {% endwith %}
+            </div>
+            <div class="user__projects small-12 columns">
+                {% for obj in object_list %}
+                <div class="project-card small-12 columns">
+                    <div class="project-card__content" style="background: url('{{ obj.header_image.url }}') center / cover no-repeat;">
+                        <div class="card-header">
+                            <h3><a href='{{ obj.get_absolute_url }}'>{{ obj.title }}</a></h3>
+                        </div>
+                        <div class="card-data">
+                            <div class="meta">
+                                <p class="small-12 medium-6 small-centered medium-uncentered columns"><span>{% blocktrans %}Date{% endblocktrans %}</span>: {{ obj.updated }}</p>
+                                <p class="small-12 medium-6 small-centered medium-uncentered columns"><span>{% blocktrans %}Category{% endblocktrans %}</span>: {{ obj.category }}</p>
+                            </div>
+                            <div class="small-12 columns">
+                                <p>{{ obj.content|striptags|truncatechars:500 }}</p>
+                                <div class="buttons">
+                                    <a href="{{ obj.get_absolute_url }}">
+                                        <span class="fa-stack fa-lg">
+                                          <i class="fa fa-circle fa-stack-2x zoom-background"></i>
+                                          <i class="fa fa-ellipsis-h fa-stack-1x"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

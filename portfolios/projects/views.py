@@ -1,22 +1,20 @@
 from django.contrib import messages
-from django.contrib.auth.models import User
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import Http404
 from django.shortcuts import get_object_or_404, redirect, render, HttpResponseRedirect
 from django.utils.translation import ugettext as _
 
 from .forms import ProjectForm
-from .models import Project
+from .models import Project, User
 
 
 def user_detail(request, user_id):
     queryset_list = Project.objects.filter(author=user_id)
-
+    user = User.objects.get(id=user_id)
     context = {
         "object_list": queryset_list,
-        "title": "List",
+        "author": user,
     }
-    return render(request, "project_list.html", context)
+    return render(request, "user_detail.html", context)
 
 
 def user_list(request):
