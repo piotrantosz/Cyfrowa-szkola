@@ -2,6 +2,7 @@ from django.contrib import messages
 from django.http import Http404
 from django.shortcuts import get_object_or_404, redirect, render, HttpResponseRedirect
 from django.utils.translation import ugettext as _
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from .forms import ProjectForm
 from .models import Project, User
@@ -18,10 +19,21 @@ def user_detail(request, user_id):
 
 
 def user_list(request):
-    users = User.objects.all()
-    for user in users:
+    users_list = User.objects.all()
+    for user in users_list:
         if not Project.objects.filter(author=user):
-            users = users.exclude(username=user)  # Remove users without posts
+            users_list = users_list.exclude(username=user)  # Remove users without posts
+    paginator = Paginator(users_list, 30)  # Show 30 users on page
+    page = request.GET.get('page')
+    try:
+        users = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        users = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        users = paginator.page(paginator.num_pages)
+
     context = {
         "users": users,
     }

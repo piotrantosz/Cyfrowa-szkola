@@ -35,11 +35,17 @@ class SignupForm(forms.Form):
                                                _('Last name')
                                            })
                                 )
-    birth_date = forms.DateField(required=True,
-                                 widget=forms.SelectDateWidget(years=range(1920, 2050)))  # Let's change it someday
+
+    future_job = forms.CharField(max_length=40,
+                                 required=True,
+                                 widget=forms.TextInput(
+                                     attrs={'placeholder':
+                                                _('Who you want to be in future? (job)')
+                                            })
+                                 )
 
     def signup(self, request, user):
         user.first_name = self.cleaned_data['first_name']
         user.last_name = self.cleaned_data['last_name']
-        user.birth_date = self.cleaned_data['birth_date']
+        user.future_job = self.cleaned_data['future_job']
         user.save()

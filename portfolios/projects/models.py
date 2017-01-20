@@ -36,12 +36,12 @@ class User(AbstractBaseUser, PermissionsMixin):
     )
     first_name = models.CharField(_('first name'), max_length=30)
     last_name = models.CharField(_('last name'), max_length=30)
-    birth_date = forms.DateField(_('birth date'),widget=widgets.SelectDateWidget())
     email = models.EmailField(_('email address'))
     avatar = models.ImageField(null=True, blank=True)
     header_image = models.ImageField(null=True, blank=True)
     short_description = models.TextField(max_length=200, null=True, blank=True)
     long_description = models.TextField(max_length=3000, null=True, blank=True)
+    future_job = models.CharField(max_length=40, default="")
     is_staff = models.BooleanField(
         _('staff status'),
         default=False,
@@ -66,6 +66,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     class Meta:
         verbose_name = _('user')
         verbose_name_plural = _('users')
+        ordering = ['-date_joined']
 
     def clean(self):
         super(User, self).clean()
@@ -87,6 +88,9 @@ class User(AbstractBaseUser, PermissionsMixin):
         Sends an email to this User.
         """
         send_mail(subject, message, from_email, [self.email], **kwargs)
+
+    def get_user_url(self):
+        return reverse("projects:user_detail", kwargs={"user_id": self.id})
 
 
 class Project(models.Model):

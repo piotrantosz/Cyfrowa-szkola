@@ -1,11 +1,47 @@
 {% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block head_title %}{% blocktrans %}Portfolios{% endblocktrans %}{% endblock head_title %}
 
 {% block content %}
+    <div class="users small-12 columns">
     {% for user in users %}
-        {% if user.get_full_name %}
-            {{ user.get_full_name }}
-        {% else %}
-            {{ user.username }}
-        {% endif %}
+        <div class="small-12 medium-12 large-4 columns">
+            <div class="users-card columns">
+                <div class="users-card__image" style="background: url('{% if author.header_image %}{{ author.header_image.url }}{% else %}http://i.imgur.com/ARLq9dz.png{% endif %}') center / cover no-repeat;">
+                    <a href="{{ user.get_user_url }}">
+                        <img src="
+                        {% if author.avatar %}
+                            {{ author.avatar.url }}
+                        {% else %}
+                            {% static '/img/avatar.png' %}
+                        {% endif %}
+                        ">
+                    </a>
+                </div>
+                <div class="users-card__content">
+                    <a href="{{ user.get_user_url }}" class="name">{{ user.get_full_name }}</a>
+                    <p>{% blocktrans %}Joined{% endblocktrans %}: <span class="date">{{ user.date_joined|date:"M d, Y" }}</span></p>
+                    <p>{% blocktrans %}I want to be{% endblocktrans %}: <span class="job">{{ user.future_job }}</span></p>
+                </div>
+            </div>
+        </div>
     {% endfor %}
+    </div>
+    <div class="small-12 small-centered columns pagination users-pages">
+        <span class="step-links">
+            {% if users.has_previous %}
+                <a href="?page={{ users.previous_page_number }}"><span class="fa fa-arrow-left"></span></a>
+            {% endif %}
+
+            <span class="current">
+                {% blocktrans %}Page{% endblocktrans %} {{ users.number }} {% blocktrans %}of{% endblocktrans %} {{ users.paginator.num_pages }}
+            </span>
+
+            {% if users.has_next %}
+                <a href="?page={{ users.next_page_number }}"><span class="fa fa-arrow-right"></span></a>
+            {% endif %}
+        </span>
+    </div>
 {% endblock content %}
