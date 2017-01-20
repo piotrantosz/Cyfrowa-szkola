@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block head_title %}{{ instance.title }} | {{ block.super }}{% endblock head_title %}
 
@@ -34,6 +35,10 @@
         </div>
         <div class="project-detail__content row column">
             {{ instance.content|safe }}
+            <div class="extra">
+                <p><span>{% blocktrans %}Category{% endblocktrans %}: </span>{{ instance.category }}</p>
+                <p><span>{% blocktrans %}Updated{% endblocktrans %}: </span>{{ instance.updated }}</p>
+            </div>
         </div>
     </div>
 {% endblock content %}
