@@ -12,7 +12,6 @@ class ProjectForm(ModelForm):
         fields = [
             "title",
             "category",
-            "link",
             "content",
             "header_image",
         ]

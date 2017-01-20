@@ -17,6 +17,8 @@ class ProjectAdmin(admin.ModelAdmin):
 
 
 class CustomUserAdmin(UserAdmin):
+    list_display = ["username", "first_name", "last_name", "short_description", "long_description", "future_job"]
+    list_editable = ["first_name", "last_name", "short_description", "long_description", "future_job"]
     class Meta:
         model = User
 
