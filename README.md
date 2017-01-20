@@ -51,10 +51,10 @@ Static files root is static_cdn to generate them:
 
 ## Project URL's
 
-projects/ - list of projects
+projects/ - list of uers with projects
 
- * /id - project detail
+ * /user/id - user detail (with his projects)
+ * /slug - project detail
  * /create - create project
- * /id/edit - edit project
+ * /slug/edit - edit project
 
- id == slug
