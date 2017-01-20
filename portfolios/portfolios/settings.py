@@ -140,17 +140,10 @@ CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.j
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
 
-CKEDITOR_CONFIGS = {
-    'default': {
-        'toolbar': 'Basic',
-        'height': 300,
-        'width': 300,
-    },
-}
-
 # Email backend
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Account settings
 ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = True
 ACCOUNT_SIGNUP_FORM_CLASS = 'projects.forms.SignupForm'

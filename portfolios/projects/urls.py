@@ -3,7 +3,6 @@ from django.conf.urls import url
 from .views import (
     user_detail,
     user_list,
-    project_list,
     project_create,
     project_detail,
     project_update,
@@ -11,8 +10,7 @@ from .views import (
 )
 
 urlpatterns = [
-    url(r'^$', project_list, name="list"),
-    url(r'^users/$', user_list),
+    url(r'^$', user_list, name="list"),
     url(r'^create/', project_create),
     url(r'^user/(?P<user_id>\d+)/$', user_detail, name='user_detail'),
     url(r'^(?P<slug>[\w-]+)/$', project_detail, name='detail'),

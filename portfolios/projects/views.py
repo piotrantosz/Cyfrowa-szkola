@@ -40,15 +40,6 @@ def user_list(request):
     return render(request, "user_list.html", context)
 
 
-def project_list(request):
-    queryset_list = Project.objects.all()
-    context = {
-        "object_list": queryset_list,
-        "title": "Projects",
-    }
-    return render(request, "project_list.html", context)
-
-
 def project_create(request):
     if not request.user.is_authenticated():
         raise Http404
