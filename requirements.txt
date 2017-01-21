@@ -1,0 +1,14 @@
+django-allauth
+django-ckeditor
+django-wysiwyg
+html5lib
+oauthlib
+olefile
+Pillow
+python-openid
+pytidylib
+requests
+requests-oauthlib
+webencodings
+pytz
+django-recaptcha

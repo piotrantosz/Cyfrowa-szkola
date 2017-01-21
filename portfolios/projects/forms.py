@@ -1,11 +1,13 @@
 from django import forms
 from django.forms import ModelForm
 from django.utils.translation import ugettext_lazy as _
+from captcha.fields import ReCaptchaField
 
 from .models import Project
 
 
 class ProjectForm(ModelForm):
+    captcha = ReCaptchaField()
     class Meta:
         model = Project
         exclude = ('author',)

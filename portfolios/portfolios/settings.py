@@ -46,6 +46,7 @@ INSTALLED_APPS = (
     'django_wysiwyg',
     'ckeditor',
     'ckeditor_uploader',
+    'captcha'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -142,6 +143,10 @@ CKEDITOR_UPLOAD_PATH = "uploads/"
 
 # Email backend
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# reCaptcha settings
+RECAPTCHA_PUBLIC_KEY = ''
+RECAPTCHA_PRIVATE_KEY = ''
 
 # Account settings
 ACCOUNT_EMAIL_REQUIRED = True

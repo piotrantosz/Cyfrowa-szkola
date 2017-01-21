@@ -1,3 +1,4 @@
+
 # Vedius-portfolios
 Django application which allows multiple users (students) to share their projects and create their online portfolio.
 
@@ -30,6 +31,17 @@ To configure Facebook and Google authentication generate ID's and secret keys.
 * Google - <https://developers.google.com/identity/sign-in/web/devconsole-project>
 * Facebook - <http://developers.facebook.com>
 
+To configure ReCaptcha:
+* Get a public key and private key from <https://www.google.com/recaptcha/intro/index.html>
+* Add following lines to `settings.py`:
+    
+        RECAPTCHA_PUBLIC_KEY = 'MyRecaptchaKey123'
+        RECAPTCHA_PRIVATE_KEY = 'MyRecaptchaPrivateKey456'
+
+* Wherever you need a Captcha, add a field to the form:
+    
+        from captcha.fields import ReCaptchaField
+        captcha = ReCaptchaField()
 
 Admin panel
 
@@ -57,4 +69,5 @@ projects/ - list of uers with projects
  * /slug - project detail
  * /create - create project
  * /slug/edit - edit project
+
 
