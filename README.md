@@ -7,21 +7,8 @@ Using Social Accounts validation (allauth - Google, Facebook and local accounts)
 
 ## Requirements
 
-pip:
 
-* django-allauth
-* django-ckeditor
-* django-wysiwyg
-* html5lib
-* oauthlib
-* olefile
-* Pillow
-* python-openid
-* pytidylib
-* requests
-* requests-oauthlib
-* webencodings
-* pytz
+`pip install -r requirements.txt`
 
 ## Configuration
 

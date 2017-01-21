@@ -147,6 +147,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # reCaptcha settings
 RECAPTCHA_PUBLIC_KEY = ''
 RECAPTCHA_PRIVATE_KEY = ''
+NOCAPTCHA = True
 
 # Account settings
 ACCOUNT_EMAIL_REQUIRED = True
