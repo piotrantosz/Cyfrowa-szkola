@@ -68,6 +68,14 @@
                                           <i class="fa fa-ellipsis-h fa-stack-1x"></i>
                                         </span>
                                     </a>
+                                    {% if request.user.is_authenticated and request.user == obj.author %}
+                                    <a href="{{ obj.get_absolute_url }}">
+                                        <span class="fa-stack fa-lg">
+                                          <i class="fa fa-circle fa-stack-2x zoom-background"></i>
+                                          <i class="fa fa-pencil fa-stack-1x"></i>
+                                        </span>
+                                    </a>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>

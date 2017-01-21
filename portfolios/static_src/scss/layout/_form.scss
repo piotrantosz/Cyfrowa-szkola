@@ -1,7 +1,7 @@
 .form {
   padding-top: 42px;
 
-  .news-detail__header {
+  .news-detail__header{
     input {
       max-width: 50%;
       margin: auto;
@@ -59,13 +59,102 @@
       font-size: 14px;
     }
   }
+
+
+  .project-detail__header {
+    background-color: #fffacd;
+    display: block;
+
+    .meta {
+      margin: 0 !important;
+
+      h1 {
+        margin: auto;
+        margin-bottom: 15px;
+        max-width: 50%;
+      }
+
+      input {
+        max-width: 50%;
+        margin: auto;
+        font-size: 38px;
+        font-weight: 700;
+        height: 4rem;
+        background-color: transparent;
+        color: white;
+        box-shadow: none;
+        border: 1px solid #ededed;
+
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+          color: #ededed;
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+          color: #ededed;
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+          color: #ededed;
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+          color: #ededed;
+        }
+      }
+    }
+  }
+
+  .project-detail__content {
+    span {
+      font-weight: 300;
+    }
+    hr {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    input[type=submit] {
+      float: right;
+      color: white;
+      background-color: #eeb324;
+      -webkit-appearance: button;
+      padding-right: 20px;
+      padding-left: 20px;
+      margin-top: 32px;
+    }
+
+    label {
+      margin-bottom: 12px;
+      font-size: 16px;
+      font-weight: 300;
+    }
+
+    input {
+      font-weight: 300;
+      font-size: 14px;
+    }
+
+    .g-recaptcha {
+      margin-top: 12px;
+    }
+  }
 }
 
 @media screen and (max-width: map-get($breakpoints, 'medium')) {
   .form {
+    .g-recaptcha {
+      transform: scale(0.85);
+      transform-origin: left top;
+    }
+
     .news-detail__header {
       input {
         max-width: 80%;
+      }
+    }
+
+    .project-detail__header {
+      .meta {
+        input {
+          max-width: 80%;
+        }
       }
     }
   }

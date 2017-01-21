@@ -24,6 +24,10 @@
             </div>
         </div>
         <div class="project-detail__social">
+            {% if request.user.is_authenticated and request.user == instance.author %}
+            <a href="mailto:{{ instance.author.email }}?subject={{ instance.title }}"><span
+                    class="fa fa-pencil active"></span></a>
+            {% endif %}
             <a href="mailto:{{ instance.author.email }}?subject={{ instance.title }}"><span
                     class="fa fa-envelope"></span></a>
             <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}"><span
