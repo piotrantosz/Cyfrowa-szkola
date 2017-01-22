@@ -69,11 +69,17 @@
                                         </span>
                                     </a>
                                     {% if request.user.is_authenticated and request.user == obj.author %}
-                                    <a href="{{ obj.get_absolute_url }}">
+                                    <a href="{{ obj.get_absolute_url }}edit">
                                         <span class="fa-stack fa-lg">
                                           <i class="fa fa-circle fa-stack-2x zoom-background"></i>
                                           <i class="fa fa-pencil fa-stack-1x"></i>
                                         </span>
+                                    </a>
+                                    <a href="{{ obj.get_absolute_url }}delete">
+                                    <span class="fa-stack fa-lg">
+                                      <i class="fa fa-circle fa-stack-2x zoom-background"></i>
+                                      <i class="fa fa-trash fa-stack-1x"></i>
+                                    </span>
                                     </a>
                                     {% endif %}
                                 </div>

@@ -1,0 +1,203 @@
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url(http://i.imgur.com/O0cygSL.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: -999;
+}
+.account {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% + 85px), -50%);
+  .account-form {
+    background: #ffffff;
+    padding: 20px 0 20px 0;
+    box-sizing: border-box;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+
+    &__header {
+      h1 {
+        position: relative;
+        z-index: 1;
+        border-left: 5px solid #eeb324;
+        margin: 0 0 20px;
+        padding: 10px 0 10px 50px;
+        color: #eeb324;
+        font-size: 32px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+
+    &__description {
+      font-weight: 300;
+      margin-right: 55px;
+      margin-left: 55px;
+
+      .login-or {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 20px;
+        margin-top: 25px;
+        letter-spacing: 0.5px;
+
+        &:before {
+          border-top: 2px solid #dfdfdf;
+          content: "";
+          margin: 0 auto; /* this centers the line to the full width specified */
+          position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+          top: 50%;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          z-index: -1;
+        }
+
+        span {
+          /* to hide the lines from behind the text, you have to set the background color the same as the container */
+          background: #fff;
+          padding: 0 15px;
+        }
+      }
+
+      ul {
+        list-style-type: none;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+        white-space: nowrap;
+
+        li {
+          color: #ffffff;
+          display: inline-block;
+          width: 50%;
+          white-space: normal;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          font-weight: 400;
+          letter-spacing: 0.6px;
+
+          a {
+            color: inherit;
+            text-decoration: inherit;
+          }
+
+          &:nth-child(1) {
+            background-color: #3b5998;
+
+            &:hover {
+              background-color: #627AAD
+            }
+          }
+
+          &:nth-child(2) {
+            background-color: #dd4b39;
+
+            &:hover {
+              background-color: #db5c4e;
+            }
+          }
+        }
+      }
+    }
+
+    &__form {
+      margin-right: 55px;
+      margin-left: 55px;
+
+      label {
+        font-size: 16px;
+        font-weight: 300;
+      }
+
+      .buttons-form {
+        .button {
+          margin: 0;
+        }
+
+        .primary {
+          background-color: #eeb324;
+
+          &:hover {
+            transition: all 500ms ease;
+            background-color: #eaa80e;
+          }
+        }
+
+        .secondary {
+          background-color: #00a2d8;
+
+          &:hover {
+            transition: all 500ms ease;
+            background-color: #0093c4;
+          }
+        }
+      }
+
+      label[for=id_remember] {
+        display: inline-block;
+        margin-right: 5px;
+      }
+
+      #id_remember {
+        display: inline-block;
+        margin: 0;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints, 'medium')) {
+  .background {
+    background: transparent;
+  }
+  .account {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0);
+
+    .account-form {
+      margin-top: 52px;
+      position: absolute;
+      top: 0;
+      transform: translateY(0);
+      box-shadow: none;
+
+      &__header {
+        text-align: center;
+
+        h1 {
+          padding-left: 0;
+        }
+      }
+
+      &__description {
+        margin-right: 20px;
+        margin-left: 20px;
+      }
+
+      &__form {
+        margin-right: 20px;
+        margin-left: 20px;
+
+        .button {
+          width: 100%;
+          display: block;
+          margin: 0;
+          margin-bottom: 5px !important;
+        }
+      }
+    }
+  }
+}

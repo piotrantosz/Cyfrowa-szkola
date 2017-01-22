@@ -25,7 +25,7 @@
     </li>
 </a>
 <a href="{% url 'account_login' %}">
-    <li>
+    <li {% if 'accounts' in request.path %}class="active"{% else %}{% endif %}>
         <div class="icon icon--account"></div>
         <div class="title">{% blocktrans %}My profile{% endblocktrans %}</div>
     </li>
