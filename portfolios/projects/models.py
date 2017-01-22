@@ -41,7 +41,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     header_image = models.ImageField(null=True, blank=True)
     short_description = models.TextField(max_length=200, null=True, blank=True)
     long_description = models.TextField(max_length=3000, null=True, blank=True)
-    future_job = models.CharField(max_length=40)
+    future_job = models.CharField(max_length=40, default=_('Professionalist'))
     is_staff = models.BooleanField(
         _('staff status'),
         default=False,
