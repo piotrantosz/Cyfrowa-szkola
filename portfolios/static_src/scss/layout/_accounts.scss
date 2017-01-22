@@ -23,7 +23,12 @@
     transition: .3s ease;
 
     &__header {
+      &.double-header {
+        margin-top: 20px;
+      }
+
       h1 {
+        word-wrap: break-word;
         position: relative;
         z-index: 1;
         border-left: 5px solid #eeb324;
