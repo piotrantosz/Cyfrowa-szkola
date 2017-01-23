@@ -45,6 +45,9 @@
                         <a href="{% url 'projects:user_detail' user_id=user.id %}"
                            class="button secondary">{% trans 'View profile' %}</a>
                         <a href="{% url 'projects:create' %}" class="button secondary">{% trans 'Add project' %}</a>
+                        {% if request.user.is_staff %}
+                        <a href="{% url 'news:create' %}" class="button secondary">{% trans 'Add news' %}</a>
+                        {% endif %}
                         <a href="{% url 'account_logout' %}" class="button secondary">{% trans 'Logout' %}</a>
                     </div>
                 </div>
