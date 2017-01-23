@@ -2,7 +2,12 @@
 {% load i18n %}
 {% load static %}
 
-{% block head_title %}{% blocktrans %}Portfolios{% endblocktrans %}{% endblock head_title %}
+{% block head_title %}{% trans 'Portfolios' %}{% endblock head_title %}
+{% block head_title_og %}{% trans 'Portfolios' %}{% endblock head_title_og %}
+{% block meta_description %}
+    {% trans 'Find users with amazing projects and help them became specialists' %}{% endblock meta_description %}
+{% block head_desc_og %}
+    {% trans 'Find users with amazing projects and help them became specialists' %}{% endblock head_desc_og %}
 
 {% block content %}
     <div class="users small-12 columns">

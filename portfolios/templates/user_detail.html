@@ -2,7 +2,12 @@
 {% load i18n %}
 {% load static %}
 
-{% block head_title %}{{ author.first_name }}{% endblock head_title %}
+{% block head_title %}{{ author.get_full_name }}{% endblock head_title %}
+{% block head_title_og %}{{ author.get_full_name }}{% endblock head_title_og %}
+{% block meta_description %}
+    {{ author.short_description }}{% endblock meta_description %}
+{% block head_desc_og %}
+    {{ author.short_description }}{% endblock head_desc_og %}
 
 {% block content %}
     <div class="user small-12 small-centered columns ">

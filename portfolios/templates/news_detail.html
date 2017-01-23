@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 
-{% block head_title %}{{ instance.title }} | {{ block.super }}{% endblock head_title %}
+{% block head_title %}{{ instance.title }}{% endblock head_title %}
+{% block head_title_og %}{{ instance.title }}{% endblock head_title_og %}
+{% block meta_description %}
+    {{ instance.content|striptags|truncatechars:200 }}{% endblock meta_description %}
+{% block head_desc_og %}
+    {{ instance.content|striptags|truncatechars:200 }}{% endblock head_desc_og %}
 
 {% block content %}
     <div class="news-detail small-12 small-centered columns ">

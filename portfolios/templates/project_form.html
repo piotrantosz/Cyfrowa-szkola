@@ -2,8 +2,7 @@
 {% load i18n %}
 
 {% block head_title %}
-    {% if instance.title %}{{ instance.title }}{% else %}{% blocktrans %}Create{% endblocktrans %}{% endif %} |
-    {{ block.super }}
+    {% if instance.title %}{{ instance.title }}{% else %}{% blocktrans %}Create{% endblocktrans %}{% endif %}
 {% endblock head_title %}
 
 {% block head_extra %}

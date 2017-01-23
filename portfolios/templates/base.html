@@ -5,16 +5,20 @@
 <head>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="viewport" content="width=device-width">
-    <title>{% block head_title %}{% blocktrans %}Projects{% endblocktrans %}{% endblock head_title %}</title>
+
+    <title>{% block head_title %}{% blocktrans %}Portfolios Vedius{% endblocktrans %}{% endblock head_title %}</title>
+    <meta property=”og:description” content="{% block head_desc_og %}{% endblock head_desc_og %}"/>
+    <meta name="description"
+          content="{% block meta_description %}{% endblock meta_description %}">
+    <meta property=”og:title” content="{% block head_title_og %}{% trans 'Vedius Portfolios' %}{% endblock head_title_og %}"/>
+
     <link rel="stylesheet" href="{% static '/css/app.css' %}">
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/notie/dist/notie.min.css">
-    {% block head_extra %}{% endblock head_extra %}
+
     <script src="https://use.fontawesome.com/9e66c65465.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
 </head>
 <body>
-
 <div class="menu">
     <div class="menu__logo">
         {% block menu_logo %}
