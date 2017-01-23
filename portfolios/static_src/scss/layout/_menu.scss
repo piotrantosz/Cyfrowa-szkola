@@ -6,6 +6,7 @@
   height: 100vh;
   overflow: hidden;
   position: fixed;
+  z-index: 9999;
 
   &__logo {
     padding: 45px;
@@ -46,6 +47,10 @@
       width: 70px;
       position: relative;
 
+      &--about {
+        background-image: url(http://i.imgur.com/NUDhmce.png);
+      }
+
       &--home {
         background-image: url(http://i.imgur.com/AtOsGfK.png);
       }
@@ -54,7 +59,7 @@
         background-image: url(http://i.imgur.com/au1q8nr.png);
       }
 
-      &--about {
+      &--howto {
         background-image: url(http://i.imgur.com/xpFZkct.png);
       }
 
@@ -70,6 +75,11 @@
     .active {
       background-color: #00a2d8;
 
+      .icon--about {
+        transition: all 300ms ease;
+        background-image: url(http://i.imgur.com/10wBix7.png);
+      }
+
       .icon--home {
         transition: all 300ms ease;
         background-image: url(http://i.imgur.com/fYMZwXB.png);
@@ -80,7 +90,7 @@
         background-image: url(http://i.imgur.com/zqK5yje.png)
       }
 
-      .icon--about {
+      .icon--howto {
         transition: all 300ms ease;
         background-image: url(http://i.imgur.com/YV3QqLc.png)
       }
@@ -104,6 +114,10 @@
       &:hover {
         background-color: #00a2d8;
 
+        .icon--about {
+          background-image: url(http://i.imgur.com/10wBix7.png);
+        }
+
         .icon--home {
           transition: all 300ms ease;
           background-image: url(http://i.imgur.com/fYMZwXB.png);
@@ -114,7 +128,7 @@
           background-image: url(http://i.imgur.com/zqK5yje.png)
         }
 
-        .icon--about {
+        .icon--howto {
           transition: all 300ms ease;
           background-image: url(http://i.imgur.com/YV3QqLc.png)
         }
