@@ -6,6 +6,35 @@
     float: left !important;
   }
 
+  .information-card {
+    text-align: center;
+
+    &__button {
+      img {
+        margin-top: 140px;
+        height: 140px;
+        width: 140px;
+        border-radius: 50%;
+      }
+    }
+
+    &__text {
+      height: 80px;
+      text-align: center;
+      padding-top: 20px;
+      color: #222;
+      text-overflow: ellipsis;
+
+      .add-project {
+        text-transform: uppercase;
+        text-decoration: inherit;
+        color: inherit;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+
   .users-card {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: all 0.3s cubic-bezier(.25, .8, .25, 1);

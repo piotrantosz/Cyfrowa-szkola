@@ -6,6 +6,20 @@
 
 {% block content %}
     <div class="users small-12 columns">
+        {% if user.is_authenticated %}
+        <div class="small-12 medium-12 large-4 columns">
+            <div class="users-card information-card columns">
+                <a href="{% url 'projects:create' %}">
+                    <div class="information-card__button">
+                        <img src="{% static 'img/cross.png' %}">
+                    </div>
+                    <div class="information-card__text">
+                        <a class="add-project">{% trans 'Create new project' %}</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        {% endif %}
     {% for user in users %}
         <div class="small-12 medium-12 large-4 columns">
             <div class="users-card columns">
