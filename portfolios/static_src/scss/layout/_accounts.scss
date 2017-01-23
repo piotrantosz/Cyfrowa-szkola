@@ -144,6 +144,12 @@
         margin-bottom: 16px;
       }
 
+      p {
+        a {
+          word-wrap: break-word;
+        }
+      }
+
       label {
         font-size: 16px;
         font-weight: 300;
