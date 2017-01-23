@@ -4,7 +4,7 @@ from django.utils.translation import ugettext_lazy as _
 from captcha.fields import ReCaptchaField
 from django.core.exceptions import ValidationError
 
-from .models import Project
+from .models import Project, User
 
 
 class ProjectForm(ModelForm):

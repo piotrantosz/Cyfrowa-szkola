@@ -1,8 +1,8 @@
 from django.contrib import messages
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import Http404
 from django.shortcuts import get_object_or_404, redirect, render, HttpResponseRedirect
 from django.utils.translation import ugettext as _
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from .forms import ProjectForm
 from .models import Project, User

@@ -1,20 +1,46 @@
 {% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load account socialaccount %}
 
 {% block content %}
-    {% if user %}
-        <h1>Welcome, {{ user.first_name }}</h1>
-        <p>Following is the Extra information that facebook has provided to allauth:</p>
-        {% for account in user.socialaccount_set.all %}
-            <h2 style="text-transform:capitalize;">{{ account.provider }} account data</h2>
-            <p><img width="50" height="50" src="{{ account.get_avatar_url }}"/></p>
-            <p>UID: <a href="{{ account.extra_data.link }}">{{ account.uid }}</a></p>
-            <p>Username: {{ account.extra_data.username }}</p>
-            <p>First Name: {{ account.extra_data.first_name }}</p>
-            <p>Last Name: {{ account.extra_data.last_name }}</p>
-            <p>Profile Link: <a href="{{ account.extra_data.link }}">{{ account.extra_data.link }}</a></p>
-        {% endfor %}
+    {% if user.is_authenticated %}
+        <div class="background"></div>
+        <div class="account-profile account small-12">
+            <div class="account-form small-centered small-12 medium-8 large-6 columns">
+                <div class="account-form__header">
+                    <h1>{{ user.get_full_name }}</h1>
+                </div>
+                <div class="account-form__form">
+                    <div class="account-graphics" style="background: url('{% if user.header_image %}{{ user.header_image.url }}{% else %}http://i.imgur.com/CUGHDT4.jpg{% endif %}') center / cover no-repeat;">
+                        <img src="
+                        {% if user.avatar %}
+                            {{ user.avatar.url }}
+                        {% else %}
+                            {% static '/img/avatar.png' %}
+                        {% endif %}
+                        ">
+                    </div>
+                    <ul class="account-detail">
+                        <li>{% trans 'Name' %}: <span>{{ user.first_name }}</span></li>
+                        <li>{% trans 'Surname' %}: <span>{{ user.last_name }}</span></li>
+                        <li>{% trans 'Email' %}: <span>{{ user.email }}</span></li>
+                        <li>{% trans 'Joined' %}: <span>{{ user.date_joined }}</span></li>
+                        <hr>
+                        <li>{% trans 'Future job' %}: <span>{{ user.future_job }}</span>
+                        </li>
+                        <li>{% trans 'Short description (200 characters)' %}: <span>{{ user.short_description }}</span>
+                        </li>
+                        <li>{% trans 'Long description (3000 characters)' %}: <span>{{ user.long_description }}</span>
+                        </li>
+                    </ul>
+                    <div class="buttons-form">
+                        <a href="{% url 'account_edit' %}" class="button primary">{% trans 'Edit profile' %}</a>
+                        <a href="{% url 'projects:create' %}" class="button secondary">{% trans 'Add project' %}</a>
+                        <a href="{% url 'account_logout' %}" class="button secondary">{% trans 'Logout' %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     {% endif %}
-
-
 {% endblock content %}
-

@@ -24,8 +24,7 @@ urlpatterns = [
     url(r'^projects/', include('projects.urls', namespace='projects')),
     url(r'^news/', include('news.urls', namespace='news')),
     url(r'^accounts/', include('allauth.urls')),
-    url(r'^accounts/profile/', TemplateView.as_view(template_name='profile.html')),
-
+    url(r'^accounts/profile/', include('userprofile.urls')),
 ]
 
 if settings.DEBUG:

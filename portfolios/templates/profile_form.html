@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load account socialaccount %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        <div class="background"></div>
+        <div class="account-profile account small-12">
+            <div class="account-form small-centered small-12 medium-8 large-6 columns">
+                <div class="account-form__header">
+                    <h1>{{ user.get_full_name }}</h1>
+                </div>
+                <div class="account-form__form">
+                    <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+                        {{ form.as_p }}
+                        <div class="buttons-form">
+                            <input class="button primary" type="submit" value="{% trans 'Save' %}"/>
+                            <a href="{% url 'account_email' %}" class="button secondary">{% trans 'E-mails' %}</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock content %}

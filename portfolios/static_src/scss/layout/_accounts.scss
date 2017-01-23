@@ -9,11 +9,22 @@
   background-size: cover;
   z-index: -999;
 }
+
+.account-profile {
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+  transform: translate(0) !important;
+}
+
 .account {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(calc(-50% + 85px), -50%);
+
   .account-form {
     background: #ffffff;
     padding: 20px 0 20px 0;
@@ -176,6 +187,34 @@
         display: inline-block;
         margin: 0;
         vertical-align: middle;
+      }
+
+      .account-graphics {
+        text-align: center;
+        margin-bottom: 30px;
+
+        img {
+          height: 80px;
+          width: 80px;
+          border-radius: 50%;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+      }
+
+      .account-detail {
+        list-style-type: none;
+        margin-left: 0;
+
+        li {
+          font-weight: 500;
+
+
+          span {
+            font-weight: 300;
+            margin-left: 3px;
+          }
+        }
       }
     }
   }
