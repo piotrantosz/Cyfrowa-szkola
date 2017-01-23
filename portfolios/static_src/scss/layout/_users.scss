@@ -119,6 +119,15 @@
   .users {
     margin-top: 60px;
 
+    .information-card {
+      &__button {
+        img {
+          height: 100px;
+          width: 100px;
+        }
+      }
+    }
+
     .users-card {
       &__image {
         padding-top: 160px;
