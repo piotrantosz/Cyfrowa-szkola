@@ -3,6 +3,7 @@ from django.contrib.auth import get_user_model
 from django.http import Http404
 from django.shortcuts import get_object_or_404, redirect, render, HttpResponseRedirect
 from django.utils.translation import ugettext as _
+from projects.models import Project
 
 from .forms import ProfileForm
 
@@ -12,10 +13,16 @@ def profile_detail(request):
     User = get_user_model()
     user_query = User.objects.filter(username=request.user)
     for u in user_query:
+        has_projects = False
+        if Project.objects.filter(author=u):
+            has_projects = True
+
         user = u
+
 
     context = {
         "user": user,
+        "has_projects": has_projects,
     }
 
     return render(request, "profile.html", context)

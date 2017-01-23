@@ -12,6 +12,12 @@
                     <h1>{{ user.get_full_name }}</h1>
                 </div>
                 <div class="account-form__form">
+                    {% if not has_projects %}
+                    <div class="tip">
+                        <span class="fa fa-lightbulb-o"></span>{% blocktrans %}Your profile will be public after you
+                        publish your first project{% endblocktrans %}
+                    </div>
+                    {% endif %}
                     <div class="account-graphics" style="background: url('{% if user.header_image %}{{ user.header_image.url }}{% else %}http://i.imgur.com/CUGHDT4.jpg{% endif %}') center / cover no-repeat;">
                         <img src="
                         {% if user.avatar %}
@@ -36,6 +42,8 @@
                     </ul>
                     <div class="buttons-form">
                         <a href="{% url 'account_edit' %}" class="button primary">{% trans 'Edit profile' %}</a>
+                        <a href="{% url 'projects:user_detail' user_id=user.id %}"
+                           class="button secondary">{% trans 'View profile' %}</a>
                         <a href="{% url 'projects:create' %}" class="button secondary">{% trans 'Add project' %}</a>
                         <a href="{% url 'account_logout' %}" class="button secondary">{% trans 'Logout' %}</a>
                     </div>
