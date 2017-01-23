@@ -1,0 +1,30 @@
+.guide {
+  .news-detail__header {
+    .subtitle {
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 300;
+      padding-bottom: 150px;
+    }
+  }
+
+  .news-detail__content {
+    h2 {
+      word-wrap: break-word;
+      color: #eeb324;
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-top: 16px;
+    }
+
+    ul {
+      margin-top: 5px;
+    }
+
+    a {
+      color: #eeb324;
+      font-weight: 500;
+    }
+  }
+}

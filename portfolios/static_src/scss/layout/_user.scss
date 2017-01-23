@@ -41,6 +41,7 @@
       button {
         float: right;
         margin: 0;
+        margin-bottom: 5px;
 
         &.button--contact {
           margin-right: 10px;
@@ -202,14 +203,7 @@
         button {
           margin-top: 10px;
           float: none;
-
-          &.button--contact {
-            margin-right: 0;
-          }
-
-          &.button--facebook {
-            margin-right: 10px;
-          }
+          margin-right: 10px;
         }
       }
 

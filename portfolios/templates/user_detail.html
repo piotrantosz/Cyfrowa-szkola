@@ -30,6 +30,12 @@
                     <a href="mailto:{{ author.email }}">
                         <button class="button button--contact">{% blocktrans %}Contact me{% endblocktrans %}</button>
                     </a>
+                    {% if author == request.user %}
+                        <a href="{% url 'projects:create' %}">
+                            <button class="button secondary button--contact">{% blocktrans %}Create
+                                project{% endblocktrans %}</button>
+                        </a>
+                    {% endif %}
                 </div>
                 {# We are assigning variables to avoid multiple database requests #}
                 {% with sd=author.short_description ld=author.long_description %}

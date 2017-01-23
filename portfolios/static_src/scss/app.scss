@@ -41,13 +41,14 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900&subset=latin,latin-ext);
 
 // Layout
-@import "layout/base";
-@import "layout/menu";
-@import "layout/card";
-@import "layout/header";
-@import "layout/news";
-@import "layout/form";
-@import "layout/user";
-@import "layout/users";
-@import "layout/project";
-@import "layout/accounts";
+@import "layout/base"; // Base
+@import "layout/menu"; // Menu
+@import "layout/card"; // News card
+@import "layout/header"; // News header
+@import "layout/news"; // News
+@import "layout/form"; // Forms
+@import "layout/user"; // User page (public)
+@import "layout/users"; // Users list
+@import "layout/project"; // Project page
+@import "layout/accounts"; // Accounts
+@import "layout/guide"; // Guide

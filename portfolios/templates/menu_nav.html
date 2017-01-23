@@ -32,8 +32,8 @@
 </li>
 
 
-<li>
-    <a href="#">
+<li {% if 'guide' in request.path %}class="active"{% else %}{% endif %}>
+    <a href="{% url 'guide' %}">
         <div class="icon icon--howto"></div>
         <div class="title">{% blocktrans %}How to{% endblocktrans %}</div>
     </a>

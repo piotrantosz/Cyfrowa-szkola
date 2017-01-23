@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^news/', include('news.urls', namespace='news')),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^accounts/profile/', include('userprofile.urls')),
+    url(r'^guide/$', TemplateView.as_view(template_name="guide.html"), name='guide'),
 ]
 
 if settings.DEBUG:

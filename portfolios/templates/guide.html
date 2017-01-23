@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block head_title %}{% trans 'How to?' %}{% endblock head_title %}
+
+{% block content %}
+    <div class="news-detail guide small-12 small-centered columns ">
+        <div class="news-detail__header">
+            <h1>{% trans 'How to create your portfolio' %}</h1>
+            <p>
+                <span class="subtitle">
+                    {% trans 'step by step' %}
+                </span>
+            </p>
+        </div>
+        <div class="news-detail__content row column">
+            <h2>{% trans 'Overview' %}</h2>
+            <p>
+                {% blocktrans %}
+                    In our website you can easily create your personal portfolio.
+                {% endblocktrans %}<br>
+                {% blocktrans %}
+                    Each portfolio contains projects - blog styled subpages inside which you describe projects you made.
+                {% endblocktrans %}
+            </p>
+            <h2>{% trans 'Step 1: Account Detail' %}</h2>
+            <p>
+                {% blocktrans %}
+                    Your profile is describing who you are and what you are looking for. When editing profile you should
+                    fill all the fields which are:
+                {% endblocktrans %}
+            </p>
+            <ul>
+                <li>{% trans 'First name' %}</li>
+                <li>{% trans 'Last name' %}</li>
+                <li>{% trans 'Future job - who you want to became in future?' %}</li>
+                <li>{% trans 'Email - best way to communicate with you' %}</li>
+                <li>{% trans 'Avatar - square image with you on it' %}</li>
+                <li>{% trans 'Header Image - 1920x600 background image' %}</li>
+                <li>{% trans 'Short Description - short text describing yourself' %}</li>
+                <li>{% trans "Long Description - long text, describe yourself and don't worry about word limit" %}</li>
+            </ul>
+            <a href="{% url 'account_login' %}">{% trans 'Login to your account and edit details' %}</a>
+            <h2>{% trans 'Step 2: Create project' %}</h2>
+            <p>
+                {% blocktrans %}
+                    Projects are pages created by you - with smart editor you can describe projects which you made. More
+                    projects you made that's better, all of them will appear in your public profile creating your portfolio.
+                {% endblocktrans %}
+                {% if user.is_authenticated %}
+                <a href="{% url 'projects:user_detail' user_id=user.id %}">{% trans 'Your profile' %}</a>
+                {% endif %}
+            </p>
+            <ul>
+                <li>{% trans 'Title - best describing your project (e.g. Website for Yahoo)' %}</li>
+                <li>{% trans 'Category - try to use global names (e.g. Web Design, Graphic Design, Programming)' %}</li>
+                <li>{% trans 'Header Image - 1920x600 background image' %}</li>
+                <li>{% trans "Content - try to describe your project as detailed as possible. Don't be scared of adding photos, links or resources" %}</li>
+            </ul>
+            <p>{% trans 'There are two ways to add your projects (you need to be signed in!)' %}</p>
+            <ul>
+                <li>{% trans 'Portfolios page (Create project cross button)'%} <a href="{% url 'projects:list' %}">{% trans 'click here' %}</a></li>
+                <li>{% trans 'Bottom of your profile detail (Add project button)' %} <a href="{% url 'account_login' %}">{% trans 'click here' %}</a></li>
+            </ul>
+            <h2>{% trans 'Step 3: Share your profile' %}</h2>
+            <p>
+                {% blocktrans %}
+                That's all! You profile will be public in portfolios list after adding your first project.
+                You can view your profile by clicking "View profile" button on bottom of your profile page.
+                Don't bother to share it!
+                {% endblocktrans %}
+                <a href="{% url 'account_login' %}">{% trans 'Your profile' %}</a>
+            </p>
+        </div>
+    </div>
+{% endblock content %}
