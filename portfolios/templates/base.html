@@ -11,7 +11,7 @@
     <meta name="description"
           content="{% block meta_description %}{% endblock meta_description %}">
     <meta property=”og:title” content="{% block head_title_og %}{% trans 'Vedius Portfolios' %}{% endblock head_title_og %}"/>
-
+    {% block head_extra %}{% endblock head_extra %}
     <link rel="stylesheet" href="{% static '/css/app.css' %}">
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/notie/dist/notie.min.css">
 
