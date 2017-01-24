@@ -20,35 +20,36 @@
             <h2>{% trans 'Overview' %}</h2>
             <p>
                 {% blocktrans %}
-                    In our website you can easily create your personal portfolio.
+                    Our website lets you create your personal portfolio.
                 {% endblocktrans %}<br>
                 {% blocktrans %}
-                    Each portfolio contains projects - blog styled subpages inside which you describe projects you made.
+                    Each portfolio consists of blog-styled subpages where you can describe the projects you have done.
                 {% endblocktrans %}
             </p>
             <h2>{% trans 'Step 1: Account Detail' %}</h2>
             <p>
                 {% blocktrans %}
-                    Your profile is describing who you are and what you are looking for. When editing profile you should
-                    fill all the fields which are:
+                    Your profile describes you and your desires who you are and what you are looking for. While
+                    completing it, you should fill out all the fields:
                 {% endblocktrans %}
             </p>
             <ul>
                 <li>{% trans 'First name' %}</li>
-                <li>{% trans 'Last name' %}</li>
-                <li>{% trans 'Future job - who you want to became in future?' %}</li>
-                <li>{% trans 'Email - best way to communicate with you' %}</li>
-                <li>{% trans 'Avatar - square image with you on it' %}</li>
-                <li>{% trans 'Header Image - 1920x600 background image' %}</li>
-                <li>{% trans 'Short Description - short text describing yourself' %}</li>
-                <li>{% trans "Long Description - long text, describe yourself and don't worry about word limit" %}</li>
+                <li>{% trans 'Last name - surname' %}</li>
+                <li>{% trans 'Future job - who do you want to become in the future?' %}</li>
+                <li>{% trans 'Email - the most reliable to contact with you' %}</li>
+                <li>{% trans 'Avatar - square image of you on it' %}</li>
+                <li>{% trans 'Header Image - 1920x600 background image to be displayed on the top of your profile' %}</li>
+                <li>{% trans 'Short Description - short text in which you describe yourself' %}</li>
+                <li>{% trans "Long Description - long text, feel free to share all information about you with the world (no word limits apply!)" %}</li>
             </ul>
             <a href="{% url 'account_login' %}">{% trans 'Login to your account and edit details' %}</a>
             <h2>{% trans 'Step 2: Create project' %}</h2>
             <p>
                 {% blocktrans %}
-                    Projects are pages created by you - with smart editor you can describe projects which you made. More
-                    projects you made that's better, all of them will appear in your public profile creating your portfolio.
+                    You can create a page to describe a project of yours - we’ve prepared a smart text editor for you!
+                    The more projects you describe, the better! All of them will be wrapped into your public profile and
+                    therefore - your portfolio.
                 {% endblocktrans %}
                 {% if user.is_authenticated %}
                 <a href="{% url 'projects:user_detail' user_id=user.id %}">{% trans 'Your profile' %}</a>
@@ -56,21 +57,21 @@
             </p>
             <ul>
                 <li>{% trans 'Title - best describing your project (e.g. Website for Yahoo)' %}</li>
-                <li>{% trans 'Category - try to use global names (e.g. Web Design, Graphic Design, Programming)' %}</li>
+                <li>{% trans 'Category - try to use general / broad ones names (e.g. Web Design, Graphic Design, Programming)' %}</li>
                 <li>{% trans 'Header Image - 1920x600 background image' %}</li>
-                <li>{% trans "Content - try to describe your project as detailed as possible. Don't be scared of adding photos, links or resources" %}</li>
+                <li>{% trans "Content - describe your project in detail, add photos, links and other additional resources!" %}</li>
             </ul>
-            <p>{% trans 'There are two ways to add your projects (you need to be signed in!)' %}</p>
+            <p>{% trans 'There are two ways to add your projects (you must be signed in!)' %}</p>
             <ul>
-                <li>{% trans 'Portfolios page (Create project cross button)'%} <a href="{% url 'projects:list' %}">{% trans 'click here' %}</a></li>
+                <li>{% trans 'Portfolios page ("Create project" button)'%} <a href="{% url 'projects:list' %}">{% trans 'click here' %}</a></li>
                 <li>{% trans 'Bottom of your profile detail (Add project button)' %} <a href="{% url 'account_login' %}">{% trans 'click here' %}</a></li>
             </ul>
             <h2>{% trans 'Step 3: Share your profile' %}</h2>
             <p>
                 {% blocktrans %}
-                That's all! You profile will be public in portfolios list after adding your first project.
-                You can view your profile by clicking "View profile" button on bottom of your profile page.
-                Don't bother to share it!
+                    Everything is all set! Your portfolio will be visible on our list immediately after you add your
+                    first project. You can preview it at any time - just use the button on the bottom of your home. When
+                    you’re ready... just go and share it!
                 {% endblocktrans %}
                 <a href="{% url 'account_login' %}">{% trans 'Your profile' %}</a>
             </p>
