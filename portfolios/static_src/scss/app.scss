@@ -38,7 +38,7 @@
 @include foundation-top-bar;
 
 // Fonts
-@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,600,700,900&subset=latin,latin-ext);
 
 // Layout
 @import "layout/base"; // Base
@@ -52,3 +52,4 @@
 @import "layout/project"; // Project page
 @import "layout/accounts"; // Accounts
 @import "layout/guide"; // Guide
+@import "layout/about"; // Guide

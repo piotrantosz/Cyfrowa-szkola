@@ -11,7 +11,7 @@
 
 {% block content %}
     <div class="user small-12 small-centered columns ">
-        <div class="user__header" style="background: url('{% if author.header_image %}{{ author.header_image.url }}{% else %}http://i.imgur.com/CUGHDT4.jpg{% endif %}') center / cover no-repeat;">
+        <div class="user__header" style="background: url('{% if author.header_image %}{{ author.header_image.url }}{% else %}{% static 'img/account_background_2.jpg' %}{% endif %}') center / cover no-repeat;">
             <div class="avatar">
                 <img src="
                 {% if author.avatar %}

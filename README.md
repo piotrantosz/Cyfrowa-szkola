@@ -1,5 +1,5 @@
 
-# Vedius-portfolios
+# Cyfrowa szkoła sukcesu
 Django application which allows multiple users (students) to share their projects and create their online portfolio.
 
 Using Social Accounts validation (allauth - Google, Facebook and local accounts), CKEditor for modyfing projects content and more.

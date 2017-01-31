@@ -1,8 +1,8 @@
 {% load i18n %}
 
 
-<li>
-    <a href="#">
+<li {% if 'about' in request.path %}class="active"{% else %}{% endif %}>
+    <a href="{% url 'about' %}">
         <div class="icon icon--about"></div>
         <div class="title">{% blocktrans %}About project{% endblocktrans %}</div>
     </a>

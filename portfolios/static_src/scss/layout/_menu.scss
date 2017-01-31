@@ -1,7 +1,6 @@
 .menu {
   color: white;
   left: 0px;
-  background: #01AFEE url(http://i.imgur.com/fiZ8pZg.png);
   width: 170px;
   height: 100vh;
   overflow: hidden;
@@ -17,6 +16,7 @@
     }
 
     img {
+      max-width: none;
       width: 80px;
     }
   }
@@ -48,27 +48,27 @@
       position: relative;
 
       &--about {
-        background-image: url(http://i.imgur.com/NUDhmce.png);
+        background-image: url(http://i.imgur.com/IrkgCBn.png);
       }
 
       &--home {
-        background-image: url(http://i.imgur.com/AtOsGfK.png);
+        background-image: url(http://i.imgur.com/qHvevnc.png);
       }
 
       &--portfolio {
-        background-image: url(http://i.imgur.com/au1q8nr.png);
+        background-image: url(http://i.imgur.com/PkkBk6Q.png);
       }
 
       &--howto {
-        background-image: url(http://i.imgur.com/xpFZkct.png);
+        background-image: url(http://i.imgur.com/3PgamHq.png);
       }
 
       &--contact {
-        background-image: url(http://i.imgur.com/1xHhDS1.png);
+        background-image: url(http://i.imgur.com/3Ptcm0X.png);
       }
 
       &--account {
-        background-image: url(http://i.imgur.com/BRAcUNh.png);
+        background-image: url(http://i.imgur.com/9jFsSu8.png);
       }
     }
 
@@ -77,32 +77,32 @@
 
       .icon--about {
         transition: all 300ms ease;
-        background-image: url(http://i.imgur.com/10wBix7.png);
+        background-image: url(http://i.imgur.com/vN9EgeH.png);
       }
 
       .icon--home {
         transition: all 300ms ease;
-        background-image: url(http://i.imgur.com/fYMZwXB.png);
+        background-image: url(http://i.imgur.com/qGf4q4m.png);
       }
 
       .icon--portfolio {
         transition: all 300ms ease;
-        background-image: url(http://i.imgur.com/zqK5yje.png)
+        background-image: url(http://i.imgur.com/egjaJ81.png)
       }
 
       .icon--howto {
         transition: all 300ms ease;
-        background-image: url(http://i.imgur.com/YV3QqLc.png)
+        background-image: url(http://i.imgur.com/zn30Bch.png)
       }
 
       .icon--contact {
         transition: all 300ms ease;
-        background-image: url(http://i.imgur.com/dzNBN5n.png)
+        background-image: url(http://i.imgur.com/mzSk9Km.png)
       }
 
       .icon--account {
         transition: all 300ms ease;
-        background-image: url(http://i.imgur.com/uwpbwN0.png)
+        background-image: url(http://i.imgur.com/m7o31Nl.png)
       }
     }
 
@@ -115,32 +115,32 @@
         background-color: #00a2d8;
 
         .icon--about {
-          background-image: url(http://i.imgur.com/10wBix7.png);
+          background-image: url(http://i.imgur.com/vN9EgeH.png);
         }
 
         .icon--home {
           transition: all 300ms ease;
-          background-image: url(http://i.imgur.com/fYMZwXB.png);
+          background-image: url(http://i.imgur.com/qGf4q4m.png);
         }
 
         .icon--portfolio {
           transition: all 300ms ease;
-          background-image: url(http://i.imgur.com/zqK5yje.png)
+          background-image: url(http://i.imgur.com/egjaJ81.png)
         }
 
         .icon--howto {
           transition: all 300ms ease;
-          background-image: url(http://i.imgur.com/YV3QqLc.png)
+          background-image: url(http://i.imgur.com/zn30Bch.png)
         }
 
         .icon--contact {
           transition: all 300ms ease;
-          background-image: url(http://i.imgur.com/dzNBN5n.png)
+          background-image: url(http://i.imgur.com/mzSk9Km.png)
         }
 
         .icon--account {
           transition: all 300ms ease;
-          background-image: url(http://i.imgur.com/uwpbwN0.png)
+          background-image: url(http://i.imgur.com/m7o31Nl.png)
         }
       }
     }

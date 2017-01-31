@@ -1,16 +1,17 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load static %}
 
 {% block head_title %}{% trans 'News list' %}{% endblock head_title %}
 {% block head_title_og %}{% trans 'News list' %}{% endblock head_title_og %}
 {% block meta_description %}
-    {% trans 'Latest news from Vedius Portfolios - read about updates and important messages' %}{% endblock meta_description %}
+    {% trans 'Latest news from Cyfrowa Szkoła Sukcesu - read about updates and important messages' %}{% endblock meta_description %}
 {% block head_desc_og %}
-    {% trans 'Latest news from Vedius Portfolios - read about updates and important messages' %}{% endblock head_desc_og %}
+    {% trans 'Latest news from Cyfrowa Szkoła Sukcesu - read about updates and important messages' %}{% endblock head_desc_og %}
 
 {% block content %}
     <div class="content news-list small-12 columns">
-        <div class="header small-12 medium-3 large-3 columns">
+        <div class="header small-12 medium-3 large-3 columns" style="background: url({% static 'img/news_background.jpg' %}) no-repeat;">
             <div class="header__text small-12 columns small-centered">
                 <h1>{% blocktrans %}News{% endblocktrans %}</h1>
             </div>

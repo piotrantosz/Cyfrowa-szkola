@@ -1,0 +1,503 @@
+#steps-student-section {
+  font-size: 0;
+  display: flex;
+}
+
+#steps-teacher-section {
+  font-size: 0;
+  display: flex;
+}
+
+#producer-section {
+  font-size: 0;
+  display: flex;
+}
+
+#beneficiary-section {
+  font-size: 0;
+  display: flex;
+}
+
+#howto-section {
+  font-size: 0;
+  display: flex;
+}
+
+.separator {
+  h2 {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    word-spacing: 3px;
+    margin-bottom: 0;
+  }
+}
+
+.header-full {
+  background: url(http://i.imgur.com/QRMWEIC.jpg) center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    text-align: center;
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.about {
+  width: 100%;
+
+  .logos {
+    display: table;
+
+    img {
+      width: 100%;
+    }
+
+    .logo {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      padding-right: 10%;
+      padding-left: 10%;
+    }
+  }
+
+  .box-square {
+    width: calc((100vw - 170px) / 4);
+    height: calc((100vw - 170px) / 4);
+    display: inline-block;
+    padding-bottom: 4px;
+    padding-top: 4px;
+
+    &:nth-child(1) {
+      padding-left: 8px;
+    }
+
+    &:nth-child(2) {
+      padding-right: 4px;
+      padding-left: 8px;
+    }
+
+    &:nth-child(3) {
+      padding-right: 8px;
+      padding-left: 4px;
+    }
+
+    &:nth-child(4) {
+      padding-right: 8px;
+    }
+  }
+
+  .box-rectangle {
+    width: calc((100vw - 170px) / 2);
+    height: calc((100vw - 170px) / 4);
+    display: inline-block;
+  }
+
+  .box-rectangle-full {
+    width: calc(100vw - 170px);
+    height: calc((100vw - 170px) / 4);
+    display: inline-block;
+  }
+
+  .box-background {
+    width: 100%;
+    height: 100%;
+
+    &.steps-student {
+      background: url(http://i.imgur.com/feLKUVB.jpg) center no-repeat;
+      background-size: 100%;
+    }
+
+    &.steps-teacher {
+      background: url(http://i.imgur.com/xaf8anF.jpg) center no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  .box-content {
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #ffffff;
+      word-wrap: break-word;
+      display: block;
+
+      span {
+        font-size: 1.5rem;
+        font-weight: 300;
+        display: block;
+      }
+    }
+
+    p {
+      color: #ffffff;
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    ul {
+      list-style: decimal;
+      list-style-position: inside;
+      margin: 0;
+
+      li {
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+    }
+
+    .appear {
+      display: none;
+    }
+
+    &:hover {
+      ul {
+        &.appear {
+          display: block !important;
+        }
+      }
+
+      .hover {
+        display: none;
+      }
+
+      .appear {
+        display: flex;
+      }
+    }
+
+    &.steps-student {
+      &__content {
+        background-color: rgba(1, 175, 238, 0.9);
+
+        &--no-photo {
+          background-color: rgba(1, 175, 238, 1);
+        }
+      }
+    }
+
+    &.steps-teacher {
+      &__content {
+        background-color: rgba(238, 179, 36, 0.9);
+
+        &--no-photo {
+          background-color: rgba(238, 179, 36, 1);
+        }
+      }
+    }
+
+    &.steps-howto {
+      &__content {
+        background-color: rgba(1, 175, 238, 0.9);
+
+        &--no-photo {
+          background-color: rgba(1, 175, 238, 1);
+        }
+      }
+    }
+
+    &.producer-cwp {
+      &__content {
+        background-color: rgba(238, 179, 36, 0.9);
+        padding-right: 20%;
+        padding-left: 20%;
+
+        img {
+          width: 100%;
+          padding-right: 60px;
+          padding-left: 60px;
+        }
+
+        &:hover {
+          transition: all 200ms ease-out;
+          background-color: #ffffff;
+        }
+
+        &--no-photo {
+          background-color: rgba(238, 179, 36, 1);
+        }
+      }
+    }
+
+    &.producer-vedius {
+      &__content {
+        background-color: rgba(1, 175, 238, 0.9);
+        padding-right: 20%;
+        padding-left: 20%;
+
+        img {
+          width: 100%;
+          padding-right: 60px;
+          padding-left: 60px;
+        }
+
+        &:hover {
+          transition: all 200ms ease-out;
+          background-color: #ffffff;
+        }
+
+        &--no-photo {
+          background-color: rgba(1, 175, 238, 1);
+        }
+      }
+    }
+
+    &.beneficiary {
+      &__content {
+        background-color: rgba(1, 175, 238, 0.9);
+        padding-right: 10%;
+        padding-left: 10%;
+
+        img {
+          width: 100%;
+        }
+
+        &--no-photo {
+          background-color: rgba(1, 175, 238, 1);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints, 'medium')) {
+  #steps-student-section {
+    font-size: 0;
+    display: block;
+  }
+
+  #steps-teacher-section {
+    font-size: 0;
+    display: block;
+  }
+
+  #producer-section {
+    font-size: 0;
+    display: block;
+  }
+
+  #beneficiary-section {
+    font-size: 0;
+    display: block;
+  }
+
+  #howto-section {
+    font-size: 0;
+    display: block;
+  }
+
+  .separator {
+    h2 {
+      font-size: 1.7rem;
+      letter-spacing: 2px;
+      word-spacing: 2px;
+      padding-top: 20%;
+      padding-bottom: 20%;
+    }
+  }
+
+  .header-full {
+    &__content {
+      padding-right: 7px;
+      padding-left: 7px;
+      padding-top: 52px;
+      padding-bottom: 0;
+
+      h1 {
+        font-size: 2rem;
+        padding-bottom: 20px;
+      }
+
+      p {
+        letter-spacing: 0;
+        text-transform: none;
+      }
+    }
+  }
+
+  .about {
+    .box-square {
+      width: 100vw;
+      height: 100vw;
+      display: block;
+      padding-top: 4px;
+
+      &:nth-child(1) {
+        padding-left: 0;
+        padding-top: 10px;
+      }
+
+      &:nth-child(2) {
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      &:nth-child(3) {
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      &:nth-child(4) {
+        padding-right: 0;
+      }
+    }
+
+    .box-rectangle {
+      width: 100vw;
+      height: 100vw;
+      display: inline-block;
+    }
+
+    .box-rectangle-full {
+      width: 100vw;
+      height: 100vw;
+      display: inline-block;
+    }
+
+    .box-background {
+      background-size: cover !important;
+    }
+
+    .box-content {
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      ul {
+        li {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .producer-cwp__content {
+      img {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+      }
+    }
+
+    .producer-vedius__content {
+      img {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) and (min-width: map-get($breakpoints, 'medium')) {
+  #steps-student-section {
+    font-size: 0;
+    display: block;
+  }
+
+  #steps-teacher-section {
+    font-size: 0;
+    display: block;
+  }
+
+  #producer-section {
+    font-size: 0;
+    display: block;
+  }
+
+  #beneficiary-section {
+    font-size: 0;
+    display: block;
+  }
+
+  #howto-section {
+    font-size: 0;
+    display: block;
+  }
+
+  .separator {
+    h2 {
+      font-size: 1.7rem;
+    }
+  }
+
+  .header-full {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .about {
+    .box-square {
+      width: calc(100vw - 170px);
+      height: calc((100vw - 170px) / 2 );
+      display: block;
+      padding-top: 4px;
+      padding-bottom: 0 !important;
+      padding-right: 4px !important;
+      padding-left: 4px !important;
+    }
+
+    .box-rectangle {
+      width: calc(100vw - 170px);
+      height: calc((100vw - 170px) / 2);
+      display: inline-block;
+    }
+
+    .box-rectangle-full {
+      width: calc(100vw - 170px);
+      height: calc((100vw - 170px) / 2);
+      display: inline-block;
+    }
+
+    .box-content {
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      ul {
+        li {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

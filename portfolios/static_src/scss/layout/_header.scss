@@ -10,7 +10,6 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  background: url("http://i.imgur.com/W9EwXHf.jpg") no-repeat;
   background-size: cover;
   text-align: center;
 
@@ -25,7 +24,7 @@
 
     h1 {
       margin: auto;
-      font-size: 4rem;
+      font-size: 3rem;
     }
   }
 }
@@ -33,5 +32,15 @@
 @media screen and (max-width: map-get($breakpoints, 'medium')) {
   .header {
     display: none;
+  }
+}
+
+@media screen and (max-width: 1215px) {
+  .header {
+    &__text {
+      h1 {
+        font-size: 2rem;
+      }
+    }
   }
 }

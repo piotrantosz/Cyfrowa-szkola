@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^accounts/', include('allauth.urls')),
     url(r'^accounts/profile/', include('userprofile.urls')),
     url(r'^guide/$', TemplateView.as_view(template_name="guide.html"), name='guide'),
+    url(r'^about/$', TemplateView.as_view(template_name="about.html"), name='about'),
 ]
 
 if settings.DEBUG:

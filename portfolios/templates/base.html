@@ -10,16 +10,14 @@
     <meta property=”og:description” content="{% block head_desc_og %}{% endblock head_desc_og %}"/>
     <meta name="description"
           content="{% block meta_description %}{% endblock meta_description %}">
-    <meta property=”og:title” content="{% block head_title_og %}{% trans 'Vedius Portfolios' %}{% endblock head_title_og %}"/>
+    <meta property=”og:title” content="{% block head_title_og %}{% trans 'Cyfrowa Szkoła Sukcesu' %}{% endblock head_title_og %}"/>
     {% block head_extra %}{% endblock head_extra %}
     <link rel="stylesheet" href="{% static '/css/app.css' %}">
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/notie/dist/notie.min.css">
-
     <script src="https://use.fontawesome.com/9e66c65465.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
-<div class="menu">
+<div class="menu" style="background: #01AFEE url({% static 'img/menu_pattern.png' %});">
     <div class="menu__logo">
         {% block menu_logo %}
         <img src="{% static '/img/vedius-logo.png' %}">

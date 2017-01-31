@@ -1,11 +1,12 @@
 {% extends "account/base.html" %}
 
 {% load i18n %}
+{% load static %}
 
 {% block head_title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
 
 {% block content %}
-    <div class="background"></div>
+    <div class="background" style="background: url({% static 'img/account_background.jpg' %}) no-repeat center center fixed;"></div>
     <div class="account small-12">
         <div class="account-form small-centered small-12 medium-8 large-6 columns">
             <div class="account-form__header">

@@ -5,7 +5,7 @@
 
 {% block content %}
     {% if user.is_authenticated %}
-        <div class="background"></div>
+        <div class="background" style="background: url({% static 'img/account_background.jpg' %}) no-repeat center center fixed;"></div>
         <div class="account-profile account small-12">
             <div class="account-form small-centered small-12 medium-8 large-6 columns">
                 <div class="account-form__header">
@@ -18,7 +18,7 @@
                         publish your first project{% endblocktrans %}
                     </div>
                     {% endif %}
-                    <div class="account-graphics" style="background: url('{% if user.header_image %}{{ user.header_image.url }}{% else %}http://i.imgur.com/CUGHDT4.jpg{% endif %}') center / cover no-repeat;">
+                    <div class="account-graphics" style="background: url('{% if user.header_image %}{{ user.header_image.url }}{% else %}{% static 'img/account_background_2.jpg' %}{% endif %}') center / cover no-repeat;">
                         <img src="
                         {% if user.avatar %}
                             {{ user.avatar.url }}

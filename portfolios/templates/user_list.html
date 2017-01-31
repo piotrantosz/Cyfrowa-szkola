@@ -28,7 +28,7 @@
     {% for user in users %}
         <div class="small-12 medium-12 large-4 columns">
             <div class="users-card columns">
-                <div class="users-card__image" style="background: url('{% if user.header_image %}{{ user.header_image.url }}{% else %}http://i.imgur.com/ARLq9dz.png{% endif %}') center / cover no-repeat;">
+                <div class="users-card__image" style="background: url('{% if user.header_image %}{{ user.header_image.url }}{% else %}{% static 'img/user_pattern.png' %}{% endif %}') center / cover no-repeat;">
                     <a href="{{ user.get_user_url }}">
                         <img src="
                         {% if user.avatar %}

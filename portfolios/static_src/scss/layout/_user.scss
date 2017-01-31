@@ -14,6 +14,7 @@
       padding-top: 325px;
 
       img {
+        max-width: none;
         width: 150px;
         height: 150px;
         border-radius: 50%;
@@ -185,6 +186,7 @@
       height: 300px;
 
       .avatar {
+        max-width: none;
         width: 124px;
         padding-top: 186px;  /* 225px - 52px of top padding + 13px because avatar size -26px */
       }

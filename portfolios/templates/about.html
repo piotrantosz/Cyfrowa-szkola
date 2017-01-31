@@ -1,0 +1,244 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block head_title %}{% trans 'Cyfrowa Szkoła Sukcesu' %}{% endblock head_title %}
+{% block head_title_og %}{% trans 'Cyfrowa Szkoła Sukcesu' %}{% endblock head_title_og %}
+{% block meta_description %}
+    {% trans 'Rozwój oferty kształcenia zawodowego Zespołu Szkół Teleinformatycznych i Elektronicznych we Wrocławiu.
+                Dostosowanie systemów kształcenia i szkolenia do potrzeb rynku pracy.' %}{% endblock meta_description %}
+{% block head_desc_og %}
+    {% trans 'Rozwój oferty kształcenia zawodowego Zespołu Szkół Teleinformatycznych i Elektronicznych we Wrocławiu.
+                Dostosowanie systemów kształcenia i szkolenia do potrzeb rynku pracy.' %}{% endblock head_desc_og %}
+
+
+{% block content %}
+    <div class="header-full">
+        <div class="header-full__content">
+            <h1>{% blocktrans %}Cyfrowa Szkoła Sukcesu{% endblocktrans %}</h1>
+            <p>{% blocktrans %}Rozwój oferty kształcenia zawodowego Zespołu Szkół Teleinformatycznych i Elektronicznych we Wrocławiu.<br>
+                Dostosowanie systemów kształcenia i szkolenia do potrzeb rynku pracy.{% endblocktrans %}</p>
+            <p><strong>{% blocktrans %}Projekt EFS 10.4.1{% endblocktrans %}</strong></p>
+        </div>
+    </div>
+    <div class="about">
+        <div class="logos">
+            <div class="small-12 medium-12 large-4 columns logo">
+                <img alt="{% blocktrans %}Fundusze Europejskie - Program Regionalny{% endblocktrans %}" src="{% static "img/logo_fepr.png" %}">
+            </div>
+            <div class="small-12 medium-12 large-4 columns logo">
+                <img alt="{% blocktrans %}Dolny Śląsk{% endblocktrans %}" src="{% static "img/logo_ds.png" %}">
+            </div>
+            <div class="small-12 medium-12 large-4 columns logo">
+                <img alt="{% blocktrans %}Unia Europejska - Europejski Fundusz Społeczny{% endblocktrans %}" src="{% static "img/logo_ueefs.png" %}">
+            </div>
+        </div>
+        <div class="separator">
+            <h2>{% blocktrans %}Realizatorzy{% endblocktrans %}</h2>
+        </div>
+        <div id="producer-section">
+            <div class="box-rectangle">
+                <a href="http://vedius.pl/">
+                <div class="producer-vedius box-background" style="background: url({% static 'img/vedius_bg.jpg' %}) center no-repeat; background-size: cover;">
+                    <div class="box-content producer-vedius__content">
+                        <h3 class="hover">
+                            <span>{% blocktrans %}Centrum Szkoleń Informatycznych{% endblocktrans %}</span>
+                            {% blocktrans %}VEDIUS{% endblocktrans %}
+                        </h3>
+                        <img alt="{% blocktrans %}Centrum Szkoleń Informatycznych VEDIUS{% endblocktrans %}" class="appear" src="{% static 'img/vedius_logo.png' %}">
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="box-rectangle">
+                <a href="http://cwp.wroclaw.pl/">
+                <div class="producer-cwp box-background"
+                     style="background: url({% static 'img/cwp_bg.jpg' %}) center no-repeat; background-size: cover;">
+                    <div class="box-content producer-cwp__content">
+                        <h3 class="hover">
+                            <span>{% blocktrans %}Centrum Wspierania Przedsiębiorczości{% endblocktrans %}</span>
+                            {% blocktrans %}WROCŁAW{% endblocktrans %}
+                        </h3>
+                        <img alt="{% blocktrans %}Centrum Wspierania Przedsiębiorczości{% endblocktrans %}" class="appear" src="{% static 'img/cwp_logo.png' %}">
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+        <div class="separator">
+            <h2>{% blocktrans %}Beneficjent{% endblocktrans %}</h2>
+        </div>
+        <div id="beneficiary-section">
+            <div class="box-rectangle-full">
+                <div class="beneficiary box-background"
+                     style="background: url({% static 'img/zstiew.jpg' %}) center no-repeat; background-size: cover;">
+                    <div class="box-content beneficiary__content">
+                        <h3>
+                            {% blocktrans %}Zespół szkół teleinformatycznych i elektronicznych we Wrocławiu{% endblocktrans %}
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator">
+            <h2>{% blocktrans %}Etapy realizacji projektu{% endblocktrans %}</h2>
+        </div>
+        <div id="steps-student-section">
+            <div class="box-square">
+                <div class="steps-student box-background">
+                    <div class="box-content steps-student__content">
+                        <h3>{% blocktrans %}Ścieżka wsparcia ucznia{% endblocktrans %}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="box-square">
+                <div class="steps steps-student--1 box-background">
+                    <div class="box-content steps-student__content--no-photo">
+                        <h3 class="hover">
+                            <span>{% blocktrans %}Etap 1{% endblocktrans %}:</span>
+                            {% blocktrans %}Doradztwo zawodowe{% endblocktrans %}
+                        </h3>
+                        <ul class="appear">
+                            <li>{% blocktrans %}Indywidualny Plan Działania (IPD){% endblocktrans %}</li>
+                            <li>{% blocktrans %}Analiza umiejętności zawodowych{% endblocktrans %}</li>
+                            <li>{% blocktrans %}Autoprezentacja{% endblocktrans %}</li>
+                            <li>{% blocktrans %}Planowanie kariery edukacyjnej i zawodowej{% endblocktrans %}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="box-square">
+                <div class="steps steps-student--2 box-background">
+                    <div class="box-content steps-student__content--no-photo">
+                        <h3 class="hover">
+                            <span>{% blocktrans %}Etap 2:{% endblocktrans %}</span>
+                            {% blocktrans %}Szkolenie{% endblocktrans %}
+                        </h3>
+                        <ul class="appear">
+                            <li>{% blocktrans %}Specjalistyczne szkolenia IT{% endblocktrans %}</li>
+                            <li>{% blocktrans %}Transfer wiedzy z czołowych firm informatycznych na świecie{% endblocktrans %}</li>
+                            <li>{% blocktrans %}Praca z projektem{% endblocktrans %}</li>
+                            <li>{% blocktrans %}Indywidualny konsulting{% endblocktrans %}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="box-square">
+                <div class="steps steps-student--3 box-background">
+                    <div class="box-content steps-student__content--no-photo">
+                        <h3 class="hover">
+                            <span>{% blocktrans %}Etap 3{% endblocktrans %}:</span>
+                            {% blocktrans %}Budowa własnego portfolio{% endblocktrans %}
+                        </h3>
+                        <ul class="appear">
+                            <li>{% blocktrans %}Tworzenie własnych projektów informatycznych{% endblocktrans %}</li>
+                            <li>{% blocktrans %}Treningowe miejsca pracy - praca nad projektami zespołowymi{% endblocktrans %}</li>
+                            <li>{% blocktrans %}Aktywizacja zawodowa - zamieszczenie autorskich projektów w bazie, nawiązanie kontaktów
+                                z potencjalnymi pracodawcami{% endblocktrans %}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="steps-teacher-section">
+            <div class="box-square">
+                <div class="steps-teacher box-background">
+                    <div class="box-content steps-teacher__content">
+                        <h3>{% blocktrans %}Ścieżka wsparcia nauczyciela{% endblocktrans %}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="box-square">
+                <div class="steps steps---1 box-background">
+                    <div class="box-content steps-teacher__content--no-photo">
+                        <h3>
+                            <span>{% blocktrans %}Etap 1{% endblocktrans %}:</span>
+                            {% blocktrans %}Indywidualny coaching/mentoring{% endblocktrans %}
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="box-square">
+                <div class="steps steps--2 box-background">
+                    <div class="box-content steps-teacher__content--no-photo">
+                        <h3>
+                            <span>{% blocktrans %}Etap 2{% endblocktrans %}:</span>
+                            {% blocktrans %}Tworzenie/aktualizacja bazy dydaktycznej{% endblocktrans %}
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="box-square">
+                <div class="steps steps--3 box-background">
+                    <div class="box-content steps-teacher__content--no-photo">
+                        <h3>
+                            <span>{% blocktrans %}Etap 3{% endblocktrans %}:</span>
+                            {% blocktrans %}Podniesienie jakości kształcenia{% endblocktrans %}
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator">
+            <h2>{% blocktrans %}Budowa własnego portfolio{% endblocktrans %}</h2>
+        </div>
+        <div id="howto-section">
+            <div class="box-square">
+                <div class="steps steps---1 box-background">
+                    <div class="box-content steps-howto__content--no-photo">
+                        <h3>
+                            <span>{% blocktrans %}Krok 1{% endblocktrans %}:</span>
+                            {% blocktrans %}Stwórz swój profil{% endblocktrans %}
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="box-square">
+                <div class="steps steps--2 box-background">
+                    <div class="box-content steps-howto__content--no-photo">
+                        <h3>
+                            <span>{% blocktrans %}Krok 2{% endblocktrans %}:</span>
+                            {% blocktrans %}Dodaj swoje projekty{% endblocktrans %}
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="box-square">
+                <div class="steps steps--3 box-background">
+                    <div class="box-content steps-howto__content--no-photo">
+                        <h3>
+                            <span>{% blocktrans %}Krok 3:{% endblocktrans %}</span>
+                            {% blocktrans %}Udostępnij swoje portfolio{% endblocktrans %}
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="box-square">
+                <a href="{% url "guide" %}">
+                <div class="steps-howto box-background">
+                    <div class="box-content steps-howto__content--no-photo">
+                        <h3>
+                            {% blocktrans %}Czytaj więcej..{% endblocktrans %}
+                        </h3>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+        <div class="separator">
+            <h2>{% blocktrans %}Partnerzy{% endblocktrans %}</h2>
+        </div>
+        <div class="logos small-12">
+            <div class="small-12 medium-12 large-4 columns logo">
+                <img alt="{% blocktrans %}Nokia{% endblocktrans %}" src="{% static "img/logo_nokia.png" %}">
+            </div>
+            <div class="small-12 medium-12 large-4 columns logo">
+                <img alt="{% blocktrans %}IBM{% endblocktrans %}" src="{% static "img/logo_ibm.png" %}">
+            </div>
+            <div class="small-12 medium-12 large-4 columns logo">
+                <img alt="{% blocktrans %}Asplex{% endblocktrans %}" src="{% static "img/logo_asplex.png" %}">
+            </div>
+        </div>
+    </div>
+{% endblock content %}

@@ -17,6 +17,8 @@ body {
 }
 
 .callout {
+  position: absolute;
+  width: calc(100vw - 170px);
   z-index: 999;
   margin-bottom: 0;
   text-align: center;
@@ -54,6 +56,7 @@ body {
 
   .callout {
     margin-top: 52px;
+    width: 100vw;
   }
 }
 

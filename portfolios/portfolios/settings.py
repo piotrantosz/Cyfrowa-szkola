@@ -46,7 +46,7 @@ INSTALLED_APPS = (
     'django_wysiwyg',
     'ckeditor',
     'ckeditor_uploader',
-    'captcha'
+    'captcha',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -58,6 +58,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'django.middleware.locale.LocaleMiddleware'
 )
 
 ROOT_URLCONF = 'portfolios.urls'
@@ -73,6 +74,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.i18n',
                 # `allauth` needs this from django
                 'django.template.context_processors.request',
             ],
@@ -95,7 +97,11 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pl-PL'
+
+LANGUAGES = (
+    ('pl-PL', 'Polish'),
+)
 
 TIME_ZONE = 'Europe/Warsaw'
 
@@ -153,3 +159,9 @@ NOCAPTCHA = True
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = True
 ACCOUNT_SIGNUP_FORM_CLASS = 'projects.forms.SignupForm'
+
+# Local paths
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, "locale"),
+]
+
