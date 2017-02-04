@@ -13,11 +13,10 @@
     <meta property=”og:title” content="{% block head_title_og %}{% trans 'Cyfrowa Szkoła Sukcesu' %}{% endblock head_title_og %}"/>
     {% block head_extra %}{% endblock head_extra %}
     <link rel="stylesheet" href="{% static '/css/app.css' %}">
-    <script src="https://use.fontawesome.com/9e66c65465.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
-<div class="menu" style="background: #01AFEE url({% static 'img/menu_pattern.png' %});">
+<div class="menu" style="background: #2d404f;">
     <div class="menu__logo">
         {% block menu_logo %}
         <img src="{% static '/img/vedius-logo.png' %}">
@@ -33,6 +32,6 @@
 {% include "messages_display.html" %}
 {% block content %}
 {% endblock content %}
-
+<script src="https://use.fontawesome.com/465197f122.js"></script>
 </body>
 </html>

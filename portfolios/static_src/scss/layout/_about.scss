@@ -1,21 +1,26 @@
-#steps-student-section {
-  font-size: 0;
-  display: flex;
-}
-
-#steps-teacher-section {
-  font-size: 0;
-  display: flex;
-}
-
 #producer-section {
   font-size: 0;
   display: flex;
+  margin-top: -60px;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+#steps-student-section {
+  padding-right: 12px;
+  padding-left: 12px;
+  display: flex;
+
+  .steps {
+    padding-top: 80px;
+  }
 }
 
 #beneficiary-section {
   font-size: 0;
   display: flex;
+  padding-right: 12px;
+  padding-left: 12px;
 }
 
 #howto-section {
@@ -24,6 +29,10 @@
 }
 
 .separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   h2 {
     padding-top: 5%;
     padding-bottom: 5%;
@@ -34,21 +43,50 @@
     letter-spacing: 3px;
     word-spacing: 3px;
     margin-bottom: 0;
+
+    display: table;
+
+    &.yellow {
+      &:before, &:after {
+        border-top: 6px solid #eeb324;
+      }
+    }
+
+    &.green {
+      &:before, &:after {
+        border-top: 6px solid #2cdea5;
+      }
+    }
+
+    &:before, &:after {
+      content: '';
+      display: table-cell;
+      position: relative;
+      top: 0.6em;
+      width: 60px;
+    }
+    &:before {
+      right: 20px;
+    }
+    &:after {
+      left: 20px;
+    }
   }
 }
 
 .header-full {
-  background: url(http://i.imgur.com/QRMWEIC.jpg) center no-repeat;
+  background: url(http://i.imgur.com/WBXk4kI.jpg) center no-repeat; /* http://i.imgur.com/QRMWEIC.jpg */
   background-size: cover;
-  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
 
   &__content {
-    text-align: center;
+    margin-left: 5%;
+    padding-top: 15%;
+    padding-bottom: 15%;
 
     h1 {
+      text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
       font-size: 4rem;
       font-weight: 700;
       text-transform: uppercase;
@@ -57,6 +95,7 @@
     }
 
     p {
+      text-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
       font-size: 1rem;
       font-weight: 300;
       text-transform: uppercase;
@@ -66,21 +105,233 @@
   }
 }
 
+.logos {
+  display: table;
+
+  img {
+    width: 100%;
+  }
+
+  .logo {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}
+
+.partners {
+  display: block;
+
+  img {
+    width: 100%;
+  }
+
+  p {
+    padding-top: 70px;
+    font-size: 1.5rem;
+    margin: 0;
+    margin-left: 40px;
+  }
+
+  hr {
+    width: 60px;
+    float: left;
+    height: 6px;
+    border-bottom: 6px solid #2d404f;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 40px;
+  }
+
+  .partner {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-right: 7%;
+    padding-left: 7%;
+  }
+}
+
 .about {
   width: 100%;
 
-  .logos {
-    display: table;
+  .steps {
+    padding-right: 0;
+    padding-left: 0;
+    color: white;
 
-    img {
-      width: 100%;
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 0;
+      font-weight: 700;
     }
 
-    .logo {
-      padding-top: 40px;
-      padding-bottom: 40px;
-      padding-right: 10%;
-      padding-left: 10%;
+    p{
+      margin: 0;
+      font-size: 2rem;
+      margin-left: 3%;
+      display: table;
+
+      &:before {
+        border-top: 5px solid #ffffff;
+        content: '';
+        display: table-cell;
+        position: relative;
+        top: 0.7em;
+        width: 50px;
+      }
+      &:before {
+        right: 15%;
+      }
+    }
+
+    .student {
+      padding-right: 0;
+      padding-left: 0;
+
+      &__header {
+        color: white;
+        background: url(http://i.imgur.com/kupkXdY.jpg) center no-repeat;
+        background-size: cover;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 40px;
+      }
+
+      &__content {
+        .box {
+          display: flex;
+          margin-top: 40px;
+
+          .number {
+            font-weight: 700;
+            margin-left: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+            font-size: 2rem;
+            background-color: #eeb324;
+          }
+
+          .text {
+            display: inline-block;
+            margin-left: 20px;
+            color: #222;
+            width: 70%;
+
+            h4 {
+              font-size: 1.5rem;
+              font-weight: 700;
+              margin-bottom: 0;
+            }
+
+            span {
+              font-size: 1rem;
+              font-style: italic;
+            }
+
+            hr {
+              margin-top: 7px;
+              margin-bottom: 7px;
+              width: 10%;
+              margin-right: 90%;
+            }
+
+            ul {
+              list-style: none;
+              padding: 0;
+              margin: 0;
+
+              li {
+                font-size: 1rem;
+                padding-left: 1em;
+                text-indent: -.7em;
+
+                &::before {
+                  content: "• ";
+                  color: #eeb324;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .teacher {
+      padding-right: 0;
+      padding-left: 0;
+
+      &__header {
+        background: url(http://i.imgur.com/y6oJ3Jn.jpg) center no-repeat;
+        background-size: cover;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 40px;
+      }
+
+      &__content {
+        .box {
+          display: flex;
+          margin-top: 40px;
+
+          .number {
+            font-weight: 700;
+            margin-left: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+            font-size: 2rem;
+            background-color: #f41d5a;
+          }
+
+          .text {
+            display: inline-block;
+            margin-left: 20px;
+            color: #222;
+            width: 70%;
+
+            h4 {
+              font-size: 1.5rem;
+              font-weight: 700;
+              margin-bottom: 0;
+            }
+
+            span {
+              font-size: 1rem;
+              font-style: italic;
+            }
+
+            hr {
+              margin-top: 7px;
+              margin-bottom: 7px;
+              width: 10%;
+              margin-right: 90%;
+            }
+
+            ul {
+              list-style: none;
+              padding: 0;
+              margin: 0;
+
+              li {
+                font-size: 1rem;
+                padding-left: 1em;
+                text-indent: -.7em;
+
+                &::before {
+                  content: "• ";
+                  color: #f41d5a;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 
@@ -114,6 +365,11 @@
     width: calc((100vw - 170px) / 2);
     height: calc((100vw - 170px) / 4);
     display: inline-block;
+
+    &--small {
+      padding-top: 17px;
+      padding-bottom: 17px;
+    }
   }
 
   .box-rectangle-full {
@@ -125,16 +381,6 @@
   .box-background {
     width: 100%;
     height: 100%;
-
-    &.steps-student {
-      background: url(http://i.imgur.com/feLKUVB.jpg) center no-repeat;
-      background-size: 100%;
-    }
-
-    &.steps-teacher {
-      background: url(http://i.imgur.com/xaf8anF.jpg) center no-repeat;
-      background-size: 100%;
-    }
   }
 
   .box-content {
@@ -199,26 +445,6 @@
       }
     }
 
-    &.steps-student {
-      &__content {
-        background-color: rgba(1, 175, 238, 0.9);
-
-        &--no-photo {
-          background-color: rgba(1, 175, 238, 1);
-        }
-      }
-    }
-
-    &.steps-teacher {
-      &__content {
-        background-color: rgba(238, 179, 36, 0.9);
-
-        &--no-photo {
-          background-color: rgba(238, 179, 36, 1);
-        }
-      }
-    }
-
     &.steps-howto {
       &__content {
         background-color: rgba(1, 175, 238, 0.9);
@@ -229,21 +455,34 @@
       }
     }
 
+    &.producer-desc {
+      &__content {
+        background-color: #202f3b;
+        padding-right: 20%;
+        padding-left: 20%;
+
+        span {
+          color: #ffffff;
+        }
+
+        h3 {
+          color: #eeb324;
+        }
+      }
+    }
+
     &.producer-cwp {
       &__content {
+        padding-top: 12px;
+        padding-bottom: 12px;
         background-color: rgba(238, 179, 36, 0.9);
         padding-right: 20%;
         padding-left: 20%;
 
         img {
           width: 100%;
-          padding-right: 60px;
-          padding-left: 60px;
-        }
-
-        &:hover {
-          transition: all 200ms ease-out;
-          background-color: #ffffff;
+          padding-right: 40px;
+          padding-left: 40px;
         }
 
         &--no-photo {
@@ -260,13 +499,8 @@
 
         img {
           width: 100%;
-          padding-right: 60px;
-          padding-left: 60px;
-        }
-
-        &:hover {
-          transition: all 200ms ease-out;
-          background-color: #ffffff;
+          padding-right: 40px;
+          padding-left: 40px;
         }
 
         &--no-photo {
@@ -276,17 +510,193 @@
     }
 
     &.beneficiary {
+      &:hover {
+        transition: all 500ms ease;
+        
+      }
+
       &__content {
-        background-color: rgba(1, 175, 238, 0.9);
+        background-color: #2cdea5;
         padding-right: 10%;
         padding-left: 10%;
+        text-align: left;
+        flex-direction: column;
+
+        p {
+          width: 100%;
+          font-size: 1.5rem;
+          font-weight: 300;
+
+          span {
+            font-weight: 500;
+          }
+        }
+
+        h3 {
+          margin-bottom: 0;
+        }
+
+        hr {
+          width: 120px;
+          float: left;
+          height: 6px;
+          margin-left: 0;
+          border-bottom: 6px solid #ffffff;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
 
         img {
           width: 100%;
         }
+      }
+    }
+  }
+}
 
-        &--no-photo {
-          background-color: rgba(1, 175, 238, 1);
+footer {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #273846;
+  text-align: right;
+  color: #ffffff;
+
+  p {
+    margin-right: 7%;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1300px) and (min-width: map-get($breakpoints, 'medium')) {
+  #producer-section {
+    font-size: 0;
+    display: block;
+    margin-top: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  #beneficiary-section {
+    font-size: 0;
+    display: block;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  #howto-section {
+    font-size: 0;
+    display: block;
+  }
+
+  .separator {
+    h2 {
+      font-size: 1.7rem;
+
+      &:before, &:after {
+        display: none;
+      }
+    }
+  }
+
+  .header-full {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .about {
+    .steps {
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+
+    .student {
+      &__content {
+        .box {
+          &:last-child {
+            margin-bottom: 40px;
+          }
+
+          .number {
+            margin-left: 0 !important;
+          }
+        }
+      }
+    }
+
+    .teacher {
+      &__content {
+        .box {
+          &:last-child {
+            margin-bottom: 40px;
+          }
+
+          .number {
+            margin-left: 0 !important;
+          }
+        }
+      }
+    }
+
+    .partners {
+      text-align: center;
+
+      p {
+        font-size: 1.7rem;
+        letter-spacing: 2px;
+        word-spacing: 2px;
+        padding-top: 20%;
+        padding-bottom: 20%;
+        margin-left: 0;
+        text-transform: uppercase;
+      }
+
+      hr {
+        display: none;
+      }
+    }
+
+    .box-square {
+      width: calc(100vw - 170px);
+      height: calc((100vw - 170px) / 2);
+      display: block;
+      padding-top: 4px;
+      padding-bottom: 0 !important;
+      padding-right: 4px !important;
+      padding-left: 4px !important;
+    }
+
+    .box-rectangle {
+      width: calc(100vw - 170px);
+      height: calc((100vw - 170px) / 2);
+      display: inline-block;
+    }
+
+    .box-rectangle-full {
+      width: calc(100vw - 170px);
+      height: calc((100vw - 170px) / 2);
+      display: inline-block;
+    }
+
+    .box-content {
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      ul {
+        li {
+          font-size: 1rem;
         }
       }
     }
@@ -294,24 +704,20 @@
 }
 
 @media screen and (max-width: map-get($breakpoints, 'medium')) {
-  #steps-student-section {
-    font-size: 0;
-    display: block;
-  }
-
-  #steps-teacher-section {
-    font-size: 0;
-    display: block;
-  }
-
   #producer-section {
     font-size: 0;
     display: block;
+    margin-top: 0;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   #beneficiary-section {
     font-size: 0;
     display: block;
+    padding: 0;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   #howto-section {
@@ -326,6 +732,10 @@
       word-spacing: 2px;
       padding-top: 20%;
       padding-bottom: 20%;
+
+      &:before, &:after {
+        display: none;
+      }
     }
   }
 
@@ -334,7 +744,7 @@
       padding-right: 7px;
       padding-left: 7px;
       padding-top: 52px;
-      padding-bottom: 0;
+      padding-bottom: 52px;
 
       h1 {
         font-size: 2rem;
@@ -348,7 +758,67 @@
     }
   }
 
+  .logos {
+    padding-top: 52px;
+  }
+
   .about {
+    .steps {
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+
+    .student {
+      &__content {
+        .box {
+          &:last-child {
+            margin-bottom: 40px;
+          }
+
+          .number {
+            margin-left: 0 !important;
+          }
+        }
+      }
+    }
+
+    .teacher {
+      &__content {
+        .box {
+          &:last-child {
+            margin-bottom: 40px;
+          }
+
+          .number {
+            margin-left: 0 !important;
+          }
+        }
+      }
+    }
+
+    .partners {
+      text-align: center;
+
+      p {
+        font-size: 1.7rem;
+        letter-spacing: 2px;
+        word-spacing: 2px;
+        padding-top: 20%;
+        padding-bottom: 20%;
+        margin-left: 0;
+        text-transform: uppercase;
+      }
+
+      hr {
+        display: none;
+      }
+    }
+
     .box-square {
       width: 100vw;
       height: 100vw;
@@ -418,85 +888,6 @@
       img {
         padding-right: 0 !important;
         padding-left: 0 !important;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1300px) and (min-width: map-get($breakpoints, 'medium')) {
-  #steps-student-section {
-    font-size: 0;
-    display: block;
-  }
-
-  #steps-teacher-section {
-    font-size: 0;
-    display: block;
-  }
-
-  #producer-section {
-    font-size: 0;
-    display: block;
-  }
-
-  #beneficiary-section {
-    font-size: 0;
-    display: block;
-  }
-
-  #howto-section {
-    font-size: 0;
-    display: block;
-  }
-
-  .separator {
-    h2 {
-      font-size: 1.7rem;
-    }
-  }
-
-  .header-full {
-    h1 {
-      font-size: 2rem;
-    }
-  }
-
-  .about {
-    .box-square {
-      width: calc(100vw - 170px);
-      height: calc((100vw - 170px) / 2 );
-      display: block;
-      padding-top: 4px;
-      padding-bottom: 0 !important;
-      padding-right: 4px !important;
-      padding-left: 4px !important;
-    }
-
-    .box-rectangle {
-      width: calc(100vw - 170px);
-      height: calc((100vw - 170px) / 2);
-      display: inline-block;
-    }
-
-    .box-rectangle-full {
-      width: calc(100vw - 170px);
-      height: calc((100vw - 170px) / 2);
-      display: inline-block;
-    }
-
-    .box-content {
-      h3 {
-        font-size: 1.5rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-      ul {
-        li {
-          font-size: 1rem;
-        }
       }
     }
   }
