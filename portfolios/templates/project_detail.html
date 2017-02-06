@@ -47,8 +47,8 @@
         <div class="project-detail__content row column">
             {{ instance.content|safe }}
             <div class="extra">
-                <p><span>{% blocktrans %}Category{% endblocktrans %}: </span>{{ instance.category }}</p>
-                <p><span>{% blocktrans %}Updated{% endblocktrans %}: </span>{{ instance.updated }}</p>
+                <p><span>{% blocktrans trimmed %}Category{% endblocktrans %}: </span>{{ instance.category }}</p>
+                <p><span>{% blocktrans trimmed %}Updated{% endblocktrans %}: </span>{{ instance.updated }}</p>
             </div>
         </div>
     </div>

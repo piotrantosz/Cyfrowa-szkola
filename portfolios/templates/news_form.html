@@ -2,7 +2,7 @@
 {% load i18n %}
 
 {% block head_title %}
-    {% if instance.title %}{{ instance.title }}{% else %}{% blocktrans %}Create{% endblocktrans %}{% endif %} |
+    {% if instance.title %}{{ instance.title }}{% else %}{% blocktrans trimmed %}Create{% endblocktrans %}{% endif %} |
     {{ block.super }}
 {% endblock head_title %}
 
@@ -16,7 +16,7 @@
         <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
             <div class="news-detail__header">
                 <h1><input value="{{ instance.title }}" id="id_title" maxlength="120" name="title" type="text" required=""
-                           placeholder="{% blocktrans %}Title{% endblocktrans %}"></h1>
+                           placeholder="{% blocktrans trimmed %}Title{% endblocktrans %}"></h1>
                 <p>
                 <span class="author">
                     {% if request.user.get_full_name %}
@@ -38,13 +38,13 @@
                 <span class="fa fa-google"></span>
             </div>
             <div class="news-detail__content row column">
-                <label for="id_header_image">{% blocktrans %}Card image{% endblocktrans %}</label>
+                <label for="id_header_image">{% blocktrans trimmed %}Card image{% endblocktrans %}</label>
                 {% if instance.header_image %}
                 <a href="{{ instance.header_image.url }}">{{ instance.header_image }}</a>
                 {% endif %}
                 <input value="{{ instance.header_image }}" id="id_header_image" name="header_image" type="file" required="">
                 <hr>
-                <label for="id_content">{% blocktrans %}Content{% endblocktrans %}</label>
+                <label for="id_content">{% blocktrans trimmed %}Content{% endblocktrans %}</label>
                 <textarea cols="40" id="id_content" name="content" rows="10"
                           style="visibility: hidden; display: none;">{{ instance.content }}</textarea>
                 {% wysiwyg_editor "id_content" %}

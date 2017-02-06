@@ -13,7 +13,7 @@
     <div class="content news-list small-12 columns">
         <div class="header small-12 medium-3 large-3 columns" style="background: url({% static 'img/news_background.jpg' %}) no-repeat;">
             <div class="header__text small-12 columns small-centered">
-                <h1>{% blocktrans %}News{% endblocktrans %}</h1>
+                <h1>{% blocktrans trimmed %}News{% endblocktrans %}</h1>
             </div>
         </div>
         <div class="small-12 medium-9 large-9 columns" style="float: right;">
@@ -29,7 +29,7 @@
                         <div class="content">
                             <span class="author">{{ obj.author }}</span>
                             <h1 class="title"><a href="{{ obj.get_absolute_url }}">{{ obj.title }}</a></h1>
-                            <p class="text">{{ obj.content|striptags|truncatechars:300 }} <b><a href="{{ obj.get_absolute_url }}">{% blocktrans %}read more{% endblocktrans %}</a></b></p>
+                            <p class="text">{{ obj.content|striptags|truncatechars:300 }} <b><a href="{{ obj.get_absolute_url }}">{% blocktrans trimmed %}read more{% endblocktrans %}</a></b></p>
                             <a href="{{ obj.get_absolute_url }}"><label class="menu-button"><span></span></label></a>
                         </div>
                     </div>

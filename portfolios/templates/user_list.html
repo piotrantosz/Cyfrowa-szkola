@@ -41,8 +41,8 @@
                 </div>
                 <div class="users-card__content">
                     <a href="{{ user.get_user_url }}" class="name">{{ user.get_full_name }}</a>
-                    <p>{% blocktrans %}Joined{% endblocktrans %}: <span class="date">{{ user.date_joined|date:"M d, Y" }}</span></p>
-                    <p>{% blocktrans %}I want to be{% endblocktrans %}: <span class="job">{{ user.future_job }}</span></p>
+                    <p>{% blocktrans trimmed %}Joined{% endblocktrans %}: <span class="date">{{ user.date_joined|date:"M d, Y" }}</span></p>
+                    <p>{% blocktrans trimmed %}I want to be{% endblocktrans %}: <span class="job">{{ user.future_job }}</span></p>
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@
             {% endif %}
 
             <span class="current">
-                {% blocktrans %}Page{% endblocktrans %} {{ users.number }} {% blocktrans %}of{% endblocktrans %} {{ users.paginator.num_pages }}
+                {% blocktrans trimmed %}Page{% endblocktrans %} {{ users.number }} {% blocktrans trimmed %}of{% endblocktrans %} {{ users.paginator.num_pages }}
             </span>
 
             {% if users.has_next %}

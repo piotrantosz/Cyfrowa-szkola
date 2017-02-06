@@ -19,12 +19,12 @@
         <div class="news-detail__content row column">
             <h2>{% trans 'Overview' %}</h2>
             <p>
-                {% blocktrans %}Our website lets you create your personal portfolio.{% endblocktrans %}<br>
-                {% blocktrans %}Each portfolio consists of blog-styled subpages where you can describe the projects you have done.{% endblocktrans %}
+                {% blocktrans trimmed %}Our website lets you create your personal portfolio.{% endblocktrans %}<br>
+                {% blocktrans trimmed %}Each portfolio consists of blog-styled subpages where you can describe the projects you have done.{% endblocktrans %}
             </p>
             <h2>{% trans 'Step 1: Account Detail' %}</h2>
             <p>
-                {% blocktrans %}Your profile describes you and your desires who you are and what you are looking for. While completing it, you should fill out all the fields:{% endblocktrans %}
+                {% blocktrans trimmed %}Your profile describes you and your desires who you are and what you are looking for. While completing it, you should fill out all the fields:{% endblocktrans %}
             </p>
             <ul>
                 <li>{% trans 'First name' %}</li>
@@ -39,7 +39,7 @@
             <a href="{% url 'account_login' %}">{% trans 'Login to your account and edit details' %}</a>
             <h2>{% trans 'Step 2: Create project' %}</h2>
             <p>
-                {% blocktrans %}You can create a page to describe a project of yours - we’ve prepared a smart text editor for you! The more projects you describe, the better! All of them will be wrapped into your public profile and therefore - your portfolio.{% endblocktrans %}
+                {% blocktrans trimmed %}You can create a page to describe a project of yours - we’ve prepared a smart text editor for you! The more projects you describe, the better! All of them will be wrapped into your public profile and therefore - your portfolio.{% endblocktrans %}
                 {% if user.is_authenticated %}
                 <a href="{% url 'projects:user_detail' user_id=user.id %}">{% trans 'Your profile' %}</a>
                 {% endif %}
@@ -57,7 +57,7 @@
             </ul>
             <h2>{% trans 'Step 3: Share your profile' %}</h2>
             <p>
-                {% blocktrans %}Everything is all set! Your portfolio will be visible on our list immediately after you add your first project. You can preview it at any time - just use the button on the bottom of your home. When you’re ready... just go and share it!{% endblocktrans %}
+                {% blocktrans trimmed %}Everything is all set! Your portfolio will be visible on our list immediately after you add your first project. You can preview it at any time - just use the button on the bottom of your home. When you’re ready... just go and share it!{% endblocktrans %}
                 <a href="{% url 'account_login' %}">{% trans 'Your profile' %}</a>
             </p>
         </div>

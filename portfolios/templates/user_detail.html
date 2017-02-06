@@ -25,19 +25,19 @@
         <div class="row column">
             <div class="user__detail small-12 columns">
                 <div class="greeting">
-                    <h1>{% blocktrans %}Hello{% endblocktrans %}{% if user.is_authenticated %} {{ user.first_name }}{% endif %}!
-                        {% blocktrans %}I'm{% endblocktrans %} {{ author.get_full_name }}
+                    <h1>{% blocktrans trimmed %}Hello{% endblocktrans %}{% if user.is_authenticated %} {{ user.first_name }}{% endif %}!
+                        {% blocktrans trimmed %}I'm{% endblocktrans %} {{ author.get_full_name }}
                     </h1>
                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.url }}">
-                        <button class="button button--facebook">{% blocktrans %}Share on
+                        <button class="button button--facebook">{% blocktrans trimmed %}Share on
                             Facebook{% endblocktrans %}</button>
                     </a>
                     <a href="mailto:{{ author.email }}">
-                        <button class="button button--contact">{% blocktrans %}Contact me{% endblocktrans %}</button>
+                        <button class="button button--contact">{% blocktrans trimmed %}Contact me{% endblocktrans %}</button>
                     </a>
                     {% if author == request.user %}
                         <a href="{% url 'projects:create' %}">
-                            <button class="button secondary button--contact">{% blocktrans %}Create
+                            <button class="button secondary button--contact">{% blocktrans trimmed %}Create
                                 project{% endblocktrans %}</button>
                         </a>
                     {% endif %}
@@ -47,11 +47,11 @@
                 {% if sd or ld %}
                 <div class="description">
                     {% if sd %}
-                        <h2>{% blocktrans %}Short information{% endblocktrans %}:</h2>
+                        <h2>{% blocktrans trimmed %}Short information{% endblocktrans %}:</h2>
                         <p>{{ author.short_description }}</p>
                     {% endif %}
                     {% if ld %}
-                        <h2>{% blocktrans %}Long information{% endblocktrans %}:</h2>
+                        <h2>{% blocktrans trimmed %}Long information{% endblocktrans %}:</h2>
                         <p>{{ author.long_description }}</p>
                     {% endif %}
                 </div>
@@ -67,8 +67,8 @@
                         </div>
                         <div class="card-data">
                             <div class="meta">
-                                <p class="small-12 medium-6 small-centered medium-uncentered columns"><span>{% blocktrans %}Date{% endblocktrans %}</span>: {{ obj.updated }}</p>
-                                <p class="small-12 medium-6 small-centered medium-uncentered columns"><span>{% blocktrans %}Category{% endblocktrans %}</span>: {{ obj.category }}</p>
+                                <p class="small-12 medium-6 small-centered medium-uncentered columns"><span>{% blocktrans trimmed %}Date{% endblocktrans %}</span>: {{ obj.updated }}</p>
+                                <p class="small-12 medium-6 small-centered medium-uncentered columns"><span>{% blocktrans trimmed %}Category{% endblocktrans %}</span>: {{ obj.category }}</p>
                             </div>
                             <div class="small-12 columns">
                                 <p>{{ obj.content|striptags|truncatechars:500 }}</p>
