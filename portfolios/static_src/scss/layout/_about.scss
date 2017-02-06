@@ -701,6 +701,10 @@ footer {
       }
     }
   }
+
+  footer {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: map-get($breakpoints, 'medium')) {
@@ -890,5 +894,9 @@ footer {
         padding-left: 0 !important;
       }
     }
+  }
+
+  footer {
+    text-align: center;
   }
 }
