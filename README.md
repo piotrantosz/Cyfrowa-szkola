@@ -1,5 +1,11 @@
 
 # Cyfrowa szkoła sukcesu
+<p align="center">
+    <img src="http://i.imgur.com/5dRBTb9.gifv">
+</p>
+
+Visit website at <http://cyfrowa-szkola.eu>
+
 Django application which allows multiple users (students) to share their projects and create their online portfolio.
 
 Using Social Accounts validation (allauth - Google, Facebook and local accounts), CKEditor for modyfing projects content and more.
