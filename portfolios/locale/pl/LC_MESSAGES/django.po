@@ -901,9 +901,7 @@ msgid ""
 "                    %(site_name)s. As a final step, please complete the "
 "following form:"
 msgstr ""
-"Masz zamiar użyć\n"
-"                    %(provider_name)s żeby zalogować się do\n"
-"                    %(site_name)s. Jako finalny krok, proszę wypełnij: "
+"Masz zamiar użyć %(provider_name)s żeby zalogować się do %(site_name)s. Jako finalny krok, proszę wypełnij: "
 
 #: templates/user_detail.html:28
 msgid "Hello"
