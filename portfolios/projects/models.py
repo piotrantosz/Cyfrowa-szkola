@@ -37,11 +37,11 @@ class User(AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(_('first name'), max_length=30)
     last_name = models.CharField(_('last name'), max_length=30)
     email = models.EmailField(_('email address'))
-    avatar = models.ImageField(null=True, blank=True)
-    header_image = models.ImageField(null=True, blank=True)
-    short_description = models.TextField(max_length=200, null=True, blank=True)
-    long_description = models.TextField(max_length=3000, null=True, blank=True)
-    future_job = models.CharField(max_length=40, default=_('Professionalist'))
+    avatar = models.ImageField(_('avatar'), null=True, blank=True)
+    header_image = models.ImageField(_('header image'), null=True, blank=True)
+    short_description = models.TextField(_('short description'), max_length=200, null=True, blank=True)
+    long_description = models.TextField(_('long description'), max_length=3000, null=True, blank=True)
+    future_job = models.CharField(_('future job'), max_length=40, default=_('None'))
     is_staff = models.BooleanField(
         _('staff status'),
         default=False,

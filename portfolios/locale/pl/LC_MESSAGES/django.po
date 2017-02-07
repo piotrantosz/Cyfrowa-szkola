@@ -1,11 +1,13 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: Cyfrowa Szkoła - wtorek\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-07 16:19+0100\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
-"Project-Id-Version: Cyfrowa Szkoła - wtorek\n"
-"Language: pl\n"
 
 #: news/forms.py:16 templates/news_form.html:19 templates/project_form.html:21
 msgid "Title"
@@ -76,9 +78,29 @@ msgstr "Nazwisko"
 msgid "email address"
 msgstr "Adres e-mail"
 
+#: projects/models.py:40
+msgid "avatar"
+msgstr "awatar"
+
+#: projects/models.py:41
+msgid "header image"
+msgstr "obraz nagłówka"
+
+#: projects/models.py:42
+msgid "short description"
+msgstr "krótki opis"
+
+#: projects/models.py:43
+msgid "long description"
+msgstr "długi opis"
+
 #: projects/models.py:44
-msgid "Professionalist"
-msgstr "Specjalistą"
+msgid "future job"
+msgstr "Przyszła praca"
+
+#: projects/models.py:44
+msgid "None"
+msgstr "Brak"
 
 #: projects/models.py:46
 msgid "staff status"
@@ -86,15 +108,20 @@ msgstr "Status personelu"
 
 #: projects/models.py:48
 msgid "Designates whether the user can log into this admin site."
-msgstr "Wyznacza czy użytkownik może zalogować się na tej stronie administracyjnej."
+msgstr ""
+"Wyznacza czy użytkownik może zalogować się na tej stronie administracyjnej."
 
 #: projects/models.py:51
 msgid "active"
 msgstr "aktywny"
 
 #: projects/models.py:54
-msgid "Designates whether this user should be treated as active. Unselect this instead of deleting accounts."
-msgstr "Wyznacza czy dany użytkownik powinien być traktowany jako aktywny. Odznacz to zamiast usuwać konto."
+msgid ""
+"Designates whether this user should be treated as active. Unselect this "
+"instead of deleting accounts."
+msgstr ""
+"Wyznacza czy dany użytkownik powinien być traktowany jako aktywny. Odznacz "
+"to zamiast usuwać konto."
 
 #: projects/models.py:58
 msgid "date joined"
@@ -117,8 +144,10 @@ msgid "O projekcie \"Cyfrowa Szkoła Sukcesu\""
 msgstr "O projekcie \"Cyfrowa Szkoła Sukcesu\""
 
 #: templates/about_project.html:10
-msgid "Regionalny Program Operacyjny Województwa Dolnośląskiego na lata 2014-2020"
-msgstr "Regionalny Program Operacyjny Województwa Dolnośląskiego na lata 2014-2020"
+msgid ""
+"Regionalny Program Operacyjny Województwa Dolnośląskiego na lata 2014-2020"
+msgstr ""
+"Regionalny Program Operacyjny Województwa Dolnośląskiego na lata 2014-2020"
 
 #: templates/account/account_inactive.html:6
 #: templates/account/account_inactive.html:13
@@ -170,8 +199,13 @@ msgid "Warning:"
 msgstr "Ostrzeżenie:"
 
 #: templates/account/email.html:51
-msgid "You currently do not have any e-mail address set up. You should really add an e-mail address so you can receive notifications, reset your password, etc."
-msgstr "Aktualnie nie ma żadnych adres e-mail skonfigurowanych. Należy dodać adres e-mail, dzięki czemu będziesz mógł otrzymywać informacje, dokonywać resetów hasła itp."
+msgid ""
+"You currently do not have any e-mail address set up. You should really add "
+"an e-mail address so you can receive notifications, reset your password, etc."
+msgstr ""
+"Aktualnie nie ma żadnych adres e-mail skonfigurowanych. Należy dodać adres e-"
+"mail, dzięki czemu będziesz mógł otrzymywać informacje, dokonywać resetów "
+"hasła itp."
 
 #: templates/account/email.html:56
 msgid "Add E-mail Address"
@@ -186,22 +220,30 @@ msgid "Do you really want to remove the selected e-mail address?"
 msgstr "Czy na pewno chcesz usunąć wybrany adres e-mail?"
 
 #: templates/account/email/email_confirmation_message.txt:1
-msgid "Hello from %(site_name)s!\n"
+#, python-format
+msgid ""
+"Hello from %(site_name)s!\n"
 "\n"
-"You're receiving this e-mail because user %(user_display)s at %(site_domain)s has given yours as an e-mail address to connect their account.\n"
+"You're receiving this e-mail because user %(user_display)s at "
+"%(site_domain)s has given yours as an e-mail address to connect their "
+"account.\n"
 "\n"
 "To confirm this is correct, go to %(activate_url)s\n"
-""
-msgstr "Witaj z %(site_name)s!\n"
+msgstr ""
+"Witaj z %(site_name)s!\n"
 "\n"
-"Otrzymujesz tą wiadomość ponieważ użytkownik %(user_display)s w %(site_domain)s podał twój adres e-mail do połączenia z jego kontem.\n"
+"Otrzymujesz tą wiadomość ponieważ użytkownik %(user_display)s w "
+"%(site_domain)s podał twój adres e-mail do połączenia z jego kontem.\n"
 "\n"
 "Aby potwierdzić, że jest to prawda, idź do %(activate_url)s\n"
 
 #: templates/account/email/email_confirmation_message.txt:7
-msgid "Thank you from %(site_name)s!\n"
+#, python-format
+msgid ""
+"Thank you from %(site_name)s!\n"
 "%(site_domain)s"
-msgstr "Dziękuje z %(site_name)s!\n"
+msgstr ""
+"Dziękuje z %(site_name)s!\n"
 "%(site_domain)s"
 
 #: templates/account/email/email_confirmation_subject.txt:3
@@ -209,24 +251,35 @@ msgid "Please Confirm Your E-mail Address"
 msgstr "Proszę potwierdź swój adres e-mail"
 
 #: templates/account/email/password_reset_key_message.txt:1
-msgid "Hello from %(site_name)s!\n"
+#, python-format
+msgid ""
+"Hello from %(site_name)s!\n"
 "\n"
-"You're receiving this e-mail because you or someone else has requested a password for your user account at %(site_domain)s.\n"
-"It can be safely ignored if you did not request a password reset. Click the link below to reset your password."
-msgstr "Witaj z %(site_name)s!\n"
+"You're receiving this e-mail because you or someone else has requested a "
+"password for your user account at %(site_domain)s.\n"
+"It can be safely ignored if you did not request a password reset. Click the "
+"link below to reset your password."
+msgstr ""
+"Witaj z %(site_name)s!\n"
 "\n"
-"Otrzymujesz tę wiadomość, ponieważ ty lub ktoś inny poprosił o hasło do konta użytkownika w %(site_domain)s.\n"
+"Otrzymujesz tę wiadomość, ponieważ ty lub ktoś inny poprosił o hasło do "
+"konta użytkownika w %(site_domain)s.\n"
 "Można to zignorować, jeśli nie poprosiłeś o zresetowanie hasła. \n"
 "Kliknij poniższy link, aby zresetować hasło."
 
 #: templates/account/email/password_reset_key_message.txt:8
+#, python-format
 msgid "In case you forgot, your username is %(username)s."
-msgstr "W przypadku gdybyś zapomniał, twoja nazwa użytkownika to %(username)s. "
+msgstr ""
+"W przypadku gdybyś zapomniał, twoja nazwa użytkownika to %(username)s. "
 
 #: templates/account/email/password_reset_key_message.txt:10
-msgid "Thank you for using %(site_name)s!\n"
+#, python-format
+msgid ""
+"Thank you for using %(site_name)s!\n"
 "%(site_domain)s"
-msgstr "Dziękujemy za używanie %(site_name)s!\n"
+msgstr ""
+"Dziękujemy za używanie %(site_name)s!\n"
 "%(site_domain)s"
 
 #: templates/account/email/password_reset_key_subject.txt:3
@@ -239,16 +292,26 @@ msgid "Confirm E-mail Address"
 msgstr "Potwierdź adres email"
 
 #: templates/account/email_confirm.html:23
-msgid "Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail address for user %(user_display)s."
-msgstr "Proszę potwierdzić że <a href=\"mailto:%(email)s\">%(email)s</a> to poprawny adres e-mail dla użytkownika %(user_display)s. "
+#, python-format
+msgid ""
+"Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
+"address for user %(user_display)s."
+msgstr ""
+"Proszę potwierdzić że <a href=\"mailto:%(email)s\">%(email)s</a> to poprawny "
+"adres e-mail dla użytkownika %(user_display)s. "
 
 #: templates/account/email_confirm.html:28
 msgid "Confirm"
 msgstr "Potwierdź"
 
 #: templates/account/email_confirm.html:36
-msgid "This e-mail confirmation link expired or is invalid. Please <a href=\"%(email_url)s\">issue a new e-mail confirmation request</a>."
-msgstr "Link zawarty w tym e-mailu wygasł lub jest nieprawidłowy. Proszę <a href=\"%(email_url)s\">poproś o nowy link potwierdzający</a>."
+#, python-format
+msgid ""
+"This e-mail confirmation link expired or is invalid. Please <a href="
+"\"%(email_url)s\">issue a new e-mail confirmation request</a>."
+msgstr ""
+"Link zawarty w tym e-mailu wygasł lub jest nieprawidłowy. Proszę <a href="
+"\"%(email_url)s\">poproś o nowy link potwierdzający</a>."
 
 #: templates/account/login.html:7 templates/account/login.html:14
 #: templates/account/login.html:47 templates/account/signup.html:25
@@ -260,8 +323,13 @@ msgid "or"
 msgstr "lub"
 
 #: templates/account/login.html:35
-msgid "If you have not created an account yet, then please <a href=\"%(signup_url)s\">sign up</a> first."
-msgstr "Jeśli nie stworzyłeś jeszcze konta, wtedy <a href=\"%(signup_url)s\">zarejestruj się</a> pierwsze."
+#, python-format
+msgid ""
+"If you have not created an account yet, then please <a href=\"%(signup_url)s"
+"\">sign up</a> first."
+msgstr ""
+"Jeśli nie stworzyłeś jeszcze konta, wtedy <a href=\"%(signup_url)s"
+"\">zarejestruj się</a> pierwsze."
 
 #: templates/account/login.html:48 templates/account/signup.html:13
 #: templates/account/signup.html:24 templates/socialaccount/signup.html:28
@@ -282,22 +350,27 @@ msgid "Are you sure you want to sign out?"
 msgstr "Czy na pewno chcesz się wylogować?"
 
 #: templates/account/messages/cannot_delete_primary_email.txt:2
+#, python-format
 msgid "You cannot remove your primary e-mail address (%(email)s)."
 msgstr "Nie możesz usunąć twojego głównego adresu e-mail (%(email)s)."
 
 #: templates/account/messages/email_confirmation_sent.txt:2
+#, python-format
 msgid "Confirmation e-mail sent to %(email)s."
 msgstr "Potwierdzenie wysłane do %(email)s."
 
 #: templates/account/messages/email_confirmed.txt:2
+#, python-format
 msgid "You have confirmed %(email)s."
 msgstr "Potwierdziłeś %(email)s."
 
 #: templates/account/messages/email_deleted.txt:2
+#, python-format
 msgid "Removed e-mail address %(email)s."
 msgstr "Usunięto adres e-mail %(email)s."
 
 #: templates/account/messages/logged_in.txt:4
+#, python-format
 msgid "Successfully signed in as %(name)s."
 msgstr "Pomyślnie zalogowano się jako %(name)s."
 
@@ -346,16 +419,27 @@ msgid "Reset My Password"
 msgstr "Zresetuj moje hasło"
 
 #: templates/account/password_reset_done.html:22
-msgid "We have sent you an e-mail. Please contact us if you do not receive it within a few minutes."
-msgstr "Wysłaliśmy do Ciebie e-mail. Prosimy o kontakt, jeśli nie otrzymasz go w ciągu kilku minut."
+msgid ""
+"We have sent you an e-mail. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+"Wysłaliśmy do Ciebie e-mail. Prosimy o kontakt, jeśli nie otrzymasz go w "
+"ciągu kilku minut."
 
 #: templates/account/password_reset_from_key.html:14
 msgid "Bad Token"
 msgstr "Tły Token"
 
 #: templates/account/password_reset_from_key.html:19
-msgid "The password reset link was invalid, possibly because it has already been used. Please request a <a href=\"%(passwd_reset_url)s\">new password reset</a>."
-msgstr "Link do zresetowania hasła jest niepoprawny, prawdopodobnie ponieważ już został użyty. Spróbuj poprosić o nowy <a href=\"%(passwd_reset_url)s\">link do resetowania hasła</a>. "
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used. Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
+"a>."
+msgstr ""
+"Link do zresetowania hasła jest niepoprawny, prawdopodobnie ponieważ już "
+"został użyty. Spróbuj poprosić o nowy <a href=\"%(passwd_reset_url)s\">link "
+"do resetowania hasła</a>. "
 
 #: templates/account/password_reset_from_key.html:31
 #: templates/account/password_reset_from_key_done.html:16
@@ -396,6 +480,7 @@ msgid "Note"
 msgstr "Uwaga"
 
 #: templates/account/snippets/already_logged_in.html:5
+#, python-format
 msgid "you are already logged in as %(user_display)s."
 msgstr "jesteś już zalogowany jako %(user_display)s."
 
@@ -409,24 +494,46 @@ msgid "Verification sent"
 msgstr "Weryfikacja wysłana"
 
 #: templates/account/verification_sent.html:16
-msgid "We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process. Please contact us if you do not receive it within a few minutes."
-msgstr "Wysłaliśmy do ciebie e-mail z linkiem weryfikacyjnym. Kliknij na link w e-mailu aby zakończyć proces rejestracji. Skontaktuj się z nami, jeśli nie otrzymasz go w przeciągu kilku minut."
+msgid ""
+"We have sent an e-mail to you for verification. Follow the link provided to "
+"finalize the signup process. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+"Wysłaliśmy do ciebie e-mail z linkiem weryfikacyjnym. Kliknij na link w e-"
+"mailu aby zakończyć proces rejestracji. Skontaktuj się z nami, jeśli nie "
+"otrzymasz go w przeciągu kilku minut."
 
 #: templates/account/verified_email_required.html:13
 msgid "Verify Your E-mail"
 msgstr "Zweryfikuj swój email"
 
 #: templates/account/verified_email_required.html:19
-msgid "This part of the site requires us to verify that you are who you claim to be. For this purpose, we require that you verify ownership of your e-mail address."
-msgstr "Ta część strony wymaga weryfikacji tego kim jesteś. Dlatego prosimy cię, żebyś pierwsze potwierdził swój adres e-mail."
+msgid ""
+"This part of the site requires us to verify that you are who you claim to "
+"be. For this purpose, we require that you verify ownership of your e-mail "
+"address."
+msgstr ""
+"Ta część strony wymaga weryfikacji tego kim jesteś. Dlatego prosimy cię, "
+"żebyś pierwsze potwierdził swój adres e-mail."
 
 #: templates/account/verified_email_required.html:23
-msgid "We have sent an e-mail to you for verification. Please click on the link inside this e-mail. Please contact us if you do not receive it within a few minutes."
-msgstr "Wysłaliśmy e-mail do Ciebie w celu weryfikacji. Proszę kliknąć na link wewnątrz tego e-maila. Prosimy o kontakt, jeśli nie otrzymasz go w ciągu kilku minut."
+msgid ""
+"We have sent an e-mail to you for verification. Please click on the link "
+"inside this e-mail. Please contact us if you do not receive it within a few "
+"minutes."
+msgstr ""
+"Wysłaliśmy e-mail do Ciebie w celu weryfikacji. Proszę kliknąć na link "
+"wewnątrz tego e-maila. Prosimy o kontakt, jeśli nie otrzymasz go w ciągu "
+"kilku minut."
 
 #: templates/account/verified_email_required.html:27
-msgid "<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your e-mail address</a> ."
-msgstr "<strong>Uwaga:</strong> nadal możesz <a href=\"%(email_url)s\">zmienić swój adres e-mail</a> . "
+#, python-format
+msgid ""
+"<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your e-"
+"mail address</a> ."
+msgstr ""
+"<strong>Uwaga:</strong> nadal możesz <a href=\"%(email_url)s\">zmienić swój "
+"adres e-mail</a> . "
 
 #: templates/base.html:10
 msgid "Cyfrowa Szkoła"
@@ -437,7 +544,8 @@ msgid "How to create portfolio"
 msgstr "Jak stworzyć portfolio"
 
 #: templates/guide.html:6 templates/guide.html:7
-msgid "Step by step guide of creating your own portfolio at Cyfrowa Szkoła Sukcesu"
+msgid ""
+"Step by step guide of creating your own portfolio at Cyfrowa Szkoła Sukcesu"
 msgstr "Nasza strona internetowa pozwala stworzyć twoje prywatne portfolio."
 
 #: templates/guide.html:12
@@ -457,16 +565,25 @@ msgid "Our website lets you create your personal portfolio."
 msgstr "Nasza strona internetowa pozwala stworzyć twoje prywatne portfolio."
 
 #: templates/guide.html:23
-msgid "Each portfolio consists of blog-styled subpages where you can describe the projects you have done."
-msgstr "Każde portfolio składa się z podstron stylowanych na bloga - gdzie w łatwy sposób możesz opisać wykonany przez siebie projekt."
+msgid ""
+"Each portfolio consists of blog-styled subpages where you can describe the "
+"projects you have done."
+msgstr ""
+"Każde portfolio składa się z podstron stylowanych na bloga - gdzie w łatwy "
+"sposób możesz opisać wykonany przez siebie projekt."
 
 #: templates/guide.html:25
 msgid "Step 1: Account Detail"
 msgstr "Krok 1: Szczegóły konta"
 
 #: templates/guide.html:27
-msgid "Your profile describes you and your desires who you are and what you are looking for. While completing it, you should fill out all the fields:"
-msgstr "Twój profil opisuje ciebie oraz twoje pragnienia, to kim chcesz zostać w przyszłości i czego oczekujesz. Kiedy uzupełniasz go, zadbaj aby wypełnić poniższe pola:"
+msgid ""
+"Your profile describes you and your desires who you are and what you are "
+"looking for. While completing it, you should fill out all the fields:"
+msgstr ""
+"Twój profil opisuje ciebie oraz twoje pragnienia, to kim chcesz zostać w "
+"przyszłości i czego oczekujesz. Kiedy uzupełniasz go, zadbaj aby wypełnić "
+"poniższe pola:"
 
 #: templates/guide.html:31
 msgid "Last name - surname"
@@ -485,15 +602,21 @@ msgid "Avatar - square image of you on it"
 msgstr "Awatar - kwadratowe zdjęcie z tobą"
 
 #: templates/guide.html:35
-msgid "Header Image - 1920x600 background image to be displayed on the top of your profile"
-msgstr "Główne zdjęcie - zdjęcie o rozmiarze 1920x600, które będzie wyświetlane jako tło twojego profilu"
+msgid ""
+"Header Image - 1920x600 background image to be displayed on the top of your "
+"profile"
+msgstr ""
+"Główne zdjęcie - zdjęcie o rozmiarze 1920x600, które będzie wyświetlane jako "
+"tło twojego profilu"
 
 #: templates/guide.html:36
 msgid "Short Description - short text in which you describe yourself"
 msgstr "Krótki opis - w kilku słowach opisz siebie"
 
 #: templates/guide.html:37
-msgid "Long Description - long text, feel free to share all information about you with the world (no word limits apply!)"
+msgid ""
+"Long Description - long text, feel free to share all information about you "
+"with the world (no word limits apply!)"
 msgstr "Długi opis - nie przejmuj się limitami, opisz jak najlepiej siebie!"
 
 #: templates/guide.html:39
@@ -505,8 +628,16 @@ msgid "Step 2: Create project"
 msgstr "Krok 2: Dodawanie projektu"
 
 #: templates/guide.html:42
-msgid "You can create a page to describe a project of yours - we’ve prepared a smart text editor for you! The more projects you describe, the better! All of them will be wrapped into your public profile and therefore - your portfolio."
-msgstr "Możesz utworzyć podstrone w której opiszesz któryś z swoich projektów - przygotowaliśmy specjalny edytor dla ciebie! Postaraj się dodać jak najwięcej swoich projektów, wszystkie będą pokazane na twoim publicznym profilu - czyli twoim portfolio."
+msgid ""
+"You can create a page to describe a project of yours - we’ve prepared a "
+"smart text editor for you! The more projects you describe, the better! All "
+"of them will be wrapped into your public profile and therefore - your "
+"portfolio."
+msgstr ""
+"Możesz utworzyć podstrone w której opiszesz któryś z swoich projektów - "
+"przygotowaliśmy specjalny edytor dla ciebie! Postaraj się dodać jak "
+"najwięcej swoich projektów, wszystkie będą pokazane na twoim publicznym "
+"profilu - czyli twoim portfolio."
 
 #: templates/guide.html:44 templates/guide.html:61
 msgid "Your profile"
@@ -514,23 +645,33 @@ msgstr "Twój profil"
 
 #: templates/guide.html:48
 msgid "Title - best describing your project (e.g. Website for Yahoo)"
-msgstr "Tytuł - najlepiej opisz swój projekt (np. strona internetowa dla Yahoo)"
+msgstr ""
+"Tytuł - najlepiej opisz swój projekt (np. strona internetowa dla Yahoo)"
 
 #: templates/guide.html:49
-msgid "Category - try to use general / broad ones names (e.g. Web Design, Graphic Design, Programming)"
-msgstr "Kategoria - spróbuj użyć popularnych nazw (np. Web Design, Programowanie, Grafika)"
+msgid ""
+"Category - try to use general / broad ones names (e.g. Web Design, Graphic "
+"Design, Programming)"
+msgstr ""
+"Kategoria - spróbuj użyć popularnych nazw (np. Web Design, Programowanie, "
+"Grafika)"
 
 #: templates/guide.html:50
 msgid "Header Image - 1920x600 background image"
 msgstr "Zdjęcie nagłówka - zdjęcie o rozmiarze 1920x600 stanowiące tło"
 
 #: templates/guide.html:51
-msgid "Content - describe your project in detail, add photos, links and other additional resources!"
-msgstr "Treść - opisz swój projekt najdokładniej jak możesz, postaraj się wyczerpać temat, dodawaj zdjęcia, linki oraz wszystko czego potrzebujesz!"
+msgid ""
+"Content - describe your project in detail, add photos, links and other "
+"additional resources!"
+msgstr ""
+"Treść - opisz swój projekt najdokładniej jak możesz, postaraj się wyczerpać "
+"temat, dodawaj zdjęcia, linki oraz wszystko czego potrzebujesz!"
 
 #: templates/guide.html:53
 msgid "There are two ways to add your projects (you must be signed in!)"
-msgstr "Istnieją dwa sposoby dodawania swoich projektów (musisz być zalogowany!)"
+msgstr ""
+"Istnieją dwa sposoby dodawania swoich projektów (musisz być zalogowany!)"
 
 #: templates/guide.html:55
 msgid "Portfolios page (\"Create project\" button)"
@@ -542,15 +683,23 @@ msgstr "kliknij tutaj"
 
 #: templates/guide.html:56
 msgid "Bottom of your profile detail (Add project button)"
-msgstr "Na dole strony z informacjami o twoim koncie - przycisk \"Dodaj projekt\""
+msgstr ""
+"Na dole strony z informacjami o twoim koncie - przycisk \"Dodaj projekt\""
 
 #: templates/guide.html:58
 msgid "Step 3: Share your profile"
 msgstr "Krok 3: Udostępniaj swój profil (portfolio)"
 
 #: templates/guide.html:60
-msgid "Everything is all set! Your portfolio will be visible on our list immediately after you add your first project. You can preview it at any time - just use the button on the bottom of your home. When you’re ready... just go and share it!"
-msgstr "Wszystko gotowe! Po dodaniu twojego pierwszego projektu, twój profil będzie publiczny! Możesz go zobaczyć w każdym czasie - po prostu kliknij na przycisk \"Zobacz swój profil\" na stronie \"Mój profil\"."
+msgid ""
+"Everything is all set! Your portfolio will be visible on our list "
+"immediately after you add your first project. You can preview it at any time "
+"- just use the button on the bottom of your home. When you’re ready... just "
+"go and share it!"
+msgstr ""
+"Wszystko gotowe! Po dodaniu twojego pierwszego projektu, twój profil będzie "
+"publiczny! Możesz go zobaczyć w każdym czasie - po prostu kliknij na "
+"przycisk \"Zobacz swój profil\" na stronie \"Mój profil\"."
 
 #: templates/menu_nav.html:7
 msgid "About project"
@@ -590,8 +739,12 @@ msgid "News list"
 msgstr "Lista aktualności"
 
 #: templates/news_list.html:8 templates/news_list.html:10
-msgid "Latest news from Cyfrowa Szkoła Sukcesu - read about updates and important messages"
-msgstr "Najnowsze wiadomości z Cyfrowej Szkoły Sukcesu - czytaj o aktualnościach i ważnych wydarzeniach."
+msgid ""
+"Latest news from Cyfrowa Szkoła Sukcesu - read about updates and important "
+"messages"
+msgstr ""
+"Najnowsze wiadomości z Cyfrowej Szkoły Sukcesu - czytaj o aktualnościach i "
+"ważnych wydarzeniach."
 
 #: templates/news_list.html:32
 msgid "read more"
@@ -657,6 +810,12 @@ msgstr "Zapisz"
 msgid "E-mails"
 msgstr "E-maile"
 
+#: templates/profile_form.html:20
+#, fuzzy
+#| msgid "Set Password"
+msgid "Password"
+msgstr "Ustaw hasło"
+
 #: templates/project_detail.html:50 templates/project_form.html:60
 #: templates/user_detail.html:71
 msgid "Category"
@@ -679,8 +838,10 @@ msgid "Social Network Login Error"
 msgstr "Błąd logowania przez sieć społeczną"
 
 #: templates/socialaccount/authentication_error.html:16
-msgid "An error occurred while attempting to login via your social network account."
-msgstr "Wystąpił błąd podczas próby logowania za pośrednictwem sieci społecznej."
+msgid ""
+"An error occurred while attempting to login via your social network account."
+msgstr ""
+"Wystąpił błąd podczas próby logowania za pośrednictwem sieci społecznej."
 
 #: templates/socialaccount/connections.html:6
 #: templates/socialaccount/connections.html:13
@@ -688,12 +849,17 @@ msgid "Account Connections"
 msgstr "Podłączone konta"
 
 #: templates/socialaccount/connections.html:19
-msgid "You can sign in to your account using any of the following third party accounts:"
+msgid ""
+"You can sign in to your account using any of the following third party "
+"accounts:"
 msgstr "Możesz zalogować się na swoje konto używając jedną z poniższych metod:"
 
 #: templates/socialaccount/connections.html:53
-msgid "You currently have no social network accounts connected to this account."
-msgstr "Aktualnie, nie posiadasz konta w sieci społecznościowej powiązanego z tym kontem."
+msgid ""
+"You currently have no social network accounts connected to this account."
+msgstr ""
+"Aktualnie, nie posiadasz konta w sieci społecznościowej powiązanego z tym "
+"kontem."
 
 #: templates/socialaccount/connections.html:56
 msgid "Add a 3rd Party Account"
@@ -705,8 +871,14 @@ msgid "Login Cancelled"
 msgstr "Logowanie anulowane"
 
 #: templates/socialaccount/login_cancelled.html:19
-msgid "You decided to cancel logging in to our site using one of your existing accounts. If this was a mistake, please proceed to <a href=\"%(login_url)s\">sign in</a>."
-msgstr "Zdecydowałeś się zaprzestać logowania za pomocą konta społecznościowego. Jeśli to był błąd <a href=\"%(login_url)s\">zaloguj się</a>."
+#, python-format
+msgid ""
+"You decided to cancel logging in to our site using one of your existing "
+"accounts. If this was a mistake, please proceed to <a href=\"%(login_url)s"
+"\">sign in</a>."
+msgstr ""
+"Zdecydowałeś się zaprzestać logowania za pomocą konta społecznościowego. "
+"Jeśli to był błąd <a href=\"%(login_url)s\">zaloguj się</a>."
 
 #: templates/socialaccount/messages/account_connected.txt:2
 msgid "The social account has been connected."
@@ -721,11 +893,15 @@ msgid "The social account has been disconnected."
 msgstr "Konto społecznościowe zostało usunięte."
 
 #: templates/socialaccount/signup.html:16
-msgid "You are about to use\n"
+#, python-format
+msgid ""
+"You are about to use\n"
 "                    your\n"
 "                    %(provider_name)s account to login to\n"
-"                    %(site_name)s. As a final step, please complete the following form:"
-msgstr "Masz zamiar użyć\n"
+"                    %(site_name)s. As a final step, please complete the "
+"following form:"
+msgstr ""
+"Masz zamiar użyć\n"
 "                    %(provider_name)s żeby zalogować się do\n"
 "                    %(site_name)s. Jako finalny krok, proszę wypełnij: "
 
@@ -763,7 +939,9 @@ msgstr "Data"
 
 #: templates/user_list.html:8 templates/user_list.html:10
 msgid "Find users with amazing projects and help them became specialists"
-msgstr "Znajdź użytkowników, z niesamowitymi projektami i pomóż im zostać specjalistam w swoim fachu"
+msgstr ""
+"Znajdź użytkowników, z niesamowitymi projektami i pomóż im "
+"zostać specjalistam w swoim fachu"
 
 #: templates/user_list.html:22
 msgid "Create new project"
@@ -781,3 +959,5 @@ msgstr "Strona"
 msgid "of"
 msgstr "z"
 
+#~ msgid "Professionalist"
+#~ msgstr "Specjalistą"
