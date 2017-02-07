@@ -65,54 +65,58 @@
     font-weight: 300;
 
     h1 {
-      font-weight: 300;
+      font-weight: 700;
       font-size: 2rem;
       margin-top: 32px;
       margin-bottom: 4px;
     }
 
     h2 {
-      font-weight: 300;
+      font-weight: 600;
       font-size: 1.5rem;
-      margin-top: 32px;
+      margin-top: 14px;
       margin-bottom: 4px;
     }
 
     h3 {
-      font-weight: 300;
-      font-size: 1rem;
-      margin-top: 32px;
+      font-weight: 500;
+      font-size: 1.25rem;
+      margin-top: 12px;
       margin-bottom: 4px;
     }
 
     h4 {
-      font-weight: 300;
-      font-size: 0.5rem;
-      margin-top: 32px;
+      font-weight: 400;
+      font-size: 1.15rem;
+      margin-top: 10px;
       margin-bottom: 4px;
     }
 
     h5 {
-      font-weight: 300;
-      font-size: 0.5rem;
-      margin-top: 32px;
+      font-weight: 400;
+      font-size: 1.10rem;
+      margin-top: 6px;
       margin-bottom: 4px;
     }
 
     h6 {
-      font-weight: 300;
-      font-size: 0.5rem;
-      margin-top: 32px;
+      font-weight: 400;
+      font-size: 1.5rem;
+      margin-top: 6px;
       margin-bottom: 4px;
     }
 
     p{
-      font-size: 16px;
-      margin-bottom: 0;
+      font-size: 1rem;
+      margin-bottom: 4px;
     }
 
     img {
       height: auto !important;
+    }
+
+    ul, ol {
+      padding-left: 5px;
     }
   }
 }

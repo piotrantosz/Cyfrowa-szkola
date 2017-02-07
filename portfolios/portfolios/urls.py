@@ -20,13 +20,14 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 
 urlpatterns = [
+    url(r'^$', TemplateView.as_view(template_name="about.html"), name='about'),
     url(r'^admin/', admin.site.urls),
     url(r'^projects/', include('projects.urls', namespace='projects')),
     url(r'^news/', include('news.urls', namespace='news')),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^accounts/profile/', include('userprofile.urls')),
     url(r'^guide/$', TemplateView.as_view(template_name="guide.html"), name='guide'),
-    url(r'^about/$', TemplateView.as_view(template_name="about.html"), name='about'),
+    url(r'^about-project/$', TemplateView.as_view(template_name="about_project.html"), name='about-project'),
 ]
 
 if settings.DEBUG:

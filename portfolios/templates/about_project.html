@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+    <div class="news-detail small-12 small-centered columns ">
+        <div class="news-detail__header">
+            <h1>{% blocktrans trimmed %}O projekcie "Cyfrowa Szkoła Sukcesu"{% endblocktrans %}</h1>
+            <p>
+                <span class="author">
+                {% blocktrans trimmed %}Regionalny Program Operacyjny Województwa Dolnośląskiego na lata
+                    2014-2020{% endblocktrans %}
+                </span>
+            </p>
+        </div>
+        <div class="news-detail__social">
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}"><span
+                    class="fa fa-facebook"></span></a>
+            <a href="https://twitter.com/home?status=%20{{ request.build_absolute_uri }}"><span
+                    class="fa fa-twitter"></span></a>
+            <a href='https://plus.google.com/share?url={{ request.build_absolute_uri }}'><span
+                    class="fa fa-google"></span></a>
+        </div>
+        <div class="news-detail__content row column">
+            <dl>
+                <dt>I. Nazwa projektu:</dt>
+                <dd>Cyfrowa Szkoła Sukcesu - rozwój oferty kształcenia zawodowego Zespołu Szkół Teleinformatycznych i
+                    Elektronicznych we Wrocławiu
+                </dd>
+                <dt>II. Nazwa Programu Operacyjnego:</dt>
+                <dd>Regionalny Program Operacyjny Województwa Dolnośląskiego na lata 2014-2020</dd>
+                <dt>III. Numer i nazwa Osi priorytetowej:</dt>
+                <dd>10 Edukacja</dd>
+                <dt>IV. Numer i nazwa Działania:</dt>
+                <dd>10.4 Dostosowanie systemów kształcenia i szkolenia zawodowego do potrzeb rynku pracy</dd>
+                <dt>V. Numer i nazwa Poddziałania:</dt>
+                <dd>10.4.1 Dostosowanie systemów kształcenia i szkolenia zawodowego do potrzeb rynku pracy</dd>
+                <dt>VI. Nazwa i numer priorytetu inwestycyjnego:</dt>
+                <dd>Lepsze dostosowanie systemów kształcenia i szkolenia do potrzeb rynku pracy, ułatwianie
+                    przechodzenia z etapu kształcenia do etapu zatrudnienia oraz wzmacnianie systemów kształcenia i
+                    szkolenia zawodowego i ich jakości, w tym poprzez mechanizmy prognozowania umiejętności,
+                    dostosowania programów nauczania oraz tworzenia i rozwoju systemów uczenia się poprzez praktyczną
+                    naukę zawodu realizowaną w ścisłej współpracy z pracodawcami
+                </dd>
+                <dt>VII. Instytucja ogłaszająca konkurs:</dt>
+                <dd>Urząd Marszałkowski Województwa Dolnośląskiego</dd>
+            </dl>
+
+            <h2>Informacje o projekcie – cel projektu, działania, planowane efekty</h2>
+
+            <p>Beneficjentem projektu jest Zespół Szkół Teleinformatycznych i Elektronicznych we Wrocławiu
+                (ZSTiE), uczniowie i kadra nauczycielska. Organem prowadzącym Szkołę jest Gmina Wrocław.</p>
+            <br>
+            <p>Projekt jest realizowany pod kierownictwem Centrum Szkoleń Informatycznych VEDIUS, partnerem w
+                projekcie jest Stowarzyszenie Centrum Wspierania Przedsiębiorczości.</p>
+            <br>
+            <p>Oba podmioty wspólnie ze Szkołą wykonały diagnozę potrzeb dla obszaru informatyczno-
+                elektronicznego Szkoły tj. dla zawodów: technik informatyk, technik teleinformatyk, monter sieci,
+                monter elektronik. Diagnoza miała określić słabe i mocne strony Szkoły i być punktem wyjścia do
+                podniesienia jakości kształcenia zawodowego w Szkole i skorelowania jej z rynkiem pracy i
+                oczekiwaniami przedsiębiorców. Wyniki i wnioski wynikające z wykonanej diagnozy pokazują z jednej
+                strony duży potencjał Szkoły w zakresie kształcenia w obszarze informatyczno-elektronicznym, ale
+                równocześnie też konieczność dostosowania kształcenia do wymogów współczesnego rynku pracy.</p>
+            <br>
+            <p>Zaplanowane w projekcie działania są niezbędne do realizacji celu głównego, jakim jest nabycie
+                kwalifikacji zawodowych dopasowanych do regionalnego rynku pracy przez uczniów Zespołu Szkół
+                Teleinformatycznych i Elektronicznych we Wrocławiu. Udział w kursach zawodowych oraz doradztwie
+                edukacyjno-zawodowym przyczyni się do podniesienia zdolności do zatrudnienia uczniów w
+                zawodach z branży ICT na lokalnym rynku pracy. Podniesienie kwalifikacji w obszarze informatyczno -
+                elektronicznym kadry nauczycielskiej (16 osób) oraz stworzenie dobrze wyposażonych pracowni
+                komputerowych wzbogaci i uatrakcyjni ofertę kształcenia zawodowego Zespołu Szkół
+                Teleinformatycznych i Elektronicznych we Wrocławiu</p>
+
+            <h2>Działania</h2>
+            <h3>Inwestycje</h3>
+            <p>Przewidziano wyposażenie pracowni ZSTiE Wrocław do kwalifikacji E14 – komputery stacjonarne (16 sztuk) o
+                parametrach przedstawionych poniżej:</p>
+            <ol>
+                <li>Procesor: INTEL CORE i5-6600 - 3.30 GHz, turbo 3.90 GHz, x4/4, 6 MB, 65W, BOX, s-1151</li>
+                <li>Płyta gł&oacute;wna: MSI H170M-A PRO-m-ATX, H170, 4xDDR4, 2x PCI-E 16x, RAID, DVI, HDMI,
+                    S-1151
+                </li>
+                <li>Pamięć RAM: DDR4 HYPERX - 16 GB / 2133 (2x 8 GB), CL14, Fury Black</li>
+                <li>Dysk Twardy: TOSHIBA 1 TB, 32 MB, 7200 obr., 3.5", SATA 3 - DT01ACA100</li>
+                <li>Dysk Twardy SSD: SSD SANDISK PLUS - 240 GB, 2.5", SATA3, 530 MB/s, 440 MB/s - SDSSDA-240G</li>
+                <li>Napęd optyczny: LG GH24NSD1 - 24x DVDRW DL, SATA, OEM, czarna</li>
+                <li>Obudowa: CHIEFTEC XT-01B-350GPB - m-ATX, 350W, USB 3.0, czarna</li>
+                <li>Monitor: PHILIPS 200V4QSBR - 19.5", VA, 1920 x 1080, LED, 8 ms, 3000:1, DVI, czarny</li>
+                <li>Klawiatura: LOGITECH K120 - przewodowa, USB, czarna</li>
+                <li>Mysz: LOGITECH B100 - optyczna, przewodowa, USB, czarna</li>
+                <li>Karta Sieciowa: EDIMAX EW-7612PIN - PCI-E x1, Wi-Fi b/g/n, 300 Mb/s, dwie anteny</li>
+            </ol>
+            <h3>Wsparcie doradczo edukacyjne dla uczniów</h3>
+            <p>Zaplanowano 20 godzin indywidualnego wsparcia doradczego w zakresie wyboru ścieżki zawodowej dla łącznie
+                160 uczniów.</p>
+            <p>Doradztwo edukacyjno-zawodowe umożliwi uczniom rozwój kompetencji społecznych, w tym umiejętności pracy w
+                zespole oraz dostarczy diagnozę ich predyspozycji zawodowych. Celem DEZ jest również zbadanie mocnych i
+                słabych stron UP, wzmocnienie motywacji i samooceny oraz wyposażenie ich w umiejętności efektywnego
+                wykorzystania własnych kwalifikacji i predyspozycji tworząc indywidualne ścieżki kariery.</p>
+
+            <h3>Szkolenia, praca z projektem</h3>
+            <p>W ramach projektu zaplanowano 120-godzinne szkolenia o poniższej tematyce:</p>
+            <ol>
+                <li>Grafik komputerowy z modułem fotografii reklamowej, operator DTP</li>
+                <li>Projektant i administrator stron internetowych z modułem SEO i e-marketingu</li>
+                <li>Programista gier komputerowych</li>
+                <li>Programista aplikacji na smartphone i system operacyjny IOS i Android</li>
+                <li>Projektant, monter i administrator sieci komputerowych</li>
+                <li>Administrator systemami serwerowymi Windows i Linux</li>
+                <li>Serwisant sprzętu komputerowego. Szkolenia przeprowadzą trenerzy wsp&oacute;łpracujący z Centrum
+                    Szkoleń Informatycznych VEDIUS
+                </li>
+            </ol>
+            <p>Po zakończeniu szkolenia Trener/ konsultant pracy z projektem nadzoruje realizację przez uczniów
+                samodzielnych projektów w symulowanych treningowych miejscach pracy</p>
+
+            <h3>Coaching</h3>
+            <p>Dla nauczycieli przedmiotów zawodowych zaplanowane jest po 90 godzin indywidualnych konsultacji ze
+                specjalistą z obszaru kształcenia właściwego dla danego nauczyciela w celu aktualizacji wiedzy i trendów
+                w obszarze informatyczno – elektronicznym, a także wprowadzania treści odpowiadającym najnowszym
+                rozwiązaniom w dziedzinie ICT (m.in. programowanie aplikacji na urządzenia mobilne, e-marketing,
+                technologie internetowe, techniki DTP) oraz pobudzenia wśród uczniów przedsiębiorczości. Celem i trwałym
+                rezultatem indywidualnego wsparcia dla nauczycieli będzie podniesienie jakości kształcenia
+                zawodowego.</p>
+
+            <h3>Realizatorzy projektu</h3>
+            <h4>Lider</h4>
+            <p>Centrum Szkoleń Informatycznych Vedius istnieje na rynku od 2009 r. Specjalizuje się w organizacji
+                szkoleń informatycznych i biznesowych. Oprócz szkoleń zajmuje się również doradztwem i wykonawstwem
+                usług w sektorze IT.</p>
+            <p>Firma Vedius jest też agencją zatrudnienia wpisaną do KRAZ pod nr 13178 oraz instytucją
+                szkoleniową wpisaną do RIS pod numerem 2.12/00161/2009. Jako agencja zatrudnienia rekrutuje
+                pracowników do firm z branży IT. Firma Vedius jest również Niepubliczną Placówką Kształcenia
+                Ustawicznego wpisaną do ewidencji prowadzonej przez Prezydenta Miasta Krakowa pod numerem
+                4430.13.154. W 2014 r. roku firma Vedius otrzymała znak jakości Małopolskie Standardy Usług
+                Edukacyjnych i Szkoleniowych (przyznaje go Wojewódzki Urząd Pracy w Krakowie) co gwarantuje
+                odpowiednią jakość usług edukacyjnych. Ponadto firma posiada akredytację Kuratorium Oświaty w
+                Krakowie na prowadzone kursy komputerowe oraz akredytację PTI jako Laboratorium Egzaminacyjne
+                ECDL.</p>
+            <h4>Partner</h4>
+            <p>Centrum Wspierania Przedsiębiorczości z siedzibą we Wrocławiu jest instytucją rynku pracy, świadczy
+                w tym sektorze usługi, szkolenia, doradztwo z zakresu prawa, biznesu, księgowości, marketingu, jest
+                też inkubatorem społecznej przedsiębiorczości (2008‐2012 w partnerstwie z gm. Wrocław). Posiada
+                kilkuletnie doświadczenie w zakresie realizacji projektów dofinansowanych z EFS, w tym projektów w
+                obszarze wsparcia na Dolnym Śląsku.
+            </p>
+        </div>
+    </div>
+{% endblock content %}
+
+
