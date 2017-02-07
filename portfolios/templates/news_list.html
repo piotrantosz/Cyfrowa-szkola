@@ -29,7 +29,7 @@
                         <div class="content">
                             <span class="author">{{ obj.author }}</span>
                             <h1 class="title"><a href="{{ obj.get_absolute_url }}">{{ obj.title }}</a></h1>
-                            <p class="text">{{ obj.content|striptags|truncatechars:300 }} <b><a href="{{ obj.get_absolute_url }}">{% blocktrans trimmed %}read more{% endblocktrans %}</a></b></p>
+                            <p class="text">{{ obj.content|striptags|safe|truncatechars:300 }} <b><a href="{{ obj.get_absolute_url }}">{% blocktrans trimmed %}read more{% endblocktrans %}</a></b></p>
                             <a href="{{ obj.get_absolute_url }}"><label class="menu-button"><span></span></label></a>
                         </div>
                     </div>

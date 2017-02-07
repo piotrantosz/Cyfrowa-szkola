@@ -71,7 +71,7 @@
                                 <p class="small-12 medium-6 small-centered medium-uncentered columns"><span>{% blocktrans trimmed %}Category{% endblocktrans %}</span>: {{ obj.category }}</p>
                             </div>
                             <div class="small-12 columns">
-                                <p>{{ obj.content|striptags|truncatechars:500 }}</p>
+                                <p>{{ obj.content|striptags|safe|truncatechars:500 }}</p>
                                 <div class="buttons">
                                     <a href="{{ obj.get_absolute_url }}">
                                         <span class="fa-stack fa-lg">
