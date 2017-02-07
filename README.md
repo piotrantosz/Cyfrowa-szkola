@@ -1,8 +1,6 @@
 
 # Cyfrowa szkoła sukcesu
-<p align="center">
-    <img src="http://i.imgur.com/5dRBTb9.gifv">
-</p>
+![Demo](http://i.imgur.com/5dRBTb9.gif)
 
 Visit website at <http://cyfrowa-szkola.eu>
 
