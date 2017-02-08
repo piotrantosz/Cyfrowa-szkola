@@ -17,17 +17,25 @@
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
-<div class="menu" style="background: #2d404f;">
-    <div class="menu__logo">
-        {% block menu_logo %}
-        <img src="{% static '/img/vedius-logo.png' %}">
-        {% endblock menu_logo %}
+<div class="navigation">
+    <div class="arrow">
+        <i class="arrow--left fa fa-angle-left"></i>
     </div>
-    <ul class="menu__nav">
-    {% block menu_nav %}
-        {% include "menu_nav.html" %}
-    {% endblock menu_nav %}
-    </ul>
+    <div class="menu" style="background: #2d404f;">
+        <div class="menu__logo">
+            {% block menu_logo %}
+            <img src="{% static '/img/vedius-logo.png' %}">
+            {% endblock menu_logo %}
+        </div>
+        <ul class="menu__nav">
+        {% block menu_nav %}
+            {% include "menu_nav.html" %}
+        {% endblock menu_nav %}
+        </ul>
+    </div>
+    <div class="arrow">
+        <i class="arrow--right fa fa-angle-right"></i>
+    </div>
 </div>
 
 {% include "messages_display.html" %}
