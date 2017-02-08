@@ -136,7 +136,6 @@
     }
 
     li {
-      height: 52px;
       padding: 15px 0;
       position: relative;
       text-align: center;
@@ -237,6 +236,7 @@
       li {
         display: inline-block;
         width: 20%;
+        height: 52px;
         padding: 0;
         float: none;
       }
