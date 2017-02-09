@@ -3,11 +3,38 @@
 
 <li {% if request.path == '/' %}class="active"{% else %}{% endif %}>
     <a href="{% url 'about' %}">
+        <div class="icon icon--home"></div>
+        <div class="title">{% blocktrans trimmed %}Homepage{% endblocktrans %}</div>
+    </a>
+</li>
+
+<li {% if 'project' in request.path %}class="active"{% else %}{% endif %}>
+    <a href="{% url 'about-project' %}">
         <div class="icon icon--about"></div>
         <div class="title">{% blocktrans trimmed %}About project{% endblocktrans %}</div>
     </a>
 </li>
 
+<li {% if 'news' in request.path %}class="active"{% else %}{% endif %}>
+    <a href="{% url 'news:list' %}">
+        <div class="icon icon--news"></div>
+        <div class="title">{% blocktrans trimmed %}News{% endblocktrans %}</div>
+    </a>
+</li>
+
+<li {% if 'download' in request.path %}class="active"{% else %}{% endif %}>
+    <a href="{% url 'download' %}">
+        <div class="icon icon--download"></div>
+        <div class="title">{% blocktrans trimmed %}Files to download{% endblocktrans %}</div>
+    </a>
+</li>
+
+<li {% if 'schedule' in request.path %}class="active"{% else %}{% endif %}>
+    <a href="{% url 'schedule' %}">
+        <div class="icon icon--calendar"></div>
+        <div class="title">{% blocktrans trimmed %}Schedule{% endblocktrans %}</div>
+    </a>
+</li>
 
 <li {% if 'accounts' in request.path %}class="active"{% else %}{% endif %}>
     <a href="{% url 'account_login' %}">
@@ -23,14 +50,6 @@
     </a>
 </li>
 
-<li {% if 'news' in request.path %}class="active"{% else %}{% endif %}>
-    <a href="{% url 'news:list' %}">
-        <div class="icon icon--home"></div>
-        <div class="title">{% blocktrans trimmed %}News{% endblocktrans %}</div>
-    </a>
-</li>
-
-
 <li {% if 'guide' in request.path %}class="active"{% else %}{% endif %}>
     <a href="{% url 'guide' %}">
         <div class="icon icon--howto"></div>
@@ -38,11 +57,10 @@
     </a>
 </li>
 
-<!--
-<a href="#">
-    <li>
+<li {% if 'contact' in request.path %}class="active"{% else %}{% endif %}>
+    <a href="{% url 'contact' %}">
         <div class="icon icon--contact"></div>
         <div class="title">{% blocktrans trimmed %}Contact{% endblocktrans %}</div>
-    </li>
-</a>
--->
+    </a>
+</li>
+

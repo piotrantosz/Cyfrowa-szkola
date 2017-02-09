@@ -1,0 +1,73 @@
+.contact {
+  ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 10px;
+  }
+
+  dd {
+    padding-left: 10px;
+  }
+
+  .map {
+    padding: 0;
+    margin-bottom: 20px;
+
+    h2 {
+      margin: 0;
+      padding-bottom: 10px;
+    }
+
+    i {
+      padding-right: 5px;
+    }
+
+    .map-description {
+      color: #ffffff;
+
+      &--wroclaw {
+        height: 400px;
+        padding: 15px;
+        background-color: #2CDEA5;
+      }
+
+      &--krakow {
+        height: 400px;
+        padding: 15px;
+        background-color: #01AFEE
+      }
+    }
+  }
+
+  .contacts {
+    padding: 0;
+    color: #ffffff;
+    text-align: center;
+
+    .persons {
+      padding: 15px;
+      background-color: #273846;
+    }
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints, 'medium')) {
+  .contact {
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .map {
+    margin-bottom: 10px;
+
+    .map-description {
+      &--wroclaw {
+        height: auto !important;
+      }
+
+      &--krakow {
+        height: auto !important;
+      }
+    }
+  }
+}

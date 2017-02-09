@@ -1,0 +1,16 @@
+.temporary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  h1 {
+   font-weight: 300;
+  }
+
+  .schedule {
+    display: block;
+    padding: 30px;
+    background-color: #ECECEC;
+  }
+}

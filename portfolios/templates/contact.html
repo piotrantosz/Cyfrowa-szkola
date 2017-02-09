@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="news-detail small-12 small-centered columns ">
+        <div class="news-detail__header">
+            <h1>Kontakt</h1>
+            <p>
+                <span class="author">
+                projekt@vedius.pl
+                </span>
+            </p>
+        </div>
+        <div class="news-detail__content contact row column">
+
+            <div class="small-12 medium-6 large-3 map columns">
+                <div class="map-description">
+                    <div class="map-description--wroclaw">
+                        <h2>Biuro Projektu Wrocław</h2>
+                        <dl>
+                            <dt><i class="fa fa-map-marker"></i>Adres:</dt>
+                            <dd>50-01 Wrocław; marsz. Józefa Piłsudskiego 95</dd>
+                            <dt><i class="fa fa-phone"></i>Telefon:</dt>
+                            <dd>(+48) 71 789 92 15</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="small-12 medium-6 large-9 map columns">
+                <div id="map-wroclaw" style="width: 100%; height: 400px;"></div>
+            </div>
+            <div class="small-12 medium-6 large-3 map columns">
+                <div class="map-description">
+                    <div class="map-description--krakow">
+                        <h2>Biuro Projektu Kraków</h2>
+                        <dl>
+                            <dt><i class="fa fa-map-marker"></i>Adres:</dt>
+                            <dd>31-127 Kraków ul. Kochanowskiego 28/1</dd>
+                            <dt><i class="fa fa-phone"></i>Telefon:</dt>
+                            <dd>(+48) 12 633 01 64</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="small-12 medium-6 large-9 map columns">
+                <div id="map-krakow" style="width: 100%; height: 400px;"></div>
+            </div>
+            <div class="small-12 columns contacts">
+                <div class="persons">
+                    <h2>Osoby do kontaktu:</h2>
+                    <dl>
+                        <dt>Kierownik projektu</dt>
+                        <dd>Tel. 505 526 461</dd>
+
+                        <dt>Specjalista ds. IT, kierownik merytoryczny</dt>
+                        <dd>Tel. 691 540 510</dd>
+
+                        <dt>Koordynator doradców zawodowych</dt>
+                        <dd>Tel. 501 615 219</dd>
+
+                        <dt>Koordynator szkolny</dt>
+                        <dd>Tel. 691 852 052</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function initMap() {
+            var uluruWroclaw = {lat: 51.100262, lng: 17.034280};
+            var uluruKrakow = {lat: 50.066832, lng: 19.925821};
+            var mapWroclaw = new google.maps.Map(document.getElementById('map-wroclaw'), {
+                zoom: 14,
+                center: uluruWroclaw,
+                scrollwheel: false
+            });
+            var mapKrakow = new google.maps.Map(document.getElementById('map-krakow'), {
+                zoom: 14,
+                center: uluruKrakow,
+                scrollwheel: false
+            });
+            var markerWroclaw = new google.maps.Marker({
+                position: uluruWroclaw,
+                map: mapWroclaw
+            });
+
+            var markerKrakow = new google.maps.Marker({
+                position: uluruKrakow,
+                map: mapKrakow
+            });
+
+
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6-F2T1kJ2E-oMPDunqwznGHN6yPsYnP8&callback=initMap">
+    </script>
+{% endblock content %}
+
+

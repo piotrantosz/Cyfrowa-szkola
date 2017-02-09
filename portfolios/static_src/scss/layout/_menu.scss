@@ -6,6 +6,56 @@
   align-items: center;
   pointer-events: none;
   width: 100%;
+  opacity: 0;
+  animation: pulse-text 7s;
+  animation-delay: 8s;
+  animation-iteration-count: 2;
+
+  @keyframes pulse-text {
+    0% {
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 0;
+    }
+
+    20% {
+      opacity: 1;
+    }
+
+    30% {
+      opacity: 1;
+    }
+
+    40% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    60% {
+      opacity: 0;
+    }
+
+    70% {
+      opacity: 0;
+    }
+
+    80% {
+      opacity: 1;
+    }
+
+    90% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
 
 
   &--left {
@@ -25,6 +75,46 @@
   }
 }
 
+.scroll {
+  pointer-events: none;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 170px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  color: #fff;
+  z-index: 99999;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 11px;
+  animation: pulse 6s infinite;
+  animation-delay: 3s;
+  animation-iteration-count: 5;
+  transition: all 800ms ease;
+  background-color: rgba(45, 64, 79, 1);
+  letter-spacing: 1.5px;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: rgba(45, 64, 79,1)
+  }
+  25% {
+    background-color: rgba(45, 64, 79, 1)
+  }
+
+  50% {
+    background-color: rgba(238, 179, 36, 1)
+  }
+  75% {
+    background-color: rgba(45, 64, 79, 1)
+  }
+  100% {
+    background-color: rgba(45, 64, 79, 1)
+  }
+}
+
 .menu {
   color: white;
   left: 0px;
@@ -34,6 +124,13 @@
   position: fixed;
   z-index: 9999;
   overflow: hidden;
+
+  &:hover {
+    .scroll {
+      transition: all 1s ease;
+      opacity: 0;
+    }
+  }
 
   &__logo {
     padding: 45px;
@@ -76,11 +173,23 @@
       width: 70px;
       position: relative;
 
+      &--home {
+        background-image: url(http://i.imgur.com/yiLUcRq.png);
+      }
+
       &--about {
         background-image: url(http://i.imgur.com/IrkgCBn.png);
       }
 
-      &--home {
+      &--download {
+        background-image: url(http://i.imgur.com/VZcW2qT.png);
+      }
+
+      &--calendar {
+        background-image: url(http://i.imgur.com/ORYPQVe.png);
+      }
+
+      &--news {
         background-image: url(http://i.imgur.com/qHvevnc.png);
       }
 
@@ -93,7 +202,7 @@
       }
 
       &--contact {
-        background-image: url(http://i.imgur.com/3Ptcm0X.png);
+        background-image: url(http://i.imgur.com/rtgjBaN.png);
       }
 
       &--account {
@@ -104,12 +213,27 @@
     .active {
       background-color: #273846;
 
+      .icon--home {
+        transition: all 300ms ease;
+        background-image: url(http://i.imgur.com/PlI9j1A.png);
+      }
+
       .icon--about {
         transition: all 300ms ease;
         background-image: url(http://i.imgur.com/vN9EgeH.png);
       }
 
-      .icon--home {
+      .icon--download {
+        transition: all 300ms ease;
+        background-image: url(http://i.imgur.com/I1Sbg5j.png);
+      }
+
+      .icon--calendar {
+        transition: all 300ms ease;
+        background-image: url(http://i.imgur.com/uy3UlEJ.png);
+      }
+
+      .icon--news {
         transition: all 300ms ease;
         background-image: url(http://i.imgur.com/qGf4q4m.png);
       }
@@ -126,7 +250,7 @@
 
       .icon--contact {
         transition: all 300ms ease;
-        background-image: url(http://i.imgur.com/mzSk9Km.png)
+        background-image: url(http://i.imgur.com/uOYk58b.png)
       }
 
       .icon--account {
@@ -139,15 +263,31 @@
       padding: 15px 0;
       position: relative;
       text-align: center;
+      list-style: none;
 
       &:hover {
         background-color: #273846;
+
+        .icon--home {
+          transition: all 300ms ease;
+          background-image: url(http://i.imgur.com/PlI9j1A.png);
+        }
 
         .icon--about {
           background-image: url(http://i.imgur.com/vN9EgeH.png);
         }
 
-        .icon--home {
+        .icon--download {
+          transition: all 300ms ease;
+          background-image: url(http://i.imgur.com/I1Sbg5j.png);
+        }
+
+        .icon--calendar {
+          transition: all 300ms ease;
+          background-image: url(http://i.imgur.com/uy3UlEJ.png);
+        }
+
+        .icon--news {
           transition: all 300ms ease;
           background-image: url(http://i.imgur.com/qGf4q4m.png);
         }
@@ -164,7 +304,7 @@
 
         .icon--contact {
           transition: all 300ms ease;
-          background-image: url(http://i.imgur.com/mzSk9Km.png)
+          background-image: url(http://i.imgur.com/uOYk58b.png)
         }
 
         .icon--account {
@@ -202,6 +342,10 @@
 }
 
 @media screen and (max-width: map-get($breakpoints, 'medium')) {
+  .scroll {
+    display: none;
+  }
+
   .menu {
     position: fixed;
     width: 100%;

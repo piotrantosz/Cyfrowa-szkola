@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cyfrowa Szkoła - wtorek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-07 16:19+0100\n"
+"POT-Creation-Date: 2017-02-09 22:43+0100\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -135,7 +135,7 @@ msgstr "użytkownik"
 msgid "users"
 msgstr "użytkownicy"
 
-#: templates/about.html:5 templates/about.html:6 templates/base.html:14
+#: templates/about.html:5 templates/about.html:6 templates/base.html:15
 msgid "Cyfrowa Szkoła Sukcesu"
 msgstr "Cyfrowa Szkoła Sukcesu"
 
@@ -535,9 +535,13 @@ msgstr ""
 "<strong>Uwaga:</strong> nadal możesz <a href=\"%(email_url)s\">zmienić swój "
 "adres e-mail</a> . "
 
-#: templates/base.html:10
+#: templates/base.html:11
 msgid "Cyfrowa Szkoła"
 msgstr "Cyfrowa Szkoła"
+
+#: templates/base.html:32
+msgid "Scroll down"
+msgstr "Przewiń w dół"
 
 #: templates/guide.html:4 templates/guide.html:5
 msgid "How to create portfolio"
@@ -702,27 +706,39 @@ msgstr ""
 "przycisk \"Zobacz swój profil\" na stronie \"Mój profil\"."
 
 #: templates/menu_nav.html:7
+msgid "Homepage"
+msgstr "Strona główna"
+
+#: templates/menu_nav.html:14
 msgid "About project"
 msgstr "O projekcie"
 
-#: templates/menu_nav.html:15
+#: templates/menu_nav.html:21 templates/news_list.html:16
+msgid "News"
+msgstr "Aktualności"
+
+#: templates/menu_nav.html:28
+msgid "Files to download"
+msgstr "Pliki do pobrania"
+
+#: templates/menu_nav.html:35
+msgid "Schedule"
+msgstr "Harmonogram"
+
+#: templates/menu_nav.html:42
 msgid "My profile"
 msgstr "Mój profil"
 
-#: templates/menu_nav.html:23 templates/user_list.html:5
+#: templates/menu_nav.html:49 templates/user_list.html:5
 #: templates/user_list.html:6
 msgid "Portfolios"
 msgstr "Portfolia"
 
-#: templates/menu_nav.html:30 templates/news_list.html:16
-msgid "News"
-msgstr "Aktualności"
-
-#: templates/menu_nav.html:38
+#: templates/menu_nav.html:56
 msgid "How to"
 msgstr "Jak używać"
 
-#: templates/menu_nav.html:46
+#: templates/menu_nav.html:63
 msgid "Contact"
 msgstr "Kontakt"
 
@@ -901,7 +917,8 @@ msgid ""
 "                    %(site_name)s. As a final step, please complete the "
 "following form:"
 msgstr ""
-"Masz zamiar użyć %(provider_name)s żeby zalogować się do %(site_name)s. Jako finalny krok, proszę wypełnij: "
+"Masz zamiar użyć %(provider_name)s żeby zalogować się do %(site_name)s. Jako "
+"finalny krok, proszę wypełnij: "
 
 #: templates/user_detail.html:28
 msgid "Hello"

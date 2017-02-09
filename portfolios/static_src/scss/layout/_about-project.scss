@@ -1,0 +1,23 @@
+.about-project {
+  h2 {
+    margin-bottom: 12px;
+    margin-top: 0;
+    font-weight: 700;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints, 'medium')) {
+  .about-project {
+    p {
+      padding-left: 2px;
+    }
+
+    ul, ol {
+      padding-left: 4px;
+    }
+  }
+}
