@@ -1,24 +1,21 @@
 from django.contrib import messages
 from django.contrib.auth import get_user_model
 from django.http import Http404
-from django.shortcuts import get_object_or_404, redirect, render, HttpResponseRedirect
+from django.shortcuts import redirect, render
 from django.utils.translation import ugettext as _
-from projects.models import Project
 
+from projects.models import Project
 from .forms import ProfileForm
+
 
 def profile_detail(request):
     if not request.user.is_authenticated():
         raise Http404
     User = get_user_model()
-    user_query = User.objects.filter(username=request.user)
-    for u in user_query:
-        has_projects = False
-        if Project.objects.filter(author=u):
-            has_projects = True
-
-        user = u
-
+    user = User.objects.get(username=request.user)
+    has_projects = False
+    if Project.objects.filter(author=user):
+        has_projects = True
 
     context = {
         "user": user,
@@ -32,10 +29,7 @@ def profile_update(request):
     if not request.user.is_authenticated():
         raise Http404
     User = get_user_model()
-    user_query = User.objects.filter(username=request.user)
-
-    for u in user_query:
-        user = u
+    user = User.objects.get(username=request.user)
 
     form = ProfileForm(request.POST or None, request.FILES or None, instance=user)
     if form.is_valid():
