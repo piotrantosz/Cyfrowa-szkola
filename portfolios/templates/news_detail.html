@@ -3,9 +3,14 @@
 {% block head_title %}{{ instance.title }}{% endblock head_title %}
 {% block head_title_og %}{{ instance.title }}{% endblock head_title_og %}
 {% block meta_description %}
-    {{ instance.content|striptags|truncatechars:200 }}{% endblock meta_description %}
+    {{ instance.content|striptags|truncatechars:150 }}{% endblock meta_description %}
 {% block head_desc_og %}
-    {{ instance.content|striptags|truncatechars:200 }}{% endblock head_desc_og %}
+    {{ instance.content|striptags|truncatechars:150 }}{% endblock head_desc_og %}
+{% block head_extra %}
+    <meta name="author" content="
+            {% if instance.author.get_full_name %}{{ instance.author.get_full_name }}{% else %}{{ instance.author }}{% endif %}">
+    <meta name='date' content='{{ instance.updated }}'>
+{% endblock head_extra %}
 
 {% block content %}
     <div class="news-detail small-12 small-centered columns ">
@@ -34,7 +39,7 @@
                     class="fa fa-google"></span></a>
         </div>
         <div class="news-detail__content row column">
-           {{ instance.content|safe }}
+            {{ instance.content|safe }}
         </div>
     </div>
 {% endblock content %}

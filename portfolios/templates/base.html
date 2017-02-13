@@ -25,7 +25,9 @@
     <div class="menu" style="background: #2d404f;">
         <div class="menu__logo">
             {% block menu_logo %}
-            <img src="{% static '/img/vedius-logo.png' %}">
+                <a href="{% url 'about' %}">
+                    <img src="{% static '/img/vedius-logo.png' %}">
+                </a>
             {% endblock menu_logo %}
         </div>
         <div class="scroll">
