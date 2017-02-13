@@ -42,7 +42,8 @@
                 {% if instance.header_image %}
                 <a href="{{ instance.header_image.url }}">{{ instance.header_image }}</a>
                 {% endif %}
-                <input value="{{ instance.header_image }}" id="id_header_image" name="header_image" type="file" required="">
+                <input value="{{ instance.header_image }}" id="id_header_image" name="header_image" type="file"
+                       {% if 'edit' not in request.path %}required=""{% endif %}>
                 <hr>
                 <label for="id_content">{% blocktrans trimmed %}Content{% endblocktrans %}</label>
                 <textarea cols="40" id="id_content" name="content" rows="10"
