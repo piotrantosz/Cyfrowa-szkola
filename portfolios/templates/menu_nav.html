@@ -8,7 +8,7 @@
     </a>
 </li>
 
-<li {% if 'project' in request.path %}class="active"{% else %}{% endif %}>
+<li {% if 'about-project' in request.path %}class="active"{% else %}{% endif %}>
     <a href="{% url 'about-project' %}">
         <div class="icon icon--about"></div>
         <div class="title">{% blocktrans trimmed %}About project{% endblocktrans %}</div>
