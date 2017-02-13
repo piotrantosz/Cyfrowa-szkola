@@ -112,6 +112,10 @@
             text-align: center;
             text-shadow: 0px 1px 7px rgba(150, 150, 150, 0.86);
 
+            &:first-letter {
+              text-transform: uppercase;
+            }
+
             a {
               color: inherit;
               text-decoration: inherit;
