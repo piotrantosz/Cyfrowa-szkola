@@ -158,7 +158,7 @@ NOCAPTCHA = True
 # Account settings
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = True
-ACCOUNT_SIGNUP_FORM_CLASS = 'projects.forms.SignupForm'
+ACCOUNT_SIGNUP_FORM_CLASS = 'userprofile.forms.SignupForm'
 
 # Local paths
 LOCALE_PATHS = [
