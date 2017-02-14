@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cyfrowa Szkoła - wtorek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-13 21:40+0100\n"
+"POT-Creation-Date: 2017-02-14 11:35+0100\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,7 +17,7 @@ msgstr "Tytuł"
 msgid "Header image"
 msgstr "Obraz nagłówka"
 
-#: news/forms.py:18 templates/news_form.html:47 templates/project_form.html:55
+#: news/forms.py:18 templates/news_form.html:48 templates/project_form.html:55
 msgid "Content"
 msgstr "Treść"
 
@@ -749,6 +749,10 @@ msgstr "Dodaj"
 #: templates/news_form.html:41
 msgid "Card image"
 msgstr "Obraz karty"
+
+#: templates/news_form.html:52 templates/project_form.html:71
+msgid "Send"
+msgstr "Wyślij"
 
 #: templates/news_list.html:5 templates/news_list.html:6
 msgid "News list"

@@ -49,7 +49,7 @@
                 <textarea cols="40" id="id_content" name="content" rows="10"
                           style="visibility: hidden; display: none;">{{ instance.content }}</textarea>
                 {% wysiwyg_editor "id_content" %}
-                <input class="button" type="submit" value="Send"/>
+                <input class="button" type="submit" value="{% blocktrans trimmed %}Send{% endblocktrans %}"/>
             </div>
         </form>
     </div>
