@@ -8,7 +8,6 @@ from .views import (
     news_delete,
 )
 
-
 urlpatterns = [
     url(r'^$', news_list, name="list"),
     url(r'^create/', news_create, name="create"),

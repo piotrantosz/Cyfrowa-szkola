@@ -1,15 +1,14 @@
-from django import forms
-from django.forms import ModelForm
 from captcha.fields import ReCaptchaField
-from django.core.exceptions import ValidationError
+from django.forms import ModelForm
 
-from .models import Project, User
+from .models import Project
 
 
 class ProjectForm(ModelForm):
     captcha = ReCaptchaField(attrs={
         'theme': 'clean',
     })
+
     class Meta:
         model = Project
         exclude = ('author',)

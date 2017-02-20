@@ -4,7 +4,6 @@
 {% load account socialaccount %}
 
 {% block content %}
-    {% if user.is_authenticated %}
         <div class="background" style="background: url({% static 'img/account_background.jpg' %}) no-repeat center center fixed;"></div>
         <div class="account-profile account small-12">
             <div class="account-form small-centered small-12 medium-8 large-6 columns">
@@ -23,5 +22,4 @@
                 </div>
             </div>
         </div>
-    {% endif %}
 {% endblock content %}

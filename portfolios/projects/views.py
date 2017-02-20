@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import Http404
 from django.shortcuts import get_object_or_404, redirect, render, HttpResponseRedirect
@@ -40,9 +41,8 @@ def user_list(request):
     return render(request, "user_list.html", context)
 
 
+@login_required
 def project_create(request):
-    if not request.user.is_authenticated():
-        raise Http404
     form = ProjectForm(request.POST or None, request.FILES or None)
     if form.is_valid():
         instance = form.save(commit=False)
@@ -71,9 +71,10 @@ def project_detail(request, slug=None):
     return render(request, "project_detail.html", context)
 
 
+@login_required
 def project_update(request, slug=None):
     instance = get_object_or_404(Project, slug=slug)
-    if not request.user.is_authenticated() or request.user != instance.author:
+    if request.user != instance.author:
         raise Http404
     form = ProjectForm(request.POST or None, request.FILES or None, instance=instance)
     if form.is_valid():
@@ -95,9 +96,10 @@ def project_update(request, slug=None):
     return render(request, "project_form.html", context)
 
 
+@login_required
 def project_delete(request, slug=None):
     instance = get_object_or_404(Project, slug=slug)
-    if not request.user.is_authenticated() or request.user != instance.author:
+    if request.user != instance.author:
         raise Http404
     instance.delete()
     messages.success(request, _("Successfully Deleted"))

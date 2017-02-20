@@ -1,5 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth import get_user_model
+from django.contrib.auth.decorators import login_required
 from django.http import Http404
 from django.shortcuts import redirect, render
 from django.utils.translation import ugettext as _
@@ -25,6 +26,7 @@ def profile_detail(request):
     return render(request, "profile.html", context)
 
 
+@login_required
 def profile_update(request):
     if not request.user.is_authenticated():
         raise Http404

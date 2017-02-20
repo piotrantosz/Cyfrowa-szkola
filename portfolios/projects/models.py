@@ -1,6 +1,5 @@
 from __future__ import unicode_literals
 
-from django import forms
 from django.conf import settings
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
@@ -10,7 +9,6 @@ from django.core.mail import send_mail
 from django.core.urlresolvers import reverse
 from django.db import models
 from django.db.models.signals import pre_save
-from django.forms.extras import widgets
 from django.utils import six, timezone
 from django.utils.text import slugify
 from django.utils.translation import ugettext_lazy as _

@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import Http404
 from django.shortcuts import get_object_or_404, redirect, render, HttpResponseRedirect
@@ -40,10 +41,11 @@ def news_detail(request, id=None):
     return render(request, "news_detail.html", context)
 
 
+@login_required
 def news_create(request):
-    if not request.user.is_authenticated() or not request.user.is_staff:
+    if not request.user.is_staff:
         raise Http404
-    form = NewsForm(request.POST or None, request.FILES or None, label_suffix = "")
+    form = NewsForm(request.POST or None, request.FILES or None, label_suffix="")
     if form.is_valid():
         instance = form.save(commit=False)
         instance.author = request.user
@@ -61,9 +63,10 @@ def news_create(request):
     return render(request, "news_form.html", context)
 
 
+@login_required
 def news_update(request, id=None):
     instance = get_object_or_404(News, id=id)
-    if not request.user.is_authenticated() or request.user != instance.author:
+    if request.user != instance.author:
         raise Http404
     form = NewsForm(request.POST or None, request.FILES or None, instance=instance, label_suffix="")
     if form.is_valid():
@@ -85,9 +88,10 @@ def news_update(request, id=None):
     return render(request, "news_form.html", context)
 
 
+@login_required
 def news_delete(request, id=None):
     instance = get_object_or_404(News, id=id)
-    if not request.user.is_authenticated() or request.user != instance.author:
+    if request.user != instance.author:
         raise Http404
     instance.delete()
     messages.success(request, _("Successfully Deleted"))

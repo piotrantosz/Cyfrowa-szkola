@@ -1,6 +1,7 @@
 from django.forms import ModelForm
-from .models import News
 from django.utils.translation import ugettext as _
+
+from .models import News
 
 
 class NewsForm(ModelForm):

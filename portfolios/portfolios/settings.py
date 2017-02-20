@@ -164,4 +164,3 @@ ACCOUNT_SIGNUP_FORM_CLASS = 'userprofile.forms.SignupForm'
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, "locale"),
 ]
-
