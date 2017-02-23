@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'projects',
     'news',
+    'userprofile',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -135,7 +136,7 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
-AUTH_USER_MODEL = 'projects.User'
+AUTH_USER_MODEL = 'userprofile.User'
 
 SITE_ID = 1
 

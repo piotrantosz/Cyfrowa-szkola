@@ -1,13 +1,16 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import Http404
 from django.shortcuts import get_object_or_404, redirect, render, HttpResponseRedirect
 from django.utils.translation import ugettext as _
 
 from .forms import ProjectForm
-from .models import Project, User
+from .models import Project
 
+User = get_user_model()
 
 def user_detail(request, user_id):
     queryset_list = Project.objects.filter(author=user_id)
@@ -52,6 +55,7 @@ def project_create(request):
         return HttpResponseRedirect(instance.get_absolute_url())
     elif form.errors:
         messages.error(request, _("Not Successfully Edited"))
+        print(form.errors)
     else:
         pass
 
