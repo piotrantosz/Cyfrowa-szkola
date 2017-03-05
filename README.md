@@ -4,7 +4,7 @@
 
 Visit website at <http://cyfrowa-szkola.eu>
 
-VEDIUS branche is avaible at <http://cyfrowa-szkola.net>
+VEDIUS branch is avaible at <http://cyfrowa-szkola.net>
 
 In the feature, this two branches will be marged into one, main project.
 
