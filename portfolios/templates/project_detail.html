@@ -12,6 +12,7 @@
             {% if instance.author.get_full_name %}{{ instance.author.get_full_name }}{% else %}{{ instance.author }}{% endif %}">
     <meta name='category' content='{{ instance.category }}'>
     <meta name='date' content='{{ instance.updated }}'>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i&subset=latin,latin-ext" rel="stylesheet">
 {% endblock head_extra %}
 
 {% block content %}

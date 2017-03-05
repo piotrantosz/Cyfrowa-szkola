@@ -2,35 +2,14 @@
 {% load i18n %}
 {% load static %}
 
-{% block head_title %}{% trans 'Cyfrowa Szkoła Sukcesu' %}{% endblock head_title %}
-{% block head_title_og %}{% trans 'Cyfrowa Szkoła Sukcesu' %}{% endblock head_title_og %}
-{% block meta_description %}
-    Rozwój oferty kształcenia zawodowego Zespołu Szkół Teleinformatycznych i Elektronicznych we Wrocławiu.
-    Dostosowanie systemów kształcenia i szkolenia do potrzeb rynku pracy.{% endblock meta_description %}
-{% block head_desc_og %}
-    Rozwój oferty kształcenia zawodowego Zespołu Szkół Teleinformatycznych i Elektronicznych we Wrocławiu.
-    Dostosowanie systemów kształcenia i szkolenia do potrzeb rynku pracy.{% endblock head_desc_og %}
-
+{% block head_title %}{% trans 'Cyfrowa Szkoła | Rabka-Zdrój' %}{% endblock head_title %}
+{% block head_title_og %}{% trans 'Cyfrowa Szkoła | Rabka-Zdrój' %}{% endblock head_title_og %}
 
 {% block content %}
-    <div class="logos">
-        <div class="small-12 medium-12 large-4 columns logo">
-            <img alt="Fundusze Europejskie - Program Regionalny"
-                 src="{% static "img/logo_fepr.png" %}">
-        </div>
-        <div class="small-12 medium-12 large-4 columns logo">
-            <img alt="Dolny Śląsk" src="{% static "img/logo_ds.png" %}">
-        </div>
-        <div class="small-12 medium-12 large-4 columns logo">
-            <img alt="Unia Europejska - Europejski Fundusz Społeczny"
-                 src="{% static "img/logo_ueefs.png" %}">
-        </div>
-    </div>
     <div class="header-full">
         <div class="header-full__content">
-            <h1>Cyfrowa Szkoła Sukcesu</h1>
-            <p>Rozwój oferty kształcenia zawodowego Zespołu Szkół Teleinformatycznych i Elektronicznych we
-                Wrocławiu.</p>
+            <h1>Cyfrowa Szkoła</h1>
+            <p>Technikum Informatyczne w Zespole Szkół w Rabce Zdroju</p>
         </div>
     </div>
     <div class="about">
@@ -64,39 +43,45 @@
             <div class="box-rectangle box-rectangle--small">
                 <a href="http://cwp.wroclaw.pl/">
                     <div class="producer-cwp box-background"
-                         style="background: url({% static 'img/cwp_bg.jpg' %}) center no-repeat; background-size: cover;">
+                         style="background: url('http://i.imgur.com/F3dyq6F.jpg') center no-repeat; background-size: cover;">
                         <div class="box-content producer-cwp__content">
                             <h3 class="hover">
-                                <span>Centrum Wspierania Przedsiębiorczości</span>
-                                WROCŁAW
+                                <span>Zespół Szkół w</span>
+                                RABCE-ZDRÓJ
                                 <span style="text-transform: uppercase; font-weight: 700; font-size: 0.8rem !important; letter-spacing: 1px;">Partner w Projekcie</span>
                             </h3>
                             <img alt="Centrum Wspierania Przedsiębiorczości" class="appear"
-                                 src="{% static 'img/cwp_logo.png' %}">
+                                 src="http://techrabka.nowotarski.pl/wp-content/uploads/2016/06/logo.png">
                         </div>
                     </div>
                 </a>
             </div>
         </div>
         <div class="separator">
-            <h2 class="yellow">Beneficjent</h2>
+            <h2 class="yellow">Działania</h2>
         </div>
         <div id="beneficiary-section">
             <div class="box-rectangle">
                 <div class="beneficiary box-background">
                     <div class="box-content beneficiary__content">
-                        <h3>
-                            Zespół szkół teleinformatycznych i elektronicznych we Wrocławiu
-                        </h3>
-                        <hr>
-                        <p><span>Cel projektu: </span>Dostosowanie systemu kształcenia i szkolenia zawodowego do potrzeb
-                            rynku pracy</p>
+                            <ul>
+                                <li>
+                                    Dostosowanie kształcenia do wymogów rynku pracy
+                                </li>
+                                <li>
+                                    Nawiązanie współpracy z potencjalnymi
+                                    pracodawcami
+                                </li>
+                                <li>
+                                    Współpraca ze środowiskiem biznesu
+                                </li>
+                            </ul>
                     </div>
                 </div>
             </div>
             <div class="box-rectangle">
                 <div class="beneficiary box-background"
-                     style="background: url(http://i.imgur.com/D1J4qjg.jpg) center no-repeat; background-size: cover;">
+                     style="background: url(http://i.imgur.com/F3dyq6F.jpg) center no-repeat; background-size: cover;">
                 </div>
             </div>
         </div>
@@ -114,13 +99,9 @@
                             </div>
                             <div class="text">
                                 <h4>Etap 1:</h4>
-                                <span>Doradztwo zawodowe</span>
-                                <hr>
                                 <ul>
-                                    <li>Indywidualny Plan Działania (IPD)</li>
-                                    <li>Analiza umiejętności zawodowych</li>
-                                    <li>Autoprezentacja</li>
-                                    <li>Planowanie kariery edukacyjnej i zawodowej</li>
+                                    <li>Praktyki i staże w firmach
+                                        informatycznych</li>
                                 </ul>
                             </div>
                         </div>
@@ -130,13 +111,10 @@
                             </div>
                             <div class="text">
                                 <h4>Etap 2:</h4>
-                                <span>Szkolenie</span>
-                                <hr>
                                 <ul>
-                                    <li>Specjalistyczne szkolenia IT</li>
-                                    <li>Praca z projektem</li>
-                                    <li>Indywidualny konsulting informatyczny</li>
-                                    <li>Praca w zespołach projektowych</li>
+                                    <li>Tworzenie własnego portfolio
+                                        zawodowego
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -146,13 +124,20 @@
                             </div>
                             <div class="text">
                                 <h4>Etap 3:</h4>
-                                <span>Tworzenie portfolio zawodowego, aktywizacja zawodowa</span>
-                                <hr>
                                 <ul>
-                                    <li>Tworzenie własnych projektów</li>
-                                    <li>Praca na symulowanych, treningowych stanowiskach pracy</li>
-                                    <li>Publikacja projektów</li>
-                                    <li>Nawiązywanie kontaktów z pracodawcami/zleceniodawcami</li>
+                                    <li>Aktywizacja zawodowa</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="number">
+                                <span>4</span>
+                            </div>
+                            <div class="text">
+                                <h4>Etap 4:</h4>
+                                <ul>
+                                    <li>Nawiązywanie kontaktów z
+                                        pracodawcami</li>
                                 </ul>
                             </div>
                         </div>
@@ -170,11 +155,8 @@
                             </div>
                             <div class="text">
                                 <h4>Etap 1:</h4>
-                                <span>Coaching</span>
-                                <hr>
                                 <ul>
-                                    <li>Analiza potrzeb</li>
-                                    <li>Planowanie działań</li>
+                                    <li>Profesjonalne użytkowanie komputera i narzędzi informatycznych</li>
                                 </ul>
                             </div>
                         </div>
@@ -184,11 +166,8 @@
                             </div>
                             <div class="text">
                                 <h4>Etap 2:</h4>
-                                <span>Indywidualny konsulting informatyczny</span>
-                                <hr>
                                 <ul>
-                                    <li>Specjalistyczne szkolenia IT</li>
-                                    <li>Konsultacje i wsparcie doradcze</li>
+                                    <li>Prowadzenie bloga przedmiotowego</li>
                                 </ul>
                             </div>
                         </div>
@@ -198,26 +177,25 @@
                             </div>
                             <div class="text">
                                 <h4>Etap 3:</h4>
-                                <span>Podniesienie jakości kształcenia</span>
-                                <hr>
                                 <ul>
-                                    <li>Tworzenie materiałów szkoleniowych</li>
-                                    <li>Opracowywanie ćwiczeń i pokazów</li>
-                                    <li>Autoprezentacja</li>
-                                    <li>Warsztaty informatyczne</li>
+                                    <li>Multimedialna lekcja</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="number">
+                                <span>4</span>
+                            </div>
+                            <div class="text">
+                                <h4>Etap 4:</h4>
+                                <ul>
+                                    <li>Rozwiązywanie zadań narzędziami
+                                        informatycznymi</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="background-separator">
-            <div class="background-separator__content">
-                <h3>Inwestycje w szkolną infrastrukturę informatyczną</h3>
-                <hr>
-                <p>Zakup nowoczesnej pracowni komputerowej do zajęć
-                    ćwiczeniowych do kwalifikacji zawodowych dla zawodu Technik Informatyk</p>
             </div>
         </div>
         <div class="separator">
@@ -266,23 +244,8 @@
                 </a>
             </div>
         </div>
-        <div class="partners small-12">
-            <div class="small-12 medium-12 large-3 columns">
-                <p>Partnerzy projektu</p>
-                <hr>
-            </div>
-            <div class="small-12 medium-12 large-3 columns partner">
-                <img alt="Nokia" src="{% static "img/logo_nokia.png" %}">
-            </div>
-            <div class="small-12 medium-12 large-3 columns partner">
-                <img alt="IBM" src="{% static "img/logo_ibm.png" %}">
-            </div>
-            <div class="small-12 medium-12 large-3 columns partner">
-                <img alt="Asplex" src="{% static "img/logo_asplex.png" %}">
-            </div>
-        </div>
     </div>
     <footer class="small-12 columns">
-        <p>&copy; Vedius 2017 / All rights reserved</p>
+        <p>&copy; Waldemar Węglarz & Piotr Antosz / All rights reserved</p>
     </footer>
 {% endblock content %}
