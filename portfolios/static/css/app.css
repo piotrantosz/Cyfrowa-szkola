@@ -5077,10 +5077,8 @@ body {
   -ms-flex-direction: column;
   flex-direction: column; }
   .header-full__content {
-    margin-left: 5%;
     padding-top: 15vw;
     padding-bottom: 15vw;
-    margin-bottom: 60px;
     text-align: center; }
     .header-full__content h1 {
       color: white;
@@ -5542,6 +5540,7 @@ footer {
   .header-full {
     text-align: center; }
     .header-full__content {
+      margin-top: 52px;
       padding-right: 7px;
       padding-left: 7px;
       padding-top: 52px;

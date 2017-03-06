@@ -130,10 +130,8 @@
   flex-direction: column;
 
   &__content {
-    margin-left: 5%;
     padding-top: 15vw;
     padding-bottom: 15vw;
-    margin-bottom: 60px;
     text-align: center;
 
     h1 {
@@ -862,6 +860,7 @@ footer {
     text-align: center;
 
     &__content {
+      margin-top: 52px;
       padding-right: 7px;
       padding-left: 7px;
       padding-top: 52px;
