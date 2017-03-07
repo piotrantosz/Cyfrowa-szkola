@@ -4,6 +4,10 @@
 
 Visit website at <http://cyfrowa-szkola.eu>
 
+VEDIUS branch is avaible at <http://cyfrowa-szkola.net>
+
+In the feature, this two branches will be marged into one, main project.
+
 Django application which allows multiple users (students) to share their projects and create their online portfolio.
 
 Using Social Accounts validation (allauth - Google, Facebook and local accounts), CKEditor for modyfing projects content and more.
