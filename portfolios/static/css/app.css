@@ -4678,7 +4678,8 @@ body {
     margin-top: 42px;
     margin-bottom: 42px;
     color: #222;
-    font-weight: 300; }
+    font-weight: 300;
+    word-wrap: break-word !important; }
     .project-detail__content h1 {
       font-weight: 300;
       font-size: 2rem;
@@ -5008,7 +5009,7 @@ body {
     padding-bottom: 90px;
     padding-left: 5%;
     padding-right: 5%;
-    background: url(http://i.imgur.com/qRBFsFI.jpg) center no-repeat;
+    background: url(http://i.imgur.com/N5FVXvj.jpg) center no-repeat;
     background-size: cover;
     text-align: center;
     display: -ms-flexbox;
@@ -5183,13 +5184,16 @@ body {
           font-size: 2rem;
           background-color: #eeb324; }
         .about .steps .student__content .box .text {
-          display: inline-block;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-align: center;
+          align-items: center;
           margin-left: 20px;
           color: #222;
           width: 70%; }
           .about .steps .student__content .box .text h4 {
             font-size: 1.5rem;
-            font-weight: 700;
+            font-weight: 500;
             margin-bottom: 7px; }
           .about .steps .student__content .box .text span {
             font-size: 1.5rem; }
@@ -5237,13 +5241,16 @@ body {
           font-size: 2rem;
           background-color: #f41d5a; }
         .about .steps .teacher__content .box .text {
-          display: inline-block;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-align: center;
+          align-items: center;
           margin-left: 20px;
           color: #222;
           width: 70%; }
           .about .steps .teacher__content .box .text h4 {
             font-size: 1.5rem;
-            font-weight: 700;
+            font-weight: 500;
             margin-bottom: 7px; }
           .about .steps .teacher__content .box .text span {
             font-size: 1rem;
