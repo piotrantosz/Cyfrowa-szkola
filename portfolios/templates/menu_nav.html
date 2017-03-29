@@ -22,13 +22,6 @@
     </a>
 </li>
 
-<li {% if 'download' in request.path %}class="active"{% else %}{% endif %}>
-    <a href="{% url 'download' %}">
-        <div class="icon icon--download"></div>
-        <div class="title">{% blocktrans trimmed %}Files to download{% endblocktrans %}</div>
-    </a>
-</li>
-
 <li {% if 'schedule' in request.path %}class="active"{% else %}{% endif %}>
     <a href="{% url 'schedule' %}">
         <div class="icon icon--calendar"></div>
