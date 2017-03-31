@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 
+from ckeditor_uploader.fields import RichTextUploadingField
 from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.db import models
@@ -8,7 +9,7 @@ from django.db import models
 class News(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True)
     title = models.CharField(max_length=120)
-    content = models.TextField()
+    content = RichTextUploadingField(config_name='content')
     header_image = models.ImageField(null=True)
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)

@@ -6,11 +6,6 @@
     {{ block.super }}
 {% endblock head_title %}
 
-{% block head_extra %}
-    {% load wysiwyg %}
-    {% wysiwyg_setup %}
-{% endblock %}
-
 {% block content %}
     <div class="form news-detail small-12 small-centered columns ">
         <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
@@ -46,9 +41,8 @@
                        {% if 'edit' not in request.path %}required=""{% endif %}>
                 <hr>
                 <label for="id_content">{% blocktrans trimmed %}Content{% endblocktrans %}</label>
-                <textarea cols="40" id="id_content" name="content" rows="10"
-                          style="visibility: hidden; display: none;">{{ instance.content }}</textarea>
-                {% wysiwyg_editor "id_content" %}
+                {{ form.media }}
+                {{ form.content }}
                 <input class="button" type="submit" value="{% blocktrans trimmed %}Send{% endblocktrans %}"/>
             </div>
         </form>

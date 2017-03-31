@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 
+from ckeditor_uploader.fields import RichTextUploadingField
 from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.db import models
@@ -12,7 +13,7 @@ class Project(models.Model):
     slug = models.SlugField(unique=True)
     title = models.CharField(max_length=120)
     category = models.CharField(max_length=30)
-    content = models.TextField()
+    content = RichTextUploadingField(config_name='content')
     header_image = models.ImageField(null=True)
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)

@@ -30,6 +30,7 @@ urlpatterns = [
     url(r'^about-project/$', TemplateView.as_view(template_name="about_project.html"), name='about-project'),
     url(r'^schedule/$', TemplateView.as_view(template_name="schedule.html"), name='schedule'),
     url(r'^contact/$', TemplateView.as_view(template_name="contact.html"), name='contact'),
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 
 ]
 

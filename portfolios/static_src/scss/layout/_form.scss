@@ -137,6 +137,14 @@
   }
 }
 
+.django-ckeditor-widget {
+  display: flex !important;
+
+  #cke_id_content {
+    width: 100% !important;
+  }
+}
+
 @media screen and (max-width: map-get($breakpoints, 'medium')) {
   .form {
     .g-recaptcha {
