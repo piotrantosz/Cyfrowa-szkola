@@ -18,6 +18,15 @@ Using Social Accounts validation (allauth - Google, Facebook and local accounts)
 
 `pip install -r requirements.txt`
 
+`npm install`
+
+* gulp-cli
+* gulp
+* gulp-sass
+* gulp-autoprefixer
+
+`gulp build`
+
 ## Configuration
 
 
