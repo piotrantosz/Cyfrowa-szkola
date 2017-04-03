@@ -18,6 +18,15 @@ Using Social Accounts validation (allauth - Google, Facebook and local accounts)
 
 `pip install -r requirements.txt`
 
+`npm install`
+
+* gulp-cli
+* gulp
+* gulp-sass
+* gulp-autoprefixer
+
+`gulp build`
+
 ## Configuration
 
 
@@ -29,12 +38,12 @@ To configure Facebook and Google authentication generate ID's and secret keys.
 To configure ReCaptcha:
 * Get a public key and private key from <https://www.google.com/recaptcha/intro/index.html>
 * Add following lines to `settings.py`:
-    
+
         RECAPTCHA_PUBLIC_KEY = 'MyRecaptchaKey123'
         RECAPTCHA_PRIVATE_KEY = 'MyRecaptchaPrivateKey456'
 
 * Wherever you need a Captcha, add a field to the form:
-    
+
         from captcha.fields import ReCaptchaField
         captcha = ReCaptchaField()
 
@@ -64,5 +73,4 @@ projects/ - list of uers with projects
  * /slug - project detail
  * /create - create project
  * /slug/edit - edit project
-
 

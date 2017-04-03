@@ -1,7 +1,6 @@
 Django==1.10.5
 django-allauth==0.30.0
 django-ckeditor==5.2.1
-django-wysiwyg==0.8.0
 django-recaptcha==1.2.1
 html5lib==0.999999999
 oauthlib==2.0.1

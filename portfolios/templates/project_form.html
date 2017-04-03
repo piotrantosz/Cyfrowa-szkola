@@ -5,11 +5,6 @@
     {% if instance.title %}{{ instance.title }}{% else %}{% blocktrans trimmed %}Create{% endblocktrans %}{% endif %}
 {% endblock head_title %}
 
-{% block head_extra %}
-    {% load wysiwyg %}
-    {% wysiwyg_setup %}
-{% endblock %}
-
 {% block content %}
     <div class="form project-detail small-12 small-centered columns ">
         <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
@@ -53,9 +48,8 @@
                        {% if 'edit' not in request.path %}required=""{% endif %}>
                 <hr>
                 <label for="id_content">{% blocktrans trimmed %}Content{% endblocktrans %}</label>
-                <textarea cols="40" id="id_content" name="content" rows="10"
-                          style="visibility: hidden; display: none;">{{ instance.content }}</textarea>
-                {% wysiwyg_editor "id_content" %}
+                {{ form.media }}
+                {{ form.content }}
                 <div class="extra">
                     <p><label for="id_category">{% blocktrans trimmed %}Category{% endblocktrans %}</label> <input
                             id="id_category" maxlength="30" name="category" type="text" value="{{ instance.category }}" required=""></p>
@@ -72,5 +66,4 @@
             </div>
         </form>
     </div>
-    {% wysiwyg_editor "id_content" %}
 {% endblock content %}
