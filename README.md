@@ -6,6 +6,8 @@ Visit website at <http://cyfrowa-szkola.eu>
 
 VEDIUS branch is avaible at <http://cyfrowa-szkola.net>
 
+PRACUJ-VEDIUS branch is avaible at <http://pracuj-vedius.pl>
+
 In the feature, this two branches will be marged into one, main project.
 
 Django application which allows multiple users (students) to share their projects and create their online portfolio.
