@@ -17,11 +17,10 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.contrib.flatpages import views
 from django.views.generic import TemplateView
 
 urlpatterns = [
-    url(r'^$', TemplateView.as_view(template_name="about.html"), name='about'),
+    url(r'^$', TemplateView.as_view(template_name="news_list.html"), name='about'),
     url(r'^admin/', admin.site.urls),
     url(r'^projects/', include('projects.urls', namespace='projects')),
     url(r'^news/', include('news.urls', namespace='news')),
@@ -29,7 +28,6 @@ urlpatterns = [
     url(r'^accounts/profile/', include('userprofile.urls')),
     url(r'^guide/$', TemplateView.as_view(template_name="guide.html"), name='guide'),
     url(r'^about-project/$', TemplateView.as_view(template_name="about_project.html"), name='about-project'),
-    url(r'^schedule/$', views.flatpage, {'url': '/schedule/'}, name='schedule'),
     url(r'^contact/$', TemplateView.as_view(template_name="contact.html"), name='contact'),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 

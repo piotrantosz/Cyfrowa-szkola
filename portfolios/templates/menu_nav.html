@@ -1,38 +1,17 @@
 {% load i18n %}
 
 
-<li {% if request.path == '/' %}class="active"{% else %}{% endif %}>
-    <a href="{% url 'about' %}">
+<li>
+    <a href="http://vedius.pl/">
         <div class="icon icon--home"></div>
-        <div class="title">{% blocktrans trimmed %}Homepage{% endblocktrans %}</div>
+        <div class="title">{% blocktrans trimmed %}vedius.pl{% endblocktrans %}</div>
     </a>
 </li>
 
-<li {% if 'about-project' in request.path %}class="active"{% else %}{% endif %}>
-    <a href="{% url 'about-project' %}">
-        <div class="icon icon--about"></div>
-        <div class="title">{% blocktrans trimmed %}About project{% endblocktrans %}</div>
-    </a>
-</li>
-
-<li {% if 'news' in request.path %}class="active"{% else %}{% endif %}>
+<li {% if 'news' in request.path or request.path == '/' %}class="active"{% else %}{% endif %}>
     <a href="{% url 'news:list' %}">
         <div class="icon icon--news"></div>
         <div class="title">{% blocktrans trimmed %}News{% endblocktrans %}</div>
-    </a>
-</li>
-
-<li {% if 'schedule' in request.path %}class="active"{% else %}{% endif %}>
-    <a href="{% url 'schedule' %}">
-        <div class="icon icon--calendar"></div>
-        <div class="title">{% blocktrans trimmed %}Schedule{% endblocktrans %}</div>
-    </a>
-</li>
-
-<li {% if 'accounts' in request.path %}class="active"{% else %}{% endif %}>
-    <a href="{% url 'account_login' %}">
-        <div class="icon icon--account"></div>
-        <div class="title">{% blocktrans trimmed %}My profile{% endblocktrans %}</div>
     </a>
 </li>
 
@@ -43,17 +22,16 @@
     </a>
 </li>
 
+<li {% if 'accounts' in request.path %}class="active"{% else %}{% endif %}>
+    <a href="{% url 'account_login' %}">
+        <div class="icon icon--account"></div>
+        <div class="title">{% blocktrans trimmed %}My profile{% endblocktrans %}</div>
+    </a>
+</li>
+
 <li {% if 'guide' in request.path %}class="active"{% else %}{% endif %}>
     <a href="{% url 'guide' %}">
         <div class="icon icon--howto"></div>
         <div class="title">{% blocktrans trimmed %}How to{% endblocktrans %}</div>
     </a>
 </li>
-
-<li {% if 'contact' in request.path %}class="active"{% else %}{% endif %}>
-    <a href="{% url 'contact' %}">
-        <div class="icon icon--contact"></div>
-        <div class="title">{% blocktrans trimmed %}Contact{% endblocktrans %}</div>
-    </a>
-</li>
-
