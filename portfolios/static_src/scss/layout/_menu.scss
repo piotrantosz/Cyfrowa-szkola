@@ -57,7 +57,6 @@
     }
   }
 
-
   &--left {
     margin-right: auto;
   }
@@ -98,7 +97,7 @@
 
 @keyframes pulse {
   0% {
-    background-color: rgba(45, 64, 79,1)
+    background-color: rgba(45, 64, 79, 1)
   }
   25% {
     background-color: rgba(45, 64, 79, 1)
@@ -149,7 +148,6 @@
   &__nav {
     width: 100%;
     margin: 0;
-
 
     a {
       color: inherit; /* blue colors for links too */
@@ -385,7 +383,11 @@
         float: none;
       }
     }
+  }
+}
 
-
+@media screen and (min-height: 760px){
+  .scroll {
+    display: none;
   }
 }
